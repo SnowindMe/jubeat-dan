@@ -2,7 +2,7 @@
   import { untrack } from "svelte";
   import SongRow from "./SongRow.svelte";
   import { MODES } from "../lib/constants.js";
-  import { postBoard } from "../lib/leaderboard.svelte.js";
+  import { getPlayerId, postBoard } from "../lib/leaderboard.svelte.js";
   import {
     clampRate,
     clampScore,
@@ -108,6 +108,7 @@
     submitClass = "";
     var payload = {
       player: app.playerName,
+      playerId: getPlayerId(),
       dan: dan.name,
       version: versionLabel(dan),
       mode: danMode,

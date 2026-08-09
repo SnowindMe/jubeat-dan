@@ -1,7 +1,7 @@
 /* ============================================================
  * 排行榜 API（Cloudflare Pages Functions + D1）
  * GET  /api/leaderboard?dan=初段&version=beyond%20the%20Ave.&mode=NORMAL&criterion=score&limit=20
- * POST /api/leaderboard  { player, dan, version, mode, criterion, scores, rates, passTotal, passRate }
+ * POST /api/leaderboard  { player, playerId, dan, version, mode, criterion, scores, rates, passTotal, passRate }
  * ============================================================ */
 
 import appData from "../../data.json";
@@ -51,7 +51,7 @@ export async function onRequestGet(context) {
   /* 管理后台：不传 dan 时返回最近记录（含 id，供排行榜管理使用） */
   if (!dan) {
     const rows = await context.env.DB.prepare(
-      "SELECT id, player, dan, version, mode, criterion, value, scores, rates, created_at " +
+      "SELECT id, player_id, player, dan, version, mode, criterion, value, scores, rates, created_at " +
       "FROM leaderboard ORDER BY created_at DESC LIMIT ?"
     ).bind(limit).all();
     return json({ entries: rows.results });
@@ -74,7 +74,7 @@ export async function onRequestGet(context) {
     sql += " AND version = ?";
     binds.push(version);
   }
-  sql += " GROUP BY player ORDER BY value DESC, achieved_at ASC LIMIT ?";
+  sql += " GROUP BY player_id ORDER BY value DESC, achieved_at ASC LIMIT ?";
   binds.push(limit);
   const { results } = await context.env.DB.prepare(sql).bind(...binds).all();
 
@@ -94,6 +94,7 @@ export async function onRequestPost(context) {
   }
 
   const player = String(body.player || "").trim();
+  const playerId = String(body.playerId || "").trim() || ("legacy:" + player);
   const dan = String(body.dan || "").trim();
   const version = String(body.version || "").trim() || "默认";
   const mode = String(body.mode || "").toUpperCase();
@@ -109,6 +110,9 @@ export async function onRequestPost(context) {
 
   if (!player || player.length > NAME_MAX) {
     return json({ error: "昵称需为 1-" + NAME_MAX + " 个字符" }, 400);
+  }
+  if (!playerId || playerId.length > 64) {
+    return json({ error: "playerId 无效" }, 400);
   }
   if (!dan || !MODES.includes(mode) || !CRITERIA.includes(criterion)) {
     return json({ error: "invalid dan/mode/criterion" }, 400);
@@ -127,10 +131,10 @@ export async function onRequestPost(context) {
   }
 
   const sql =
-    "INSERT INTO leaderboard (player, dan, version, mode, criterion, value, scores, rates, passed, created_at) " +
-    "VALUES (?, ?, ?, ?, ?, ?, ?, ?, 1, datetime('now')) " +
-    "ON CONFLICT (player, dan, version, mode, criterion) DO UPDATE SET " +
-    "value = excluded.value, scores = excluded.scores, rates = excluded.rates, " +
+    "INSERT INTO leaderboard (player_id, player, dan, version, mode, criterion, value, scores, rates, passed, created_at) " +
+    "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 1, datetime('now')) " +
+    "ON CONFLICT (player_id, dan, version, mode, criterion) DO UPDATE SET " +
+    "player = excluded.player, value = excluded.value, scores = excluded.scores, rates = excluded.rates, " +
     "passed = 1, created_at = excluded.created_at " +
     "WHERE excluded.value > leaderboard.value;";
 
@@ -146,7 +150,7 @@ export async function onRequestPost(context) {
       return json({ error: "FULL COMBO 曲数不足" }, 400);
     }
     await context.env.DB.prepare(sql)
-      .bind(player, dan, version, mode, criterion, total, JSON.stringify(scores), JSON.stringify(rates))
+      .bind(playerId, player, dan, version, mode, criterion, total, JSON.stringify(scores), JSON.stringify(rates))
       .run();
     return json({ ok: true, value: total });
   }
@@ -157,7 +161,7 @@ export async function onRequestPost(context) {
       return json({ error: "未达标，无法提交" }, 400);
     }
     await context.env.DB.prepare(sql)
-      .bind(player, dan, version, mode, criterion, avg, JSON.stringify(scores), JSON.stringify(rates))
+      .bind(playerId, player, dan, version, mode, criterion, avg, JSON.stringify(scores), JSON.stringify(rates))
       .run();
     return json({ ok: true, value: avg });
   }
@@ -167,7 +171,7 @@ export async function onRequestPost(context) {
     return json({ error: "未达标，无法提交" }, 400);
   }
   await context.env.DB.prepare(sql)
-    .bind(player, dan, version, mode, criterion, rateAvg, JSON.stringify(scores), JSON.stringify(rates))
+    .bind(playerId, player, dan, version, mode, criterion, rateAvg, JSON.stringify(scores), JSON.stringify(rates))
     .run();
   return json({ ok: true, value: rateAvg });
 }

@@ -4,6 +4,7 @@
 
 CREATE TABLE IF NOT EXISTS leaderboard (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
+  player_id TEXT NOT NULL DEFAULT '',
   player TEXT NOT NULL,
   dan TEXT NOT NULL,
   version TEXT NOT NULL DEFAULT '',
@@ -16,12 +17,39 @@ CREATE TABLE IF NOT EXISTS leaderboard (
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
--- 每个玩家在（版本 × 段位 × 模式 × 过段方式）下只保留一条记录
--- 已部署过旧表的库需先执行：
---   ALTER TABLE leaderboard ADD COLUMN version TEXT NOT NULL DEFAULT '';
---   CREATE UNIQUE INDEX idx_leaderboard_player_unique ON leaderboard (player, dan, version, mode, criterion);
+-- 每个设备（player_id）在（版本 × 段位 × 模式 × 过段方式）下只保留一条记录；
+-- 改名会原地更新 player，不会产生新的榜位。
 CREATE UNIQUE INDEX IF NOT EXISTS idx_leaderboard_player_unique
-  ON leaderboard (player, dan, version, mode, criterion);
+  ON leaderboard (player_id, dan, version, mode, criterion);
 
 CREATE INDEX IF NOT EXISTS idx_leaderboard_board
   ON leaderboard (dan, version, mode, criterion, value DESC);
+
+-- ============================================================
+-- 旧库迁移（已部署过旧表的 D1 数据库，在 Console 执行一次即可）：
+-- 旧表按 player 去重；迁移后旧记录以 'legacy:' + player 作为 player_id，
+-- 新提交按浏览器设备 ID 去重。
+-- ============================================================
+-- ALTER TABLE leaderboard RENAME TO leaderboard_old;
+-- CREATE TABLE leaderboard (
+--   id INTEGER PRIMARY KEY AUTOINCREMENT,
+--   player_id TEXT NOT NULL DEFAULT '',
+--   player TEXT NOT NULL,
+--   dan TEXT NOT NULL,
+--   version TEXT NOT NULL DEFAULT '',
+--   mode TEXT NOT NULL,
+--   criterion TEXT NOT NULL,
+--   value REAL NOT NULL,
+--   scores TEXT NOT NULL,
+--   rates TEXT NOT NULL,
+--   passed INTEGER NOT NULL DEFAULT 1,
+--   created_at TEXT NOT NULL DEFAULT (datetime('now'))
+-- );
+-- INSERT INTO leaderboard (id, player_id, player, dan, version, mode, criterion, value, scores, rates, passed, created_at)
+--   SELECT id, 'legacy:' || player, player, dan, version, mode, criterion, value, scores, rates, passed, created_at
+--   FROM leaderboard_old;
+-- DROP TABLE leaderboard_old;
+-- CREATE UNIQUE INDEX idx_leaderboard_player_unique
+--   ON leaderboard (player_id, dan, version, mode, criterion);
+-- CREATE INDEX idx_leaderboard_board
+--   ON leaderboard (dan, version, mode, criterion, value DESC);

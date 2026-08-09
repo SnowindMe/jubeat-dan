@@ -1,5 +1,35 @@
 /* 排行榜 API 客户端（Cloudflare Pages Functions + D1） */
 
+const PLAYER_ID_KEY = "jubeat-dan-player-id-v1";
+
+/* 匿名设备身份：本地生成并持久化，排行榜以它为准做去重，
+ * 改名不会产生新的榜位。 */
+export function getPlayerId() {
+  try {
+    var id = localStorage.getItem(PLAYER_ID_KEY);
+    if (id) return id;
+  } catch (e) {
+    /* ignore */
+  }
+  var newId = "";
+  try {
+    if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
+      newId = crypto.randomUUID();
+    }
+  } catch (e) {
+    /* ignore */
+  }
+  if (!newId) {
+    newId = "pid-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 12);
+  }
+  try {
+    localStorage.setItem(PLAYER_ID_KEY, newId);
+  } catch (e) {
+    /* ignore */
+  }
+  return newId;
+}
+
 export const boardState = $state({
   dan: null,
   version: "",
