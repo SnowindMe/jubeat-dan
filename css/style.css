@@ -2183,3 +2183,39 @@ body {
   .modal.editor-mode .editor-panel { overflow: visible; padding-right: 0; }
   .modal.editor-mode .editor-sidebar { max-height: 30vh; }
 }
+
+/* ---------- 管理后台（/admin） ---------- */
+
+.board-manage-panel { margin-top: 18px; }
+.board-manage-panel .board-card { max-width: 900px; margin: 0 auto; }
+.board-scroll { overflow-x: auto; }
+.board-manage-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.board-manage-table th,
+.board-manage-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #DCEFFB;
+  text-align: left;
+  vertical-align: middle;
+}
+.board-manage-table th {
+  color: #6AA9D8;
+  font-weight: 700;
+  font-size: 12px;
+}
+.board-manage-table tr:last-child td { border-bottom: none; }
+.board-manage-table .btn { padding: 4px 10px; font-size: 12px; }
+.board-manage-table .btn.danger {
+  background: #FDECEC;
+  color: #D64545;
+  border-color: #F3C2C2;
+}
+.board-empty {
+  padding: 22px 14px;
+  text-align: center;
+  color: #8FB8DC;
+}

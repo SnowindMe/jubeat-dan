@@ -1,6 +1,11 @@
 (function () {
   "use strict";
 
+  var PAGE_ADMIN = false;
+  try {
+    PAGE_ADMIN = !!(document.body && document.body.dataset && document.body.dataset.page === "admin");
+  } catch (e) { /* ignore */ }
+
   var SITE_INFO = null;
   var APP_CONFIG = null;
   var DAN_DATA = null;
@@ -1377,6 +1382,7 @@
   /* ---------- admin ---------- */
 
   var ADMIN_KEY = "jubeat-dan-admin-session";
+  var ADMIN_PASS_KEY = "jubeat-dan-admin-pass";
 
   function adminConfig() {
     return (CONFIG && CONFIG.admin) ? CONFIG.admin : null;
@@ -1452,9 +1458,10 @@
         }
         try {
           sessionStorage.setItem(ADMIN_KEY, "1");
+          sessionStorage.setItem(ADMIN_PASS_KEY, pass);
         } catch (e) { /* ignore */ }
         closeModal();
-        openEditorModal();
+        adminReady();
       });
     };
     card.querySelector("#adminSubmit").addEventListener("click", submit);
@@ -1462,6 +1469,114 @@
       if (ev.key === "Enter") submit();
     });
     return card;
+  }
+
+  /* ---------- 管理后台（/admin） ---------- */
+
+  var adminPending = "editor";
+
+  function adminReady() {
+    if (PAGE_ADMIN && adminPending === "board") {
+      openBoardManage();
+    } else {
+      openEditorModal();
+    }
+  }
+
+  function getAdminPass() {
+    try {
+      return sessionStorage.getItem(ADMIN_PASS_KEY) || "";
+    } catch (e) {
+      return "";
+    }
+  }
+
+  function openBoardManage() {
+    var panel = document.getElementById("adminBoardPanel");
+    if (!panel) return;
+    panel.hidden = false;
+    if (panel.scrollIntoView) panel.scrollIntoView({ behavior: "smooth", block: "start" });
+    loadBoardManage();
+  }
+
+  function loadBoardManage() {
+    var body = document.getElementById("boardManageBody");
+    if (!body) return;
+    var note = document.getElementById("boardManageNote");
+    body.innerHTML = '<div class="board-loading">加载中…</div>';
+    if (note) note.textContent = "";
+    fetch("/api/leaderboard?limit=100")
+      .then(function (res) {
+        return res.json().then(function (j) { return { res: res, json: j }; });
+      })
+      .then(function (r) {
+        if (!r.res.ok) throw new Error((r.json && r.json.error) || ("HTTP " + r.res.status));
+        renderBoardManage(r.json.entries || []);
+      })
+      .catch(function (err) {
+        body.innerHTML = '<div class="board-empty">加载失败：' + esc(err.message) + "</div>";
+        if (note) note.textContent = "排行榜服务未连接（需部署 Cloudflare Pages Functions）。";
+      });
+  }
+
+  function renderBoardManage(entries) {
+    var body = document.getElementById("boardManageBody");
+    if (!body) return;
+    if (!entries.length) {
+      body.innerHTML = '<div class="board-empty">暂无排行榜记录。</div>';
+      return;
+    }
+    var criterionLabel = { score: "总分数", avg: "平均分", rate: "music rate" };
+    var rows = entries.map(function (e) {
+      var valueTxt = e.criterion === "rate"
+        ? Number(e.value).toFixed(1) + "%"
+        : Math.round(Number(e.value)).toLocaleString("zh-CN");
+      return "<tr>" +
+        "<td>" + esc(e.player) + "</td>" +
+        "<td>" + esc((e.version || "") + " · " + e.dan) + "</td>" +
+        "<td>" + esc(e.mode) + "</td>" +
+        "<td>" + esc(criterionLabel[e.criterion] || e.criterion) + "</td>" +
+        "<td>" + valueTxt + "</td>" +
+        "<td>" + esc(String(e.created_at || "").replace("T", " ").slice(0, 19)) + "</td>" +
+        '<td><button type="button" class="btn danger" data-del="' + Number(e.id) + '">删除</button></td>' +
+        "</tr>";
+    }).join("");
+    body.innerHTML =
+      '<div class="board-scroll"><table class="board-manage-table">' +
+      "<thead><tr><th>玩家</th><th>段位</th><th>模式</th><th>依据</th><th>成绩</th><th>时间</th><th></th></tr></thead>" +
+      "<tbody>" + rows + "</tbody></table></div>";
+    body.querySelectorAll("[data-del]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        deleteBoardEntry(Number(btn.getAttribute("data-del")));
+      });
+    });
+  }
+
+  function deleteBoardEntry(id) {
+    if (!window.confirm("确定删除这条排行榜记录？此操作不可撤销。")) return;
+    fetch("/api/leaderboard", {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id: id, adminPass: getAdminPass() })
+    })
+      .then(function (res) {
+        return res.json().then(function (j) { return { status: res.status, json: j }; });
+      })
+      .then(function (r) {
+        if (!r.json.ok) {
+          if (r.status === 401) {
+            alert("管理员验证失败，请重新验证密码");
+            try { sessionStorage.removeItem(ADMIN_KEY); } catch (e) { /* ignore */ }
+            adminPending = "board";
+            openAdminLogin();
+            return;
+          }
+          alert(r.json.error || "删除失败");
+          return;
+        }
+        loadBoardManage();
+      })
+      .catch(function () { alert("删除失败：网络错误"); });
   }
 
   /* ---------- login ---------- */
@@ -2587,60 +2702,7 @@
 
   /* ---------- boot ---------- */
 
-  function init() {
-    var gridBg = document.getElementById("gridBg");
-    gridBg.innerHTML = Array.from({ length: 16 }, function () { return "<i></i>"; }).join("");
-    initDecorations();
-
-    document.querySelectorAll(".filters .chip").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        activeFilter = btn.dataset.filter;
-        document.querySelectorAll(".filters .chip").forEach(function (b) {
-          b.classList.toggle("active", b === btn);
-        });
-        render();
-      });
-    });
-
-    document.getElementById("exportBtn").addEventListener("click", exportData);
-    document.getElementById("importFile").addEventListener("change", function (ev) {
-      if (ev.target.files && ev.target.files[0]) importData(ev.target.files[0]);
-      ev.target.value = "";
-    });
-    document.getElementById("resetBtn").addEventListener("click", resetAll);
-    document.getElementById("manageBtn").addEventListener("click", function () {
-      if (!adminLocked() || isAdminAuthed()) {
-        openEditorModal();
-      } else {
-        openAdminLogin();
-      }
-    });
-    document.getElementById("boardBtn").addEventListener("click", openLeaderboardModal);
-    document.getElementById("loginBtn").addEventListener("click", openLoginModal);
-    updatePlayerButton();
-
-    var settingsBtn = document.getElementById("settingsBtn");
-    var settingsDropdown = document.getElementById("settingsDropdown");
-    if (settingsBtn && settingsDropdown) {
-      settingsBtn.addEventListener("click", function (ev) {
-        ev.stopPropagation();
-        var open = settingsDropdown.classList.toggle("open");
-        settingsBtn.setAttribute("aria-expanded", open ? "true" : "false");
-      });
-      settingsDropdown.addEventListener("click", function (ev) {
-        if (ev.target.closest && ev.target.closest(".dropdown-item")) {
-          settingsDropdown.classList.remove("open");
-          settingsBtn.setAttribute("aria-expanded", "false");
-        }
-      });
-      document.addEventListener("click", function (ev) {
-        if (!settingsDropdown.contains(ev.target)) {
-          settingsDropdown.classList.remove("open");
-          settingsBtn.setAttribute("aria-expanded", "false");
-        }
-      });
-    }
-
+  function wireModalCommon() {
     document.getElementById("modalClose").addEventListener("click", closeModal);
     var backdrop = document.getElementById("danModal");
     backdrop.addEventListener("click", function (ev) {
@@ -2673,6 +2735,93 @@
         }
       }
     });
+  }
+
+  function initAdminPage() {
+    var gridBg = document.getElementById("gridBg");
+    if (gridBg) gridBg.innerHTML = Array.from({ length: 16 }, function () { return "<i></i>"; }).join("");
+    initDecorations();
+    wireModalCommon();
+
+    var manageBtn = document.getElementById("adminManageBtn");
+    if (manageBtn) {
+      manageBtn.addEventListener("click", function () {
+        if (!adminLocked() || isAdminAuthed()) {
+          openEditorModal();
+        } else {
+          adminPending = "editor";
+          openAdminLogin();
+        }
+      });
+    }
+    var boardBtn = document.getElementById("adminBoardBtn");
+    if (boardBtn) {
+      boardBtn.addEventListener("click", function () {
+        if (!adminLocked() || isAdminAuthed()) {
+          openBoardManage();
+        } else {
+          adminPending = "board";
+          openAdminLogin();
+        }
+      });
+    }
+    var refreshBtn = document.getElementById("boardManageRefresh");
+    if (refreshBtn) refreshBtn.addEventListener("click", loadBoardManage);
+  }
+
+  function init() {
+    if (PAGE_ADMIN) {
+      initAdminPage();
+      return;
+    }
+
+    var gridBg = document.getElementById("gridBg");
+    gridBg.innerHTML = Array.from({ length: 16 }, function () { return "<i></i>"; }).join("");
+    initDecorations();
+
+    document.querySelectorAll(".filters .chip").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        activeFilter = btn.dataset.filter;
+        document.querySelectorAll(".filters .chip").forEach(function (b) {
+          b.classList.toggle("active", b === btn);
+        });
+        render();
+      });
+    });
+
+    document.getElementById("exportBtn").addEventListener("click", exportData);
+    document.getElementById("importFile").addEventListener("change", function (ev) {
+      if (ev.target.files && ev.target.files[0]) importData(ev.target.files[0]);
+      ev.target.value = "";
+    });
+    document.getElementById("resetBtn").addEventListener("click", resetAll);
+    document.getElementById("boardBtn").addEventListener("click", openLeaderboardModal);
+    document.getElementById("loginBtn").addEventListener("click", openLoginModal);
+    updatePlayerButton();
+
+    var settingsBtn = document.getElementById("settingsBtn");
+    var settingsDropdown = document.getElementById("settingsDropdown");
+    if (settingsBtn && settingsDropdown) {
+      settingsBtn.addEventListener("click", function (ev) {
+        ev.stopPropagation();
+        var open = settingsDropdown.classList.toggle("open");
+        settingsBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      settingsDropdown.addEventListener("click", function (ev) {
+        if (ev.target.closest && ev.target.closest(".dropdown-item")) {
+          settingsDropdown.classList.remove("open");
+          settingsBtn.setAttribute("aria-expanded", "false");
+        }
+      });
+      document.addEventListener("click", function (ev) {
+        if (!settingsDropdown.contains(ev.target)) {
+          settingsDropdown.classList.remove("open");
+          settingsBtn.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+
+    wireModalCommon();
 
     render();
   }
@@ -2693,8 +2842,16 @@
     if (window.SITE_INFO && window.APP_CONFIG && window.DAN_DATA) {
       applyData(window.SITE_INFO, window.APP_CONFIG, window.DAN_DATA);
     } else {
-      document.getElementById("danFolders").innerHTML =
-        '<div class="notice">数据加载失败：找不到 data.json，也没有可用的兜底数据。</div>';
+      var foldersEl = document.getElementById("danFolders");
+      if (foldersEl) {
+        foldersEl.innerHTML =
+          '<div class="notice">数据加载失败：找不到 data.json，也没有可用的兜底数据。</div>';
+      } else if (PAGE_ADMIN) {
+        var bodyEl = document.getElementById("boardManageBody");
+        if (bodyEl) {
+          bodyEl.innerHTML = '<div class="board-empty">数据加载失败：找不到 data.json。</div>';
+        }
+      }
     }
   }
 

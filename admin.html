@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>管理后台 · JUBEAT 段位挑战</title>
+  <link rel="icon" type="image/png" href="assets/jubeat-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="admin">
+
+  <div class="candy-field" aria-hidden="true"></div>
+
+  <header class="hero">
+    <div class="grid-bg" id="gridBg" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="logo">
+        <img class="logo-img" src="assets/jubeat-icon.png" alt="jubeat">
+        <div class="logo-text">
+          <h1>管理后台</h1>
+          <p class="subtitle">段位管理 · 排行榜管理</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="toolbar">
+      <div class="actions">
+        <button class="btn" id="adminManageBtn" title="管理员：增删段位、编辑曲目">✏️ 段位管理</button>
+        <button class="btn" id="adminBoardBtn" title="管理员：查看并管理排行榜记录">🏆 排行榜管理</button>
+        <a class="btn" href="./">← 返回主页</a>
+      </div>
+    </div>
+
+    <section id="adminBoardPanel" class="board-manage-panel" hidden>
+      <div class="board-card">
+        <div class="card-head">
+          <span class="rank-badge">🏆 排行榜管理</span>
+        </div>
+        <div class="board-controls">
+          <button class="btn primary" id="boardManageRefresh">刷新</button>
+        </div>
+        <div class="board-body" id="boardManageBody"><div class="board-loading">加载中…</div></div>
+        <div class="board-note" id="boardManageNote"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="danModal">
+    <div class="modal" role="dialog" aria-modal="true" aria-label="管理">
+      <button class="modal-close" id="modalClose" aria-label="关闭" type="button">×</button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p class="dim">非官方站点，与 KONAMI 无关 · 曲目信息请以机台实际为准</p>
+  </footer>
+
+  <script src="vendor/canvas-confetti.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

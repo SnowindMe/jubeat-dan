@@ -4,6 +4,19 @@
  * POST /api/leaderboard  { player, dan, version, mode, criterion, scores, rates, passTotal, passRate }
  * ============================================================ */
 
+import appData from "../../data.json";
+
+const ADMIN_PASS_HASH = String(
+  (appData && appData.config && appData.config.admin && appData.config.admin.passHash) || ""
+);
+
+async function sha256Hex(str) {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(function (b) {
+    return ("0" + b.toString(16)).slice(-2);
+  }).join("");
+}
+
 const MODES = ["EASY", "NORMAL", "HARD"];
 const CRITERIA = ["score", "rate", "avg"];
 const SCORE_MAX = 1000000;
@@ -32,13 +45,24 @@ function validNumberArray(arr, min, max) {
 export async function onRequestGet(context) {
   const url = new URL(context.request.url);
   const dan = (url.searchParams.get("dan") || "").trim();
+  const rawLimit = parseInt(url.searchParams.get("limit"), 10);
+  const limit = Math.min(Math.max(rawLimit || LIMIT_DEFAULT, 1), LIMIT_MAX);
+
+  /* 管理后台：不传 dan 时返回最近记录（含 id，供排行榜管理使用） */
+  if (!dan) {
+    const rows = await context.env.DB.prepare(
+      "SELECT id, player, dan, version, mode, criterion, value, scores, rates, created_at " +
+      "FROM leaderboard ORDER BY created_at DESC LIMIT ?"
+    ).bind(limit).all();
+    return json({ entries: rows.results });
+  }
+
   const version = (url.searchParams.get("version") || "").trim();
   const mode = (url.searchParams.get("mode") || "NORMAL").toUpperCase();
   const rawCriterion = url.searchParams.get("criterion");
   const criterion = rawCriterion === "rate" ? "rate" : (rawCriterion === "avg" ? "avg" : "score");
-  const limit = Math.min(Math.max(parseInt(url.searchParams.get("limit"), 10) || LIMIT_DEFAULT, 1), LIMIT_MAX);
 
-  if (!dan || !MODES.includes(mode) || !CRITERIA.includes(criterion)) {
+  if (!MODES.includes(mode) || !CRITERIA.includes(criterion)) {
     return json({ error: "invalid params" }, 400);
   }
 
@@ -146,4 +170,24 @@ export async function onRequestPost(context) {
     .bind(player, dan, version, mode, criterion, rateAvg, JSON.stringify(scores), JSON.stringify(rates))
     .run();
   return json({ ok: true, value: rateAvg });
+}
+
+export async function onRequestDelete(context) {
+  let body;
+  try {
+    body = await context.request.json();
+  } catch (e) {
+    return json({ error: "invalid json" }, 400);
+  }
+  const id = Number(body.id);
+  const pass = String(body.adminPass || "");
+  if (!Number.isInteger(id) || id <= 0) {
+    return json({ error: "invalid id" }, 400);
+  }
+  const hash = await sha256Hex(pass);
+  if (ADMIN_PASS_HASH && hash !== ADMIN_PASS_HASH.toLowerCase()) {
+    return json({ error: "管理员验证失败" }, 401);
+  }
+  const result = await context.env.DB.prepare("DELETE FROM leaderboard WHERE id = ?").bind(id).run();
+  return json({ ok: true, deleted: result.meta.changes });
 }
