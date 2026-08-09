@@ -1,0 +1,2866 @@
+{
+ "site": {
+  "versionLabel": "段位数据（festo / clan / jubeat prop）",
+  "note": "festo 段位来自 bemaniwiki TUNE RUN（初段～十段 / 皆伝 / 指神）；clan 为 NOBOLOT 検定（第1の山～英雄の山 共 12 门，3 曲制，登顶条件见各段位）；prop 课程来自 bemaniwiki COURSE MODE（Lv1～Lv10 共 33 个课程，5 曲制，BRONZE/SILVER/GOLD 条件）。"
+ },
+ "config": {
+  "storageKey": "jubeat-dan-progress-v1",
+  "scoreMax": 1000000,
+  "pass": {
+   "total": 2100000,
+   "rate": 85
+  },
+  "admin": {
+   "passHash": "aaffebecec560fec66e75f24062224ffa4e07696d2ae9a1fee3707c3f8fd9373"
+  }
+ },
+ "dans": [
+  {
+   "name": "初段",
+   "color": "#4FC3F7",
+   "songs": [
+    {
+     "title": "空色デイズ",
+     "level": 3,
+     "diff": "bsc",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/0/05/Sorairo_days.png/300px-Sorairo_days.png"
+    },
+    {
+     "title": "エイリアンエイリアン",
+     "level": 3,
+     "diff": "bsc",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/0/06/Alien_alien.png/300px-Alien_alien.png"
+    },
+    {
+     "title": "ULTRA HAPPY MEGAMIX",
+     "level": 3,
+     "diff": "bsc",
+     "mode": "normal",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/5/54/ULTRA_HAPPY_MEGAMIX.png/300px-ULTRA_HAPPY_MEGAMIX.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2100000,
+   "id": "festo-1",
+   "version": "festo",
+   "mode": "normal",
+   "songMin": 700000
+  },
+  {
+   "name": "二段",
+   "color": "#38B6F2",
+   "songs": [
+    {
+     "title": "ロストワンの号哭",
+     "level": 4,
+     "diff": "bsc",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/f/fe/Lost_one_no_goukoku.png/300px-Lost_one_no_goukoku.png"
+    },
+    {
+     "title": "厳冬記",
+     "level": 4,
+     "diff": "bsc",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/6/6a/NH-STYLE_2_album.png/300px-NH-STYLE_2_album.png"
+    },
+    {
+     "title": "チョコレートスマイル",
+     "level": 5,
+     "diff": "bsc",
+     "mode": "normal",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/9/95/Chocolate_smile.png/300px-Chocolate_smile.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2400000,
+   "id": "festo-2",
+   "version": "festo",
+   "mode": "normal",
+   "songMin": 800000
+  },
+  {
+   "name": "三段",
+   "color": "#2FA8F0",
+   "songs": [
+    {
+     "title": "高嶺の花子さん",
+     "level": 5,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/7/75/Takane_no_Hanako-san.png/300px-Takane_no_Hanako-san.png"
+    },
+    {
+     "title": "向日葵サンセット",
+     "level": 6,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/1/17/Cirno_no_perfect_sansuu_kyoushitsu_9_shuunen_version.png/300px-Cirno_no_perfect_sansuu_kyoushitsu_9_shuunen_version.png"
+    },
+    {
+     "title": "アルストロメリア",
+     "level": 6,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/e/e0/Alstroemeria.png/300px-Alstroemeria.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2550000,
+   "id": "festo-3",
+   "version": "festo",
+   "mode": "normal",
+   "songMin": 850000
+  },
+  {
+   "name": "四段",
+   "color": "#2E8BF0",
+   "songs": [
+    {
+     "title": "記憶の欠片",
+     "level": 7,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/a/a3/Kioku_no_kakera.png/300px-Kioku_no_kakera.png"
+    },
+    {
+     "title": "リメンバーリメンバー",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/f/f9/Remember_remember.png/300px-Remember_remember.png"
+    },
+    {
+     "title": "ロンロンへ ライライライ！",
+     "level": 9,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/b/b1/Ronron_e_rairairai%21.png/300px-Ronron_e_rairairai%21.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2600000,
+   "id": "festo-4",
+   "version": "festo",
+   "mode": "normal",
+   "songMin": 850000
+  },
+  {
+   "name": "五段",
+   "color": "#3B72F5",
+   "songs": [
+    {
+     "title": "都会征服Girls☆",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/d/d8/Tokai_seifuku_Girls.png/300px-Tokai_seifuku_Girls.png"
+    },
+    {
+     "title": "キモチコネクト",
+     "level": 9.3,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/8/8d/Kimochi_connect.png/300px-Kimochi_connect.png"
+    },
+    {
+     "title": "隅田川夏恋歌",
+     "level": 9.8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/c/c5/Sumidagawa_karenka.png/300px-Sumidagawa_karenka.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2650000,
+   "id": "festo-5",
+   "version": "festo",
+   "mode": "normal"
+  },
+  {
+   "name": "六段",
+   "color": "#5B62F4",
+   "songs": [
+    {
+     "title": "SHION",
+     "level": 9.3,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/5/51/SHION.png/300px-SHION.png"
+    },
+    {
+     "title": "Gimme a Big Beat",
+     "level": 9.5,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/0/0e/Gimme_a_Big_Beat.png/300px-Gimme_a_Big_Beat.png"
+    },
+    {
+     "title": "I'm so Happy",
+     "level": 10.2,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/f/f9/I%27m_so_Happy.PNG/300px-I%27m_so_Happy.PNG"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2750000,
+   "id": "festo-6",
+   "version": "festo",
+   "mode": "normal"
+  },
+  {
+   "name": "七段",
+   "color": "#7C58F0",
+   "songs": [
+    {
+     "title": "天嘩乱舞",
+     "level": 10,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/6/62/Tenkaranbu.png/300px-Tenkaranbu.png"
+    },
+    {
+     "title": "True Blue",
+     "level": 10.2,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/3/3a/True_Blue.png/300px-True_Blue.png"
+    },
+    {
+     "title": "Singularity",
+     "level": 10.5,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/d/d0/Singularity.png/300px-Singularity.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2800000,
+   "id": "festo-7",
+   "version": "festo",
+   "mode": "normal"
+  },
+  {
+   "name": "八段",
+   "color": "#9A56EC",
+   "songs": [
+    {
+     "title": "Dragon Blade",
+     "level": 10.4,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/e/e9/Dragon_Blade_jubeat.png/300px-Dragon_Blade_jubeat.png"
+    },
+    {
+     "title": "ZZ",
+     "level": 10.5,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/d/d3/ZZ.png/300px-ZZ.png"
+    },
+    {
+     "title": "Roll the Dice",
+     "level": 10.6,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/b/b0/Roll_the_Dice.png/300px-Roll_the_Dice.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2820000,
+   "id": "festo-8",
+   "version": "festo",
+   "mode": "normal"
+  },
+  {
+   "name": "九段",
+   "color": "#B45AEA",
+   "songs": [
+    {
+     "title": "アストライアの双皿",
+     "level": 10.5,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/9/9b/Astraia_no_soubei.png/300px-Astraia_no_soubei.png"
+    },
+    {
+     "title": "Our Faith",
+     "level": 10.6,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/ca/Our_Faith.png/300px-Our_Faith.png"
+    },
+    {
+     "title": "Crack Traxxxx",
+     "level": 10.6,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/6/6d/Crack_Traxxxx.png/300px-Crack_Traxxxx.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2830000,
+   "id": "festo-9",
+   "version": "festo",
+   "mode": "normal"
+  },
+  {
+   "name": "十段",
+   "color": "#CF5CE8",
+   "songs": [
+    {
+     "title": "Macuilxochitl",
+     "level": 10.3,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/b/b5/Macuilxochitl.png/300px-Macuilxochitl.png"
+    },
+    {
+     "title": "Red Goose",
+     "level": 10.5,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/c5/Red_Goose.png/300px-Red_Goose.png"
+    },
+    {
+     "title": "Elemental Creation",
+     "level": 10.6,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/4/44/Elemental_Creation.png/300px-Elemental_Creation.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2820000,
+   "id": "festo-10",
+   "version": "festo",
+   "mode": "hard"
+  },
+  {
+   "name": "皆伝",
+   "color": "#E056D4",
+   "songs": [
+    {
+     "title": "ROCK ju",
+     "level": 10.6,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/9/9e/ROCK_ju.png/300px-ROCK_ju.png"
+    },
+    {
+     "title": "Everybody's Rich",
+     "level": 10.6,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/4/4e/Everybody%27s_Rich.png/300px-Everybody%27s_Rich.png"
+    },
+    {
+     "title": "Confiserie",
+     "level": 10.7,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/8/8d/Confiserie.png/300px-Confiserie.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2850000,
+   "id": "festo-11",
+   "version": "festo",
+   "mode": "hard"
+  },
+  {
+   "name": "指神",
+   "color": "#F04A9E",
+   "songs": [
+    {
+     "title": "StrayedCatz",
+     "level": 10.6,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/5/59/StrayedCatz.png/300px-StrayedCatz.png"
+    },
+    {
+     "title": "Last Dress",
+     "level": 10.7,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/3/39/Last_Dress.png/300px-Last_Dress.png"
+    },
+    {
+     "title": "Megalara Garuda",
+     "level": 10.7,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/5/52/Megalara_Garuda.png/300px-Megalara_Garuda.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2980000,
+   "id": "festo-12",
+   "version": "festo",
+   "mode": "hard"
+  },
+  {
+   "name": "NOBOLOT検定 第1の山",
+   "color": "#4FC3F7",
+   "songs": [
+    {
+     "title": "Share The World",
+     "level": 3,
+     "diff": "bsc",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/e/ef/Share_The_World.png/300px-Share_The_World.png"
+    },
+    {
+     "title": "セツナトリップ",
+     "level": 3,
+     "diff": "bsc",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/6/6e/Setsuna_trip.png/300px-Setsuna_trip.png"
+    },
+    {
+     "title": "Giant Otter Family",
+     "level": 3,
+     "diff": "bsc",
+     "mode": "normal",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/0/0e/Giant_Otter_Family.png/300px-Giant_Otter_Family.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2100000,
+   "id": "clan-1",
+   "version": "clan",
+   "lv": 1,
+   "mode": "normal",
+   "songMin": 700000
+  },
+  {
+   "name": "NOBOLOT検定 第2の山",
+   "color": "#38B6F2",
+   "songs": [
+    {
+     "title": "ロストワンの号哭",
+     "level": 4,
+     "diff": "bsc",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/f/fe/Lost_one_no_goukoku.png/300px-Lost_one_no_goukoku.png"
+    },
+    {
+     "title": "Bad Apple!!",
+     "level": 2,
+     "diff": "bsc",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/0/07/Bad_Apple%21%21_feat._nomico.png/300px-Bad_Apple%21%21_feat._nomico.png"
+    },
+    {
+     "title": "チョコレートスマイル",
+     "level": 5,
+     "diff": "bsc",
+     "mode": "normal",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/9/95/Chocolate_smile.png/300px-Chocolate_smile.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2400000,
+   "id": "clan-2",
+   "version": "clan",
+   "lv": 3,
+   "mode": "normal",
+   "songMin": 800000
+  },
+  {
+   "name": "NOBOLOT検定 第3の山",
+   "color": "#2FA8F0",
+   "songs": [
+    {
+     "title": "PONPONPON",
+     "level": 5,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/f/fb/PONPONPON.png/300px-PONPONPON.png"
+    },
+    {
+     "title": "only my railgun",
+     "level": 6,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/9/90/Only_my_railgun.png/300px-Only_my_railgun.png"
+    },
+    {
+     "title": "アルストロメリア",
+     "level": 6,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/e/e0/Alstroemeria.png/300px-Alstroemeria.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2550000,
+   "id": "clan-3",
+   "version": "clan",
+   "lv": 4,
+   "mode": "normal",
+   "songMin": 850000
+  },
+  {
+   "name": "NOBOLOT検定 第4の山",
+   "color": "#2E8BF0",
+   "songs": [
+    {
+     "title": "記憶の欠片",
+     "level": 7,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/a/a3/Kioku_no_kakera.png/300px-Kioku_no_kakera.png"
+    },
+    {
+     "title": "le mirage",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/2/24/Le_mirage.png/300px-Le_mirage.png"
+    },
+    {
+     "title": "凛として咲く花の如く",
+     "level": 9.1,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/d/d4/Jubeat_Rin_to_shite_saku_hana_no_gotoku.PNG/300px-Jubeat_Rin_to_shite_saku_hana_no_gotoku.PNG"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2650000,
+   "id": "clan-4",
+   "version": "clan",
+   "lv": 6,
+   "mode": "normal"
+  },
+  {
+   "name": "NOBOLOT検定 第5の山",
+   "color": "#3B72F5",
+   "songs": [
+    {
+     "title": "天ノ弱",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/cd/Amanojaku_NOV.png/300px-Amanojaku_NOV.png"
+    },
+    {
+     "title": "キモチコネクト",
+     "level": 9.3,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/8/8d/Kimochi_connect.png/300px-Kimochi_connect.png"
+    },
+    {
+     "title": "隅田川夏恋歌",
+     "level": 9.8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/c/c5/Sumidagawa_karenka.png/300px-Sumidagawa_karenka.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2650000,
+   "id": "clan-5",
+   "version": "clan",
+   "lv": 7,
+   "mode": "normal"
+  },
+  {
+   "name": "NOBOLOT検定 第6の山",
+   "color": "#5B62F4",
+   "songs": [
+    {
+     "title": "Amalgamation",
+     "level": 9.1,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/ca/Amalgamation.png/300px-Amalgamation.png"
+    },
+    {
+     "title": "Knell",
+     "level": 9.5,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/3/37/Knell.png/300px-Knell.png"
+    },
+    {
+     "title": "True Blue",
+     "level": 10.2,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/3/3a/True_Blue.png/300px-True_Blue.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2750000,
+   "id": "clan-6",
+   "version": "clan",
+   "lv": 9,
+   "mode": "normal"
+  },
+  {
+   "name": "NOBOLOT検定 第7の山",
+   "color": "#7C58F0",
+   "songs": [
+    {
+     "title": "パ→ピ→プ→Yeah!",
+     "level": 10.1,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/9/91/Pa-Pi-Pu-Yeah%21_EXH.png/300px-Pa-Pi-Pu-Yeah%21_EXH.png"
+    },
+    {
+     "title": "Daily Lunch Special",
+     "level": 10.3,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/d/d3/Daily_Lunch_Special.png/300px-Daily_Lunch_Special.png"
+    },
+    {
+     "title": "Sacrifice for Justice",
+     "level": 10.3,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/b/b4/Sacrifice_for_Justice.png/300px-Sacrifice_for_Justice.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2800000,
+   "id": "clan-7",
+   "version": "clan",
+   "lv": 10,
+   "mode": "normal"
+  },
+  {
+   "name": "NOBOLOT検定 第8の山",
+   "color": "#9A56EC",
+   "songs": [
+    {
+     "title": "Our Faith",
+     "level": 10.6,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/ca/Our_Faith.png/300px-Our_Faith.png"
+    },
+    {
+     "title": "ラクガキスト",
+     "level": 10.4,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/5/57/Luckgakist_NOV.png/300px-Luckgakist_NOV.png"
+    },
+    {
+     "title": "天空の華",
+     "level": 10.6,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/1/1d/Tenkuu_no_hana.png/300px-Tenkuu_no_hana.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2820000,
+   "id": "clan-8",
+   "version": "clan",
+   "lv": 12,
+   "mode": "normal"
+  },
+  {
+   "name": "NOBOLOT検定 第9の山",
+   "color": "#B45AEA",
+   "songs": [
+    {
+     "title": "Vermilion",
+     "level": 10.4,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/e/e8/Vermilion.png/300px-Vermilion.png"
+    },
+    {
+     "title": "アストライアの双皿",
+     "level": 10.5,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/9/9b/Astraia_no_soubei.png/300px-Astraia_no_soubei.png"
+    },
+    {
+     "title": "ドーパミン",
+     "level": 10.7,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/b/b0/Dopamine.png/300px-Dopamine.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2830000,
+   "id": "clan-9",
+   "version": "clan",
+   "lv": 13,
+   "mode": "normal"
+  },
+  {
+   "name": "NOBOLOT検定 第10の山",
+   "color": "#CF5CE8",
+   "songs": [
+    {
+     "title": "TSAR BOMBA",
+     "level": 10.4,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/c5/TSAR_BOMBA.png/300px-TSAR_BOMBA.png"
+    },
+    {
+     "title": "Red Goose",
+     "level": 10.5,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/c5/Red_Goose.png/300px-Red_Goose.png"
+    },
+    {
+     "title": "Elemental Creation",
+     "level": 10.6,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/4/44/Elemental_Creation.png/300px-Elemental_Creation.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2820000,
+   "id": "clan-10",
+   "version": "clan",
+   "lv": 14,
+   "mode": "hard"
+  },
+  {
+   "name": "【挑戦】NOBOLOT検定 神の山",
+   "color": "#E056D4",
+   "songs": [
+    {
+     "title": "量子の海のリントヴルム",
+     "level": 10.5,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/1/1c/Ryoushi_no_umi_no_Lindwurm.png/300px-Ryoushi_no_umi_no_Lindwurm.png"
+    },
+    {
+     "title": "霖が哭く",
+     "level": 10.5,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/f/f5/Rin_ga_naku.png/300px-Rin_ga_naku.png"
+    },
+    {
+     "title": "Confiserie",
+     "level": 10.7,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/8/8d/Confiserie.png/300px-Confiserie.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2850000,
+   "id": "clan-11",
+   "version": "clan",
+   "lv": 15,
+   "mode": "hard"
+  },
+  {
+   "name": "【挑戦】NOBOLOT検定 英雄の山",
+   "color": "#F04A9E",
+   "songs": [
+    {
+     "title": "Sol Cosine Job 2",
+     "level": 10.7,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/b/bc/Sol_Cosine_Job_2.png/300px-Sol_Cosine_Job_2.png"
+    },
+    {
+     "title": "Megalara Garuda",
+     "level": 10.7,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/5/52/Megalara_Garuda.png/300px-Megalara_Garuda.png"
+    },
+    {
+     "title": "Stand Alone Beat Masta",
+     "level": 10.8,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": true,
+     "image": "https://remywiki.com/images/thumb/7/71/Stand_Alone_Beat_Masta.png/300px-Stand_Alone_Beat_Masta.png"
+    }
+   ],
+   "criterion": "score",
+   "passTotal": 2980000,
+   "id": "clan-12",
+   "version": "clan",
+   "lv": 16,
+   "mode": "hard"
+  },
+  {
+   "name": "溢れ出した記憶、特別なあなたにありがとう。",
+   "color": "#4FC3F7",
+   "songs": [
+    {
+     "title": "Show up! - short ver -",
+     "level": 7,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/a/a2/Show_up_%21_-_short_ver_-.png/300px-Show_up_%21_-_short_ver_-.png"
+    },
+    {
+     "title": "Special One",
+     "level": 6,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/b/b7/Special_One.png/300px-Special_One.png"
+    },
+    {
+     "title": "fellow",
+     "level": 7,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/0/0d/Fellow.png/300px-Fellow.png"
+    },
+    {
+     "title": "記憶の欠片",
+     "level": 7,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/a/a3/Kioku_no_kakera.png/300px-Kioku_no_kakera.png"
+    },
+    {
+     "title": "とってもとっても、ありがとう。",
+     "level": 6,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/b/bf/Tottemo_tottemo%2C_arigatou.png/300px-Tottemo_tottemo%2C_arigatou.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 850000,
+    "silver": 900000,
+    "gold": 950000
+   },
+   "medalBasis": "avg",
+   "id": "prop-1",
+   "version": "jubeat prop",
+   "lv": 1,
+   "mode": "normal",
+   "note": "FC 需求：SILVER 1 曲、GOLD 2 曲（打歌时点每首右侧的 FC 按钮记录）",
+   "passAvg": 850000,
+   "needFc": 0
+  },
+  {
+   "name": "コースモードが怖い？ばっかお前TAGがついてるだろ",
+   "color": "#4FC3F7",
+   "songs": [
+    {
+     "title": "この青空の下で",
+     "level": 7,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/0/00/Kono_aozora_no_shita_de.png/300px-Kono_aozora_no_shita_de.png"
+    },
+    {
+     "title": "Theory of Eternity",
+     "level": 8,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/6/63/Theory_of_Eternity_jubeat.png/300px-Theory_of_Eternity_jubeat.png"
+    },
+    {
+     "title": "Riot of Color",
+     "level": 8,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/5/5e/Riot_of_Color.png/300px-Riot_of_Color.png"
+    },
+    {
+     "title": "Chronos",
+     "level": 8,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/9/94/Chronos.png/300px-Chronos.png"
+    },
+    {
+     "title": "アルストロメリア",
+     "level": 9.5,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/e/e0/Alstroemeria.png/300px-Alstroemeria.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 800000,
+    "silver": 850000,
+    "gold": 900000
+   },
+   "medalBasis": "avg",
+   "id": "prop-2",
+   "version": "jubeat prop",
+   "lv": 1,
+   "mode": "normal",
+   "note": "FC 需求：SILVER 1 曲、GOLD 2 曲（打歌时点每首右侧的 FC 按钮记录）",
+   "passAvg": 800000,
+   "needFc": 0
+  },
+  {
+   "name": "満月の鐘踊り響くは虚空から成る恋の歌",
+   "color": "#38B6F2",
+   "songs": [
+    {
+     "title": "cloche",
+     "level": 7,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/c0/Cloche.png/300px-Cloche.png"
+    },
+    {
+     "title": "虚空と光明のディスクール",
+     "level": 7,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/a/a8/Kokuu_to_koumyou_no_discourse.png/300px-Kokuu_to_koumyou_no_discourse.png"
+    },
+    {
+     "title": "STREET DANCER",
+     "level": 7,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/8/89/STREET_DANCER.png/300px-STREET_DANCER.png"
+    },
+    {
+     "title": "ツキミチヌ",
+     "level": 7,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/a/a8/Tsukimichinu.png/300px-Tsukimichinu.png"
+    },
+    {
+     "title": "防人恋歌",
+     "level": 7,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/c0/Sakimori_renka.png/300px-Sakimori_renka.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 850000,
+    "silver": 900000,
+    "gold": 950000
+   },
+   "medalBasis": "avg",
+   "id": "prop-3",
+   "version": "jubeat prop",
+   "lv": 2,
+   "mode": "normal",
+   "note": "FC 需求：BRONZE 1 曲、SILVER 2 曲、GOLD 3 曲（打歌时点每首右侧的 FC 按钮记录）",
+   "passAvg": 850000,
+   "needFc": 1
+  },
+  {
+   "name": "スミスゼミナール 夏の陣開講記念 基本編",
+   "color": "#38B6F2",
+   "songs": [
+    {
+     "title": "いーあるふぁんくらぶ",
+     "level": 5,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/a/ae/Yi-er_funclub.png/300px-Yi-er_funclub.png"
+    },
+    {
+     "title": "天ノ弱",
+     "level": 6,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/cd/Amanojaku_NOV.png/300px-Amanojaku_NOV.png"
+    },
+    {
+     "title": "セツナトリップ",
+     "level": 7,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/6/6e/Setsuna_trip.png/300px-Setsuna_trip.png"
+    },
+    {
+     "title": "ロストワンの号哭",
+     "level": 8,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/f/fe/Lost_one_no_goukoku.png/300px-Lost_one_no_goukoku.png"
+    },
+    {
+     "title": "ラクガキスト",
+     "level": 7,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/5/57/Luckgakist_NOV.png/300px-Luckgakist_NOV.png"
+    }
+   ],
+   "criterion": "rate",
+   "medals": {
+    "bronze": 85,
+    "silver": 90,
+    "gold": 95
+   },
+   "medalBasis": "rate",
+   "id": "prop-4",
+   "version": "jubeat prop",
+   "lv": 2,
+   "mode": "normal",
+   "passRate": 85,
+   "criterionLabel": "Perfect率",
+   "medalLabel": "Perfect率",
+   "note": "FC 需求：BRONZE 1 曲、SILVER 2 曲、GOLD 3 曲（打歌时点每首右侧的 FC 按钮记录）",
+   "needFc": 1
+  },
+  {
+   "name": "HARDモードじゃないから、絶対、大丈夫だよっ！",
+   "color": "#38B6F2",
+   "songs": [
+    {
+     "title": "とってもとっても、ありがとう。",
+     "level": 6,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/b/bf/Tottemo_tottemo%2C_arigatou.png/300px-Tottemo_tottemo%2C_arigatou.png"
+    },
+    {
+     "title": "虚空と光明のディスクール",
+     "level": 7,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/a/a8/Kokuu_to_koumyou_no_discourse.png/300px-Kokuu_to_koumyou_no_discourse.png"
+    },
+    {
+     "title": "恋とキングコング",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/1/12/Koi_to_King_Kong.png/300px-Koi_to_King_Kong.png"
+    },
+    {
+     "title": "イブの時代っ！",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/c9/Eve_no_jidai%21.png/300px-Eve_no_jidai%21.png"
+    },
+    {
+     "title": "めうめうぺったんたん！！",
+     "level": 9.1,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/f/fe/Meumeupettantan%21%21.png/300px-Meumeupettantan%21%21.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 850000,
+    "silver": 900000,
+    "gold": 950000
+   },
+   "medalBasis": "avg",
+   "id": "prop-5",
+   "version": "jubeat prop",
+   "lv": 2,
+   "mode": "normal",
+   "note": "FC 需求：SILVER 1 曲、GOLD 3 曲（打歌时点每首右侧的 FC 按钮记录）",
+   "passAvg": 850000,
+   "needFc": 0
+  },
+  {
+   "name": "星明かりの下、愛という名の日替わりランチを君と",
+   "color": "#2FA8F0",
+   "songs": [
+    {
+     "title": "Fly with me",
+     "level": 7,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/d/d1/Fly_with_me_jubeat.png/300px-Fly_with_me_jubeat.png"
+    },
+    {
+     "title": "イブの時代っ！",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/c9/Eve_no_jidai%21.png/300px-Eve_no_jidai%21.png"
+    },
+    {
+     "title": "Daily Lunch Special",
+     "level": 8,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/d/d3/Daily_Lunch_Special.png/300px-Daily_Lunch_Special.png"
+    },
+    {
+     "title": "Starlight Parade",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/cd/Starlight_Parade.png/300px-Starlight_Parade.png"
+    },
+    {
+     "title": "IN THE NAME OF LOVE",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/0/04/IN_THE_NAME_OF_LOVE.png/300px-IN_THE_NAME_OF_LOVE.png"
+    }
+   ],
+   "criterion": "rate",
+   "medals": {
+    "bronze": 70,
+    "silver": 80,
+    "gold": 90
+   },
+   "medalBasis": "rate",
+   "id": "prop-6",
+   "version": "jubeat prop",
+   "lv": 3,
+   "mode": "normal",
+   "passRate": 70,
+   "criterionLabel": "Perfect率",
+   "medalLabel": "Perfect率",
+   "note": "条件为 Perfect 率（各曲 Perfect 率平均值）",
+   "needFc": 0
+  },
+  {
+   "name": "輝く北極星と幸せなヒーロー",
+   "color": "#2E8BF0",
+   "songs": [
+    {
+     "title": "Cassis",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/b/bc/Cassis.png/300px-Cassis.png"
+    },
+    {
+     "title": "Shining Star",
+     "level": 7,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/c3/Kodona_no_kaidan_single.png/300px-Kodona_no_kaidan_single.png"
+    },
+    {
+     "title": "ヒーロー",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/d/d9/Hero.png/300px-Hero.png"
+    },
+    {
+     "title": "Happy Happy",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/2/2f/Happy_Happy.png/300px-Happy_Happy.png"
+    },
+    {
+     "title": "Polaris",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/a/a2/Polaris.png/300px-Polaris.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 900000,
+    "silver": 950000,
+    "gold": 980000
+   },
+   "medalBasis": "avg",
+   "id": "prop-7",
+   "version": "jubeat prop",
+   "lv": 4,
+   "mode": "normal",
+   "note": "FC 需求：BRONZE 1 曲、SILVER 2 曲、GOLD 3 曲（打歌时点每首右侧的 FC 按钮记录）",
+   "passAvg": 900000,
+   "needFc": 1
+  },
+  {
+   "name": "花-鳥-藻-夏",
+   "color": "#2E8BF0",
+   "songs": [
+    {
+     "title": "凛として咲く花の如く",
+     "level": 9.1,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/d/d4/Jubeat_Rin_to_shite_saku_hana_no_gotoku.PNG/300px-Jubeat_Rin_to_shite_saku_hana_no_gotoku.PNG"
+    },
+    {
+     "title": "Summer Holiday",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/e/eb/Summer_Holiday.png/300px-Summer_Holiday.png"
+    },
+    {
+     "title": "VALLIS-NERIA",
+     "level": 8,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/a/a8/VALLIS-NERIA.png/300px-VALLIS-NERIA.png"
+    },
+    {
+     "title": "アルストロメリア",
+     "level": 9.5,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/e/e0/Alstroemeria.png/300px-Alstroemeria.png"
+    },
+    {
+     "title": "Far east nightbird",
+     "level": 9.4,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/9/92/Far_east_nightbird.png/300px-Far_east_nightbird.png"
+    }
+   ],
+   "criterion": "rate",
+   "medals": {
+    "bronze": 70,
+    "silver": 80,
+    "gold": 90
+   },
+   "medalBasis": "rate",
+   "id": "prop-8",
+   "version": "jubeat prop",
+   "lv": 4,
+   "mode": "normal",
+   "passRate": 70,
+   "criterionLabel": "Perfect率",
+   "medalLabel": "Perfect率",
+   "note": "条件为 Perfect 率（各曲 Perfect 率平均值）",
+   "needFc": 0
+  },
+  {
+   "name": "TAG生誕祭2014 俺の記録を抜いてみろ！",
+   "color": "#2E8BF0",
+   "songs": [
+    {
+     "title": "Theory of Eternity",
+     "level": 9.3,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/6/63/Theory_of_Eternity_jubeat.png/300px-Theory_of_Eternity_jubeat.png"
+    },
+    {
+     "title": "HEART BEAT FORMULA",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/b/b5/HEART_BEAT_FORMULA.png/300px-HEART_BEAT_FORMULA.png"
+    },
+    {
+     "title": "この青空の下で",
+     "level": 9.4,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/0/00/Kono_aozora_no_shita_de.png/300px-Kono_aozora_no_shita_de.png"
+    },
+    {
+     "title": "Fly with me",
+     "level": 9.6,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/d/d1/Fly_with_me_jubeat.png/300px-Fly_with_me_jubeat.png"
+    },
+    {
+     "title": "アルストロメリア",
+     "level": 9.5,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/e/e0/Alstroemeria.png/300px-Alstroemeria.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 900000,
+    "silver": 950000,
+    "gold": 967252
+   },
+   "medalBasis": "avg",
+   "id": "prop-9",
+   "version": "jubeat prop",
+   "lv": 4,
+   "mode": "normal",
+   "note": "FC 需求：GOLD 1 曲（打歌时点每首右侧的 FC 按钮记录）",
+   "passAvg": 900000,
+   "needFc": 0
+  },
+  {
+   "name": "さよなら、亡くした恋と蝶の舞うヒストリア",
+   "color": "#3B72F5",
+   "songs": [
+    {
+     "title": "STARLIT DUST/スティルに捧ぐ",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/2/23/STARLIT_DUST.png/300px-STARLIT_DUST.png"
+    },
+    {
+     "title": "さよならトリップ",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/9/96/Sayonara_trip.png/300px-Sayonara_trip.png"
+    },
+    {
+     "title": "亡国のヒストリア",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/a/a0/Boukoku_no_historia.png/300px-Boukoku_no_historia.png"
+    },
+    {
+     "title": "コイノチカラ",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/b/b0/Koi_no_chikara.png/300px-Koi_no_chikara.png"
+    },
+    {
+     "title": "Dragontail Butterfly",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/6/69/Dragontail_Butterfly.png/300px-Dragontail_Butterfly.png"
+    }
+   ],
+   "criterion": "rate",
+   "medals": {
+    "bronze": 80,
+    "silver": 85,
+    "gold": 90
+   },
+   "medalBasis": "rate",
+   "id": "prop-10",
+   "version": "jubeat prop",
+   "lv": 5,
+   "mode": "normal",
+   "passRate": 80,
+   "criterionLabel": "Perfect率",
+   "medalLabel": "Perfect率",
+   "note": "条件为 Perfect 率（各曲 Perfect 率平均值）",
+   "needFc": 0
+  },
+  {
+   "name": "きらきらほしふるまぼろしなぎさちゃん",
+   "color": "#3B72F5",
+   "songs": [
+    {
+     "title": "Sweet Rain",
+     "level": 9.1,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/8/8b/Sweet_Rain.png/300px-Sweet_Rain.png"
+    },
+    {
+     "title": "Shine On Me",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/d/d5/Shine_On_Me.png/300px-Shine_On_Me.png"
+    },
+    {
+     "title": "ほしふり",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/8/8c/Hoshifuri.png/300px-Hoshifuri.png"
+    },
+    {
+     "title": "le mirage",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/2/24/Le_mirage.png/300px-Le_mirage.png"
+    },
+    {
+     "title": "†渚の小悪魔ラヴリィ～レイディオ†",
+     "level": 10.2,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/6/61/Nagisa_no_koakuma_lovely_radio.png/300px-Nagisa_no_koakuma_lovely_radio.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 700000,
+    "silver": 800000,
+    "gold": 900000
+   },
+   "medalBasis": "avg",
+   "id": "prop-11",
+   "version": "jubeat prop",
+   "lv": 5,
+   "mode": "normal",
+   "passAvg": 700000,
+   "needFc": 0
+  },
+  {
+   "name": "The Memorial Third: 僕みたいに演奏してね",
+   "color": "#3B72F5",
+   "songs": [
+    {
+     "title": "天国と地獄",
+     "level": 9.4,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/b/b4/Tengoku_to_jigoku.png/300px-Tengoku_to_jigoku.png"
+    },
+    {
+     "title": "Russian Snowy Dance",
+     "level": 8,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/c8/Russian_Snowy_Dance.png/300px-Russian_Snowy_Dance.png"
+    },
+    {
+     "title": "Nature (jubeat version)",
+     "level": 9.7,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/1/11/Nature_%28jubeat_version%29.png/300px-Nature_%28jubeat_version%29.png"
+    },
+    {
+     "title": "スペースカーニバル",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/b/b0/Space_carnival.png/300px-Space_carnival.png"
+    },
+    {
+     "title": "DRAGON KILLER",
+     "level": 9.6,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/e/ee/DRAGON_KILLER.png/300px-DRAGON_KILLER.png"
+    }
+   ],
+   "criterion": "rate",
+   "medals": {
+    "bronze": 75,
+    "silver": 80,
+    "gold": 85
+   },
+   "medalBasis": "rate",
+   "id": "prop-12",
+   "version": "jubeat prop",
+   "lv": 5,
+   "mode": "normal",
+   "passRate": 75,
+   "criterionLabel": "Perfect率",
+   "medalLabel": "Perfect率",
+   "note": "条件为 Perfect 率（各曲 Perfect 率平均值）",
+   "needFc": 0
+  },
+  {
+   "name": "Enjoy! 4thKAC ～Memories of saucer～",
+   "color": "#3B72F5",
+   "songs": [
+    {
+     "title": "We're so Happy",
+     "level": 8,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/3/3b/We%27re_so_Happy.png/300px-We%27re_so_Happy.png"
+    },
+    {
+     "title": "アストライアの双皿",
+     "level": 9.5,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/9/9b/Astraia_no_soubei.png/300px-Astraia_no_soubei.png"
+    },
+    {
+     "title": "True Blue",
+     "level": 9.7,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/3/3a/True_Blue.png/300px-True_Blue.png"
+    },
+    {
+     "title": "encounter",
+     "level": 8,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/0/01/Encounter.png/300px-Encounter.png"
+    },
+    {
+     "title": "ドーパミン",
+     "level": 8,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/b/b0/Dopamine.png/300px-Dopamine.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 900000,
+    "silver": 950000,
+    "gold": 980000
+   },
+   "medalBasis": "avg",
+   "id": "prop-13",
+   "version": "jubeat prop",
+   "lv": 5,
+   "mode": "normal",
+   "note": "FC 需求：BRONZE 1 曲、SILVER 2 曲、GOLD 4 曲（打歌时点每首右侧的 FC 按钮记录）",
+   "passAvg": 900000,
+   "needFc": 1
+  },
+  {
+   "name": "Enjoy! The 5th KAC ～tracks of prop～",
+   "color": "#3B72F5",
+   "songs": [
+    {
+     "title": "天空の華",
+     "level": 9.5,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/1/1d/Tenkuu_no_hana.png/300px-Tenkuu_no_hana.png"
+    },
+    {
+     "title": "overcomplexification",
+     "level": 8,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/0/03/Overcomplexification.png/300px-Overcomplexification.png"
+    },
+    {
+     "title": "Niflheimr",
+     "level": 8,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/4/4d/Niflheimr.png/300px-Niflheimr.png"
+    },
+    {
+     "title": "glacia [ 2 ]",
+     "level": 9.5,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/0/02/Glacia.png/300px-Glacia.png"
+    },
+    {
+     "title": "アガット",
+     "level": 8,
+     "diff": "adv",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/e/e4/Agate.png/300px-Agate.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 900000,
+    "silver": 950000,
+    "gold": 980000
+   },
+   "medalBasis": "avg",
+   "id": "prop-14",
+   "version": "jubeat prop",
+   "lv": 5,
+   "mode": "normal",
+   "note": "FC 需求：BRONZE 1 曲、SILVER 2 曲、GOLD 4 曲（打歌时点每首右侧的 FC 按钮记录）",
+   "passAvg": 900000,
+   "needFc": 1
+  },
+  {
+   "name": "風に吹かれるキケンなシロクマダンス",
+   "color": "#5B62F4",
+   "songs": [
+    {
+     "title": "milky ice bear",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/0/0e/Milky_ice_bear.png/300px-Milky_ice_bear.png"
+    },
+    {
+     "title": "キケンな果実",
+     "level": 9,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/3/31/Kiken_na_kajitsu_jubeat.png/300px-Kiken_na_kajitsu_jubeat.png"
+    },
+    {
+     "title": "Green Green Dance",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/8/82/Green_Green_Dance.png/300px-Green_Green_Dance.png"
+    },
+    {
+     "title": "Windy Fairy",
+     "level": 9.1,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/cc/Windy_Fairy.png/300px-Windy_Fairy.png"
+    },
+    {
+     "title": "隅田川夏恋歌",
+     "level": 9.8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/c5/Sumidagawa_karenka.png/300px-Sumidagawa_karenka.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 900000,
+    "silver": 950000,
+    "gold": 980000
+   },
+   "medalBasis": "avg",
+   "id": "prop-15",
+   "version": "jubeat prop",
+   "lv": 6,
+   "mode": "normal",
+   "note": "FC 需求：BRONZE 1 曲、SILVER 2 曲、GOLD 3 曲（打歌时点每首右侧的 FC 按钮记录）",
+   "passAvg": 900000,
+   "needFc": 1
+  },
+  {
+   "name": "君主は視線で友との愛を語るめう",
+   "color": "#5B62F4",
+   "songs": [
+    {
+     "title": "FRIENDSHIP",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/8/8b/FRIENDSHIP.png/300px-FRIENDSHIP.png"
+    },
+    {
+     "title": "めうめうぺったんたん！！",
+     "level": 9.1,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/f/fe/Meumeupettantan%21%21.png/300px-Meumeupettantan%21%21.png"
+    },
+    {
+     "title": "O JIYA",
+     "level": 9.5,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/a/ab/O_JIYA.png/300px-O_JIYA.png"
+    },
+    {
+     "title": "eyes",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/5/57/Eyes.png/300px-Eyes.png"
+    },
+    {
+     "title": "TYCOON",
+     "level": 9.1,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/6/6d/TYCOON_NOV.png/300px-TYCOON_NOV.png"
+    }
+   ],
+   "criterion": "rate",
+   "medals": {
+    "bronze": 85,
+    "silver": 90,
+    "gold": 95
+   },
+   "medalBasis": "rate",
+   "id": "prop-16",
+   "version": "jubeat prop",
+   "lv": 6,
+   "mode": "normal",
+   "passRate": 85,
+   "criterionLabel": "Perfect率",
+   "medalLabel": "Perfect率",
+   "note": "条件为 Perfect 率（各曲 Perfect 率平均值）",
+   "needFc": 0
+  },
+  {
+   "name": "スミスゼミナール 夏の陣開講記念 応用編",
+   "color": "#5B62F4",
+   "songs": [
+    {
+     "title": "天ノ弱",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/cd/Amanojaku_NOV.png/300px-Amanojaku_NOV.png"
+    },
+    {
+     "title": "いーあるふぁんくらぶ",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/a/ae/Yi-er_funclub.png/300px-Yi-er_funclub.png"
+    },
+    {
+     "title": "ロストワンの号哭",
+     "level": 10,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/f/fe/Lost_one_no_goukoku.png/300px-Lost_one_no_goukoku.png"
+    },
+    {
+     "title": "セツナトリップ",
+     "level": 9.3,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/6/6e/Setsuna_trip.png/300px-Setsuna_trip.png"
+    },
+    {
+     "title": "ラクガキスト",
+     "level": 10.4,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/5/57/Luckgakist_NOV.png/300px-Luckgakist_NOV.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 750000,
+    "silver": 850000,
+    "gold": 900000
+   },
+   "medalBasis": "avg",
+   "id": "prop-17",
+   "version": "jubeat prop",
+   "lv": 6,
+   "mode": "normal",
+   "passAvg": 750000,
+   "needFc": 0
+  },
+  {
+   "name": "天から降り注ぐ星はまるで甘いキャンディ",
+   "color": "#7C58F0",
+   "songs": [
+    {
+     "title": "Shining Star",
+     "level": 7,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/c3/Kodona_no_kaidan_single.png/300px-Kodona_no_kaidan_single.png"
+    },
+    {
+     "title": "Sweet Rain",
+     "level": 9.1,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/8/8b/Sweet_Rain.png/300px-Sweet_Rain.png"
+    },
+    {
+     "title": "蒼天",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/0/0f/Souten.png/300px-Souten.png"
+    },
+    {
+     "title": "candii",
+     "level": 9.7,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/7/70/Candii.png/300px-Candii.png"
+    },
+    {
+     "title": "SigSig",
+     "level": 9.1,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/3/3f/Jubeat_SigSig.PNG/300px-Jubeat_SigSig.PNG"
+    }
+   ],
+   "criterion": "rate",
+   "medals": {
+    "bronze": 85,
+    "silver": 90,
+    "gold": 95
+   },
+   "medalBasis": "rate",
+   "id": "prop-18",
+   "version": "jubeat prop",
+   "lv": 7,
+   "mode": "normal",
+   "passRate": 85,
+   "criterionLabel": "Perfect率",
+   "medalLabel": "Perfect率",
+   "note": "条件为 Perfect 率（各曲 Perfect 率平均值）",
+   "needFc": 0
+  },
+  {
+   "name": "てんとう虫が囁いている「Wow Wow…」",
+   "color": "#7C58F0",
+   "songs": [
+    {
+     "title": "Wow Wow VENUS",
+     "level": 9.3,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/e/eb/Wow_Wow_VENUS.png/300px-Wow_Wow_VENUS.png"
+    },
+    {
+     "title": "ナナホシ",
+     "level": 9.6,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/2/20/Nanahoshi.png/300px-Nanahoshi.png"
+    },
+    {
+     "title": "bass 2 bass",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/a/ac/Bass_2_bass.png/300px-Bass_2_bass.png"
+    },
+    {
+     "title": "梅雪夜",
+     "level": 9.1,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/8/87/Umeyukiyo.png/300px-Umeyukiyo.png"
+    },
+    {
+     "title": "PRANA",
+     "level": 9.8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/8/81/PRANA.png/300px-PRANA.png"
+    }
+   ],
+   "criterion": "rate",
+   "medals": {
+    "bronze": 85,
+    "silver": 90,
+    "gold": 95
+   },
+   "medalBasis": "rate",
+   "id": "prop-19",
+   "version": "jubeat prop",
+   "lv": 7,
+   "mode": "normal",
+   "passRate": 85,
+   "criterionLabel": "Perfect率",
+   "medalLabel": "Perfect率",
+   "note": "条件为 Perfect 率（各曲 Perfect 率平均值）",
+   "needFc": 0
+  },
+  {
+   "name": "HARDモードでも大丈夫だよ！絶対、大丈夫だよっ！",
+   "color": "#7C58F0",
+   "songs": [
+    {
+     "title": "とってもとっても、ありがとう。",
+     "level": 6,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/b/bf/Tottemo_tottemo%2C_arigatou.png/300px-Tottemo_tottemo%2C_arigatou.png"
+    },
+    {
+     "title": "恋とキングコング",
+     "level": 8,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/1/12/Koi_to_King_Kong.png/300px-Koi_to_King_Kong.png"
+    },
+    {
+     "title": "虚空と光明のディスクール",
+     "level": 7,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/a/a8/Kokuu_to_koumyou_no_discourse.png/300px-Kokuu_to_koumyou_no_discourse.png"
+    },
+    {
+     "title": "イブの時代っ！",
+     "level": 8,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/c9/Eve_no_jidai%21.png/300px-Eve_no_jidai%21.png"
+    },
+    {
+     "title": "めうめうぺったんたん！！",
+     "level": 9.1,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/f/fe/Meumeupettantan%21%21.png/300px-Meumeupettantan%21%21.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 850000,
+    "silver": 900000,
+    "gold": 950000
+   },
+   "medalBasis": "avg",
+   "id": "prop-20",
+   "version": "jubeat prop",
+   "lv": 7,
+   "mode": "hard",
+   "passAvg": 850000,
+   "needFc": 0
+  },
+  {
+   "name": "こんなHARDモード、滅べばいい…",
+   "color": "#7C58F0",
+   "songs": [
+    {
+     "title": "走れメロンパン",
+     "level": 8,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/1/18/Hashire_melonpan.png/300px-Hashire_melonpan.png"
+    },
+    {
+     "title": "滅びに至るエランプシス",
+     "level": 8,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/d/d3/Horobi_ni_itaru_ellampsis.png/300px-Horobi_ni_itaru_ellampsis.png"
+    },
+    {
+     "title": "ちくわパフェだよ☆CKP",
+     "level": 9.3,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/9/91/Chikuwa_parfait_da_yo_CKP.png/300px-Chikuwa_parfait_da_yo_CKP.png"
+    },
+    {
+     "title": "カタルシスの月",
+     "level": 9.2,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/a/ac/Catharsis_no_tsuki.png/300px-Catharsis_no_tsuki.png"
+    },
+    {
+     "title": "ホーンテッド★メイドランチ",
+     "level": 9.4,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/8/84/Haunted_maid_lunch.png/300px-Haunted_maid_lunch.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 850000,
+    "silver": 900000,
+    "gold": 950000
+   },
+   "medalBasis": "avg",
+   "id": "prop-21",
+   "version": "jubeat prop",
+   "lv": 7,
+   "mode": "hard",
+   "passAvg": 850000,
+   "needFc": 0
+  },
+  {
+   "name": "Challenge! 4thKAC ～Memories of saucer～",
+   "color": "#7C58F0",
+   "songs": [
+    {
+     "title": "We're so Happy",
+     "level": 10.4,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/3/3b/We%27re_so_Happy.png/300px-We%27re_so_Happy.png"
+    },
+    {
+     "title": "アストライアの双皿",
+     "level": 10.5,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/9/9b/Astraia_no_soubei.png/300px-Astraia_no_soubei.png"
+    },
+    {
+     "title": "True Blue",
+     "level": 10.2,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/3/3a/True_Blue.png/300px-True_Blue.png"
+    },
+    {
+     "title": "encounter",
+     "level": 10.4,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/0/01/Encounter.png/300px-Encounter.png"
+    },
+    {
+     "title": "ドーパミン",
+     "level": 10.7,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/b/b0/Dopamine.png/300px-Dopamine.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 900000,
+    "silver": 950000,
+    "gold": 980000
+   },
+   "medalBasis": "avg",
+   "id": "prop-22",
+   "version": "jubeat prop",
+   "lv": 7,
+   "mode": "hard",
+   "passAvg": 900000,
+   "needFc": 0
+  },
+  {
+   "name": "Challenge! The 5th KAC ～tracks of prop～",
+   "color": "#7C58F0",
+   "songs": [
+    {
+     "title": "天空の華",
+     "level": 10.6,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/1/1d/Tenkuu_no_hana.png/300px-Tenkuu_no_hana.png"
+    },
+    {
+     "title": "overcomplexification",
+     "level": 10.4,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/0/03/Overcomplexification.png/300px-Overcomplexification.png"
+    },
+    {
+     "title": "Niflheimr",
+     "level": 10.6,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/4/4d/Niflheimr.png/300px-Niflheimr.png"
+    },
+    {
+     "title": "glacia [ 2 ]",
+     "level": 10.6,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/0/02/Glacia.png/300px-Glacia.png"
+    },
+    {
+     "title": "アガット",
+     "level": 10.6,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/e/e4/Agate.png/300px-Agate.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 900000,
+    "silver": 950000,
+    "gold": 980000
+   },
+   "medalBasis": "avg",
+   "id": "prop-23",
+   "version": "jubeat prop",
+   "lv": 7,
+   "mode": "hard",
+   "passAvg": 900000,
+   "needFc": 0
+  },
+  {
+   "name": "サヨナラ・キングコング ～恋のつぼみは愛の虹へ～",
+   "color": "#9A56EC",
+   "songs": [
+    {
+     "title": "つぼみ",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/5/5b/Tsubomi.png/300px-Tsubomi.png"
+    },
+    {
+     "title": "Rainbow after snow",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/4/49/Crevice.png/300px-Crevice.png"
+    },
+    {
+     "title": "あいのうた",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/6/64/Ai_no_uta.png/300px-Ai_no_uta.png"
+    },
+    {
+     "title": "サヨナラ・ヘヴン",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/7/73/Sayonara_heaven.png/300px-Sayonara_heaven.png"
+    },
+    {
+     "title": "恋とキングコング",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/1/12/Koi_to_King_Kong.png/300px-Koi_to_King_Kong.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 900000,
+    "silver": 950000,
+    "gold": 980000
+   },
+   "medalBasis": "avg",
+   "id": "prop-24",
+   "version": "jubeat prop",
+   "lv": 8,
+   "mode": "normal",
+   "passAvg": 900000,
+   "needFc": 0
+  },
+  {
+   "name": "風に舞う白鳥の翼と花弁、さながら万華鏡のよう",
+   "color": "#9A56EC",
+   "songs": [
+    {
+     "title": "白鳥の湖",
+     "level": 9.7,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/e/e6/Hakuchou_no_mizuumi.png/300px-Hakuchou_no_mizuumi.png"
+    },
+    {
+     "title": "anemone",
+     "level": 9.7,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/3/3a/ANEMONE_-GITADORA_EDITION-.png/300px-ANEMONE_-GITADORA_EDITION-.png"
+    },
+    {
+     "title": "Crosswind",
+     "level": 9.8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/4/43/Crosswind.png/300px-Crosswind.png"
+    },
+    {
+     "title": "万華鏡",
+     "level": 9.6,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/d/dd/Mangekyou.png/300px-Mangekyou.png"
+    },
+    {
+     "title": "歌の翼",
+     "level": 9.8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/3/35/Uta_no_tsubasa.png/300px-Uta_no_tsubasa.png"
+    }
+   ],
+   "criterion": "rate",
+   "medals": {
+    "bronze": 90,
+    "silver": 95,
+    "gold": 98
+   },
+   "medalBasis": "rate",
+   "id": "prop-25",
+   "version": "jubeat prop",
+   "lv": 8,
+   "mode": "normal",
+   "passRate": 90,
+   "criterionLabel": "Perfect率",
+   "medalLabel": "Perfect率",
+   "note": "条件为 Perfect 率（各曲 Perfect 率平均值）",
+   "needFc": 0
+  },
+  {
+   "name": "The 小さなおぼろガチョウ♪",
+   "color": "#9A56EC",
+   "songs": [
+    {
+     "title": "Little Star",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/4/41/Little_Star.png/300px-Little_Star.png"
+    },
+    {
+     "title": "朧",
+     "level": 9.1,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/7/74/Oboro.png/300px-Oboro.png"
+    },
+    {
+     "title": "Snow Goose",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/9/95/Snow_Goose.png/300px-Snow_Goose.png"
+    },
+    {
+     "title": "quaver♪",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/e/ea/Quaver.png/300px-Quaver.png"
+    },
+    {
+     "title": "The Wind of Gold",
+     "level": 10.2,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/9/91/The_Wind_of_Gold.png/300px-The_Wind_of_Gold.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 970000,
+    "silver": 980000,
+    "gold": 990000
+   },
+   "medalBasis": "avg",
+   "id": "prop-26",
+   "version": "jubeat prop",
+   "lv": 8,
+   "mode": "normal",
+   "note": "FC 需求：BRONZE 2 曲、SILVER 3 曲、GOLD 4 曲（打歌时点每首右侧的 FC 按钮记录）",
+   "passAvg": 970000,
+   "needFc": 2
+  },
+  {
+   "name": "TAG生誕祭2014 俺の記録を抜いてみろ！～HARD編～",
+   "color": "#9A56EC",
+   "songs": [
+    {
+     "title": "Chronos",
+     "level": 9.3,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/9/94/Chronos.png/300px-Chronos.png"
+    },
+    {
+     "title": "Cosmic Hurricane",
+     "level": 10,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/7/72/Cosmic_Hurricane.png/300px-Cosmic_Hurricane.png"
+    },
+    {
+     "title": "Romancing Layer",
+     "level": 10.2,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/1/1a/Romancing_Layer.png/300px-Romancing_Layer.png"
+    },
+    {
+     "title": "PRANA",
+     "level": 9.8,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/8/81/PRANA.png/300px-PRANA.png"
+    },
+    {
+     "title": "Riot of Color",
+     "level": 10.4,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/5/5e/Riot_of_Color.png/300px-Riot_of_Color.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 800000,
+    "silver": 900000,
+    "gold": 931463
+   },
+   "medalBasis": "avg",
+   "id": "prop-27",
+   "version": "jubeat prop",
+   "lv": 8,
+   "mode": "hard",
+   "note": "GOLD 931,463（TAG 的 NORMAL 模式最佳成绩）",
+   "passAvg": 800000,
+   "needFc": 0
+  },
+  {
+   "name": "凍る世界で見る鳳凰の火の花",
+   "color": "#B45AEA",
+   "songs": [
+    {
+     "title": "KUNG-FU MAMA",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/b/bf/KUNG-FU_MAMA.png/300px-KUNG-FU_MAMA.png"
+    },
+    {
+     "title": "Icicles",
+     "level": 8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/4/41/Icicles_jubeat.png/300px-Icicles_jubeat.png"
+    },
+    {
+     "title": "Russian Snowy Dance",
+     "level": 10,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/c8/Russian_Snowy_Dance.png/300px-Russian_Snowy_Dance.png"
+    },
+    {
+     "title": "トリカゴノ鳳凰",
+     "level": 9.1,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/e/e8/Torikago_no_houou.png/300px-Torikago_no_houou.png"
+    },
+    {
+     "title": "隅田川夏恋歌",
+     "level": 9.8,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/c5/Sumidagawa_karenka.png/300px-Sumidagawa_karenka.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 920000,
+    "silver": 950000,
+    "gold": 980000
+   },
+   "medalBasis": "avg",
+   "id": "prop-28",
+   "version": "jubeat prop",
+   "lv": 9,
+   "mode": "normal",
+   "passAvg": 920000,
+   "needFc": 0
+  },
+  {
+   "name": "真実の桜が乱れしとき、キルト纏いし君は修羅となる",
+   "color": "#B45AEA",
+   "songs": [
+    {
+     "title": "Sakura Sunrise",
+     "level": 9.2,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/a/a8/Sakura_Sunrise.png/300px-Sakura_Sunrise.png"
+    },
+    {
+     "title": "TYCOON",
+     "level": 9.1,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/6/6d/TYCOON_NOV.png/300px-TYCOON_NOV.png"
+    },
+    {
+     "title": "黒髪乱れし修羅となりて",
+     "level": 9.1,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/9/90/Kurokami_midareshi_shura_to_narite.png/300px-Kurokami_midareshi_shura_to_narite.png"
+    },
+    {
+     "title": "キルト",
+     "level": 9.5,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/6/65/Quilt.png/300px-Quilt.png"
+    },
+    {
+     "title": "True Blue",
+     "level": 10.2,
+     "diff": "ext",
+     "mode": "normal",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/3/3a/True_Blue.png/300px-True_Blue.png"
+    }
+   ],
+   "criterion": "rate",
+   "medals": {
+    "bronze": 80,
+    "silver": 85,
+    "gold": 90
+   },
+   "medalBasis": "rate",
+   "id": "prop-29",
+   "version": "jubeat prop",
+   "lv": 9,
+   "mode": "normal",
+   "passRate": 80,
+   "criterionLabel": "Perfect率",
+   "medalLabel": "Perfect率",
+   "note": "条件为 Perfect 率（各曲 Perfect 率平均值）",
+   "needFc": 0
+  },
+  {
+   "name": "THE FINAL01 ～雷光に月、乙女に花散る祝福を～",
+   "color": "#CF5CE8",
+   "songs": [
+    {
+     "title": "GIGA BREAK",
+     "level": 9.7,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/d/da/GIGA_BREAK.png/300px-GIGA_BREAK.png"
+    },
+    {
+     "title": "Macuilxochitl",
+     "level": 10.3,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/b/b5/Macuilxochitl.png/300px-Macuilxochitl.png"
+    },
+    {
+     "title": "I'm so Happy",
+     "level": 10.2,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/f/f9/I%27m_so_Happy.PNG/300px-I%27m_so_Happy.PNG"
+    },
+    {
+     "title": "HEAVENLY MOON",
+     "level": 10.4,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/3/39/HEAVENLY_MOON.PNG/300px-HEAVENLY_MOON.PNG"
+    },
+    {
+     "title": "アストライアの双皿",
+     "level": 10.5,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/9/9b/Astraia_no_soubei.png/300px-Astraia_no_soubei.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 920000,
+    "silver": 950000,
+    "gold": 980000
+   },
+   "medalBasis": "avg",
+   "id": "prop-30",
+   "version": "jubeat prop",
+   "lv": 10,
+   "mode": "hard",
+   "passAvg": 920000,
+   "needFc": 0
+  },
+  {
+   "name": "The Memorial Third: assimilated all into Nature",
+   "color": "#CF5CE8",
+   "songs": [
+    {
+     "title": "ラキラキ",
+     "level": 10.6,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/3/3e/Lucky_lucky.png/300px-Lucky_lucky.png"
+    },
+    {
+     "title": "Mirage",
+     "level": 9.7,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/f/fb/Mirage.png/300px-Mirage.png"
+    },
+    {
+     "title": "トルコ行進曲",
+     "level": 10.2,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/0/08/Turkey_koushinkyoku.png/300px-Turkey_koushinkyoku.png"
+    },
+    {
+     "title": "Red Goose",
+     "level": 10.5,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/c/c5/Red_Goose.png/300px-Red_Goose.png"
+    },
+    {
+     "title": "Nature (jubeat version)",
+     "level": 10.5,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/1/11/Nature_%28jubeat_version%29.png/300px-Nature_%28jubeat_version%29.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 920000,
+    "silver": 950000,
+    "gold": 980000
+   },
+   "medalBasis": "avg",
+   "id": "prop-31",
+   "version": "jubeat prop",
+   "lv": 10,
+   "mode": "hard",
+   "passAvg": 920000,
+   "needFc": 0
+  },
+  {
+   "name": "4thKAC ～Memories of saucer～",
+   "color": "#CF5CE8",
+   "songs": [
+    {
+     "title": "We're so Happy",
+     "level": 10.4,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/3/3b/We%27re_so_Happy.png/300px-We%27re_so_Happy.png"
+    },
+    {
+     "title": "アストライアの双皿",
+     "level": 10.5,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/9/9b/Astraia_no_soubei.png/300px-Astraia_no_soubei.png"
+    },
+    {
+     "title": "True Blue",
+     "level": 10.2,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/3/3a/True_Blue.png/300px-True_Blue.png"
+    },
+    {
+     "title": "encounter",
+     "level": 10.4,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/0/01/Encounter.png/300px-Encounter.png"
+    },
+    {
+     "title": "ドーパミン",
+     "level": 10.7,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/b/b0/Dopamine.png/300px-Dopamine.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 920000,
+    "silver": 950000,
+    "gold": 980000
+   },
+   "medalBasis": "avg",
+   "id": "prop-32",
+   "version": "jubeat prop",
+   "lv": 10,
+   "mode": "hard",
+   "passAvg": 920000,
+   "needFc": 0
+  },
+  {
+   "name": "The 5th KAC ～tracks of prop～",
+   "color": "#CF5CE8",
+   "songs": [
+    {
+     "title": "天空の華",
+     "level": 10.6,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/1/1d/Tenkuu_no_hana.png/300px-Tenkuu_no_hana.png"
+    },
+    {
+     "title": "overcomplexification",
+     "level": 10.4,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/0/03/Overcomplexification.png/300px-Overcomplexification.png"
+    },
+    {
+     "title": "Niflheimr",
+     "level": 10.6,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/4/4d/Niflheimr.png/300px-Niflheimr.png"
+    },
+    {
+     "title": "glacia [ 2 ]",
+     "level": 10.6,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/0/02/Glacia.png/300px-Glacia.png"
+    },
+    {
+     "title": "アガット",
+     "level": 10.6,
+     "diff": "ext",
+     "mode": "hard",
+     "hidden": false,
+     "image": "https://remywiki.com/images/thumb/e/e4/Agate.png/300px-Agate.png"
+    }
+   ],
+   "criterion": "avg",
+   "medals": {
+    "bronze": 920000,
+    "silver": 950000,
+    "gold": 980000
+   },
+   "medalBasis": "avg",
+   "id": "prop-33",
+   "version": "jubeat prop",
+   "lv": 10,
+   "mode": "hard",
+   "passAvg": 920000,
+   "needFc": 0
+  }
+ ]
+}
