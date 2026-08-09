@@ -25,6 +25,20 @@ CREATE UNIQUE INDEX IF NOT EXISTS idx_leaderboard_player_unique
 CREATE INDEX IF NOT EXISTS idx_leaderboard_board
   ON leaderboard (dan, version, mode, criterion, value DESC);
 
+-- 用户反馈表
+CREATE TABLE IF NOT EXISTS feedback (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  player TEXT NOT NULL DEFAULT '',
+  content TEXT NOT NULL,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+-- 站点配置表（目前存管理员密码 hash，key='pass_hash'）
+CREATE TABLE IF NOT EXISTS admin_config (
+  key TEXT PRIMARY KEY,
+  value TEXT NOT NULL
+);
+
 -- ============================================================
 -- 旧库迁移（已部署过旧表的 D1 数据库，在 Console 执行一次即可）：
 -- 旧表按 player 去重；迁移后旧记录以 'legacy:' + player 作为 player_id，
@@ -53,3 +67,15 @@ CREATE INDEX IF NOT EXISTS idx_leaderboard_board
 --   ON leaderboard (player_id, dan, version, mode, criterion);
 -- CREATE INDEX idx_leaderboard_board
 --   ON leaderboard (dan, version, mode, criterion, value DESC);
+--
+-- 新增功能（反馈 + 管理员改密码）迁移，任意时刻执行一次即可：
+-- CREATE TABLE IF NOT EXISTS feedback (
+--   id INTEGER PRIMARY KEY AUTOINCREMENT,
+--   player TEXT NOT NULL DEFAULT '',
+--   content TEXT NOT NULL,
+--   created_at TEXT NOT NULL DEFAULT (datetime('now'))
+-- );
+-- CREATE TABLE IF NOT EXISTS admin_config (
+--   key TEXT PRIMARY KEY,
+--   value TEXT NOT NULL
+-- );

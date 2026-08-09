@@ -11,6 +11,24 @@ export const CANDY_COLORS = ["#FF7EB6", "#35E0FF", "#FFD166", "#7BE0A0", "#A46BF
 
 export const DECOR_COLORS = ["#FF7EB6", "#35E0FF", "#FFD166", "#7BE0A0", "#A46BFF", "#FF9F5C"];
 
+/* 玩家头像（emoji 预设） */
+export const AVATARS = [
+  "🐱", "🐶", "🐰", "🐻", "🦊", "🐼", "🐨", "🦁",
+  "🐯", "🐸", "🐵", "🐷", "🦄", "🐙", "🦋", "🐢",
+  "🐳", "🦉", "⭐", "🔥", "🌙", "🎧", "🎮", "🎵",
+  "⚡", "🌸", "🍀", "💎"
+];
+
+/* 姓名框预设（边框颜色） */
+export const FRAMES = [
+  { id: "none", label: "无框", color: "transparent" },
+  { id: "cyan", label: "冰蓝", color: "#38B6F2" },
+  { id: "gold", label: "鎏金", color: "#E8A33D" },
+  { id: "pink", label: "樱粉", color: "#F06292" },
+  { id: "green", label: "翠绿", color: "#43B581" },
+  { id: "purple", label: "星紫", color: "#9A56EC" }
+];
+
 export const POOLS = {
   all:  { label: "全曲池",    match: (s) => true },
   low:  { label: "入門 Lv≤7",  match: (s) => s.level <= 7 },

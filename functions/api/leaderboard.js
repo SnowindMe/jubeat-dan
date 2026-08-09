@@ -4,18 +4,7 @@
  * POST /api/leaderboard  { player, playerId, dan, version, mode, criterion, scores, rates, passTotal, passRate }
  * ============================================================ */
 
-import appData from "../../data.json";
-
-const ADMIN_PASS_HASH = String(
-  (appData && appData.config && appData.config.admin && appData.config.admin.passHash) || ""
-);
-
-async function sha256Hex(str) {
-  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
-  return Array.from(new Uint8Array(buf)).map(function (b) {
-    return ("0" + b.toString(16)).slice(-2);
-  }).join("");
-}
+import { verifyAdmin } from "./_admin.js";
 
 const MODES = ["EASY", "NORMAL", "HARD"];
 const CRITERIA = ["score", "rate", "avg"];
@@ -188,8 +177,7 @@ export async function onRequestDelete(context) {
   if (!Number.isInteger(id) || id <= 0) {
     return json({ error: "invalid id" }, 400);
   }
-  const hash = await sha256Hex(pass);
-  if (ADMIN_PASS_HASH && hash !== ADMIN_PASS_HASH.toLowerCase()) {
+  if (!(await verifyAdmin(context.env, pass))) {
     return json({ error: "管理员验证失败" }, 401);
   }
   const result = await context.env.DB.prepare("DELETE FROM leaderboard WHERE id = ?").bind(id).run();

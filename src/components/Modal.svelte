@@ -9,11 +9,12 @@
   let backdropEl = $state(null);
   let closeBtn = $state(null);
 
-  const FOCUS_SELF = ["login", "admin", "unlock", "import"];
+  const FOCUS_SELF = ["login", "admin", "unlock", "import", "code", "feedback", "passwd"];
 
   const modeClass = $derived(
     modal.mode === "editor" ? "editor-mode" :
-    modal.mode === "login" || modal.mode === "unlock" || modal.mode === "admin" ? "login-mode" :
+    modal.mode === "login" || modal.mode === "unlock" || modal.mode === "admin" ||
+    modal.mode === "code" || modal.mode === "feedback" || modal.mode === "passwd" ? "login-mode" :
     modal.mode === "leaderboard" ? "board-mode" : ""
   );
 

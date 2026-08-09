@@ -2,7 +2,9 @@
   import { tick } from "svelte";
   import AdminLogin from "./components/AdminLogin.svelte";
   import BoardManage from "./components/admin/BoardManage.svelte";
+  import FeedbackManage from "./components/admin/FeedbackManage.svelte";
   import EditorCard from "./components/admin/EditorCard.svelte";
+  import PasswordCard from "./components/PasswordCard.svelte";
   import Decorations from "./components/Decorations.svelte";
   import Modal from "./components/Modal.svelte";
   import { versionLabel } from "./lib/pass.js";
@@ -18,11 +20,17 @@
 
   let boardVisible = $state(false);
   let boardKey = $state(0);
+  let feedbackVisible = $state(false);
+  let feedbackKey = $state(0);
   let pending = $state("editor");
 
   function run(action) {
     if (action === "board") {
       openBoardManage();
+    } else if (action === "feedback") {
+      openFeedbackManage();
+    } else if (action === "passwd") {
+      openModal("passwd");
     } else {
       openEditorModal();
     }
@@ -58,9 +66,22 @@
     if (panel && panel.scrollIntoView) panel.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
+  async function openFeedbackManage() {
+    feedbackVisible = true;
+    feedbackKey++;
+    await tick();
+    var panel = document.querySelector(".feedback-manage-panel");
+    if (panel && panel.scrollIntoView) panel.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
   function onBoardAuthFail() {
     clearAdminSession();
     requireAuth("board");
+  }
+
+  function onFeedbackAuthFail() {
+    clearAdminSession();
+    requireAuth("feedback");
   }
 </script>
 
@@ -86,6 +107,8 @@
     <div class="actions">
       <button class="btn" id="adminManageBtn" title="管理员：增删段位、编辑曲目" onclick={() => requireAuth("editor")}>✏️ 段位管理</button>
       <button class="btn" id="adminBoardBtn" title="管理员：查看并管理排行榜记录" onclick={() => requireAuth("board")}>🏆 排行榜管理</button>
+      <button class="btn" id="adminFeedbackBtn" title="管理员：查看并管理用户反馈" onclick={() => requireAuth("feedback")}>📮 反馈管理</button>
+      <button class="btn" id="adminPasswdBtn" title="管理员：修改管理员密码" onclick={() => requireAuth("passwd")}>🔑 修改密码</button>
       <a class="btn" href="./">← 返回主页</a>
     </div>
   </div>
@@ -105,6 +128,22 @@
       </div>
     </section>
   {/if}
+
+  {#if feedbackVisible}
+    <section class="feedback-manage-panel">
+      <div class="board-card">
+        <div class="card-head">
+          <span class="rank-badge">📮 反馈管理</span>
+        </div>
+        <div class="board-controls">
+          <button class="btn primary" onclick={() => { feedbackKey++; }}>刷新</button>
+        </div>
+        {#key feedbackKey}
+          <FeedbackManage onAuthFail={onFeedbackAuthFail} />
+        {/key}
+      </div>
+    </section>
+  {/if}
 </main>
 
 <footer class="site-footer">
@@ -116,10 +155,14 @@
     <EditorCard />
   {:else if modal.mode === "admin"}
     <AdminLogin onSuccess={runPending} />
+  {:else if modal.mode === "passwd"}
+    <PasswordCard />
   {/if}
 </Modal>
 
 <style>
   .board-manage-panel { margin-top: 18px; }
+  .feedback-manage-panel { margin-top: 18px; }
   .board-manage-panel .board-card { max-width: 900px; margin: 0 auto; }
+  .feedback-manage-panel .board-card { max-width: 900px; margin: 0 auto; }
 </style>

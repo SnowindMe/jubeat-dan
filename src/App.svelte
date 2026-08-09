@@ -1,6 +1,9 @@
 <script>
+  import { FRAMES } from "./lib/constants.js";
   import DanCard from "./components/DanCard.svelte";
   import Decorations from "./components/Decorations.svelte";
+  import CodeCard from "./components/CodeCard.svelte";
+  import FeedbackCard from "./components/FeedbackCard.svelte";
   import ImportConfirm from "./components/ImportConfirm.svelte";
   import LeaderboardCard from "./components/LeaderboardCard.svelte";
   import LoginCard from "./components/LoginCard.svelte";
@@ -26,6 +29,8 @@
   } from "./lib/stores.svelte.js";
 
   let settingsOpen = $state(false);
+
+  const frameColor = $derived((FRAMES.find(function (f) { return f.id === app.playerFrame; }) || FRAMES[0]).color);
 
   $effect(function () {
     effectiveDans();
@@ -110,7 +115,16 @@
     </div>
     <div class="actions">
       <button class="btn" id="boardBtn" title="查看排行榜" onclick={() => openModal("leaderboard")}>🏆 排行榜</button>
-      <button class="btn" id="loginBtn" title="设置玩家昵称" onclick={() => openModal("login")}>{app.playerName ? "👤 " + app.playerName : "👤 登录"}</button>
+      <button class="btn player-chip" id="loginBtn" title="设置昵称 / 头像 / 姓名框" onclick={() => openModal("login")} style="--frame-color: {frameColor}">
+        {#if app.playerName}
+          <span class="player-chip-avatar">{app.playerAvatar}</span>
+          <span class="player-chip-name">{app.playerName}</span>
+        {:else}
+          <span class="player-chip-name">👤 登录</span>
+        {/if}
+      </button>
+      <button class="btn" id="codeBtn" title="输入隐藏码解锁隐藏段位" onclick={() => openModal("code")}>🔑 隐藏码</button>
+      <button class="btn" id="feedbackBtn" title="意见反馈" onclick={() => openModal("feedback")}>📮 反馈</button>
       <div class="dropdown" class:open={settingsOpen}>
         <button
           class="btn"
@@ -173,12 +187,46 @@
     <VersionDetail version={modal.payload?.version} />
   {:else if modal.mode === "import"}
     <ImportConfirm payload={modal.payload} />
+  {:else if modal.mode === "code"}
+    <CodeCard />
+  {:else if modal.mode === "feedback"}
+    <FeedbackCard />
   {/if}
 </Modal>
 
 <Notice />
 
 <style>
+  .player-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 4px 12px 4px 5px;
+    border: 2px solid var(--frame-color, transparent);
+    border-radius: 999px;
+    background: linear-gradient(180deg, #FFFFFF, #EFF9FF);
+  }
+
+  .player-chip-avatar {
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #E1F4FF, #C5E9FB);
+    font-size: 15px;
+  }
+
+  .player-chip-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1B3A55;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   .dan-list {
     display: flex;
     flex-direction: column;

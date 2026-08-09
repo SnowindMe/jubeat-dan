@@ -2,7 +2,9 @@ import { APP_CONFIG, DEFAULT_DANS } from "./data.svelte.js";
 import {
   ADMIN_KEY,
   ADMIN_PASS_KEY,
+  AVATARS,
   CUSTOM_KEY,
+  FRAMES,
   MODES,
   PLAYER_KEY,
   POOLS,
@@ -20,6 +22,8 @@ import {
  * 因此把所有可重赋值字段放在一个对象里，只做属性级修改。 */
 export const app = $state({
   playerName: "",
+  playerAvatar: "",
+  playerFrame: "none",
   customDans: null,
   progress: null,
   random: null,
@@ -30,20 +34,53 @@ export const app = $state({
 
 /* ---------- 玩家 ---------- */
 
-function loadPlayerName() {
-  try {
-    return localStorage.getItem(PLAYER_KEY) || "";
-  } catch (e) {
-    return "";
-  }
+function defaultAvatar() {
+  return AVATARS[0];
 }
 
-app.playerName = loadPlayerName();
-
-export function savePlayer(name) {
-  app.playerName = name;
+function loadProfile() {
+  var name = "";
+  var avatar = defaultAvatar();
+  var frame = "none";
   try {
-    localStorage.setItem(PLAYER_KEY, name);
+    var raw = localStorage.getItem(PLAYER_KEY);
+    if (!raw) return { name: name, avatar: avatar, frame: frame };
+    var parsed = JSON.parse(raw);
+    if (parsed && typeof parsed === "object" && typeof parsed.name === "string") {
+      return {
+        name: parsed.name,
+        avatar: AVATARS.includes(parsed.avatar) ? parsed.avatar : avatar,
+        frame: FRAMES.some(function (f) { return f.id === parsed.frame; }) ? parsed.frame : frame
+      };
+    }
+    /* 旧格式：纯昵称字符串 */
+    name = String(raw);
+  } catch (e) {
+    /* 旧格式：非 JSON 视为纯昵称 */
+    try {
+      name = String(localStorage.getItem(PLAYER_KEY) || "");
+    } catch (e2) {
+      name = "";
+    }
+  }
+  return { name: name, avatar: avatar, frame: frame };
+}
+
+var profile = loadProfile();
+app.playerName = profile.name;
+app.playerAvatar = profile.avatar;
+app.playerFrame = profile.frame;
+
+export function saveProfile(name, avatar, frame) {
+  app.playerName = name;
+  app.playerAvatar = avatar || defaultAvatar();
+  app.playerFrame = FRAMES.some(function (f) { return f.id === frame; }) ? frame : "none";
+  try {
+    localStorage.setItem(PLAYER_KEY, JSON.stringify({
+      name: app.playerName,
+      avatar: app.playerAvatar,
+      frame: app.playerFrame
+    }));
   } catch (e) {
     /* ignore */
   }

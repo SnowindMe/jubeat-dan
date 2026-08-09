@@ -1,22 +1,34 @@
 <script>
   import { ADMIN_KEY, ADMIN_PASS_KEY } from "../lib/constants.js";
-  import { APP_CONFIG } from "../lib/data.svelte.js";
   import { closeModal } from "../lib/stores.svelte.js";
-  import { sha256Hex } from "../lib/utils.js";
 
   let { onSuccess } = $props();
   let pass = $state("");
   let msg = $state("");
+  let sending = $state(false);
 
   async function submit() {
     if (!pass) {
       msg = "请输入密码";
       return;
     }
-    var hash = await sha256Hex(pass);
-    var a = APP_CONFIG.admin;
-    if (!hash || !a || hash.toLowerCase() !== String(a.passHash).toLowerCase()) {
+    sending = true;
+    msg = "";
+    var ok = false;
+    try {
+      var r = await fetch("/api/admin", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "verify", pass: pass })
+      });
+      var j = await r.json().catch(function () { return {}; });
+      ok = r.ok && !!j.ok;
+    } catch (e) {
+      ok = false;
+    }
+    if (!ok) {
       msg = "密码错误";
+      sending = false;
       return;
     }
     try {
@@ -25,6 +37,7 @@
     } catch (e) {
       /* ignore */
     }
+    sending = false;
     closeModal();
     onSuccess?.();
   }
