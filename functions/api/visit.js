@@ -32,9 +32,20 @@ export async function onRequestGet(context) {
     "INSERT OR IGNORE INTO visitors (visitor) VALUES (?)"
   ).bind(visitor).run();
 
-  const { results } = await context.env.DB.prepare(
-    "SELECT COUNT(*) AS total FROM visitors"
-  ).all();
-  const total = Number(results && results[0] ? results[0].total : 0);
+  /* 访客总数用 KV 缓存 60 秒，避免每次页面加载都全表 COUNT */
+  let total = null;
+  if (context.env.LEADERBOARD_CACHE) {
+    const cached = await context.env.LEADERBOARD_CACHE.get("visit:total", "json");
+    if (typeof cached === "number" || typeof cached === "string") total = Number(cached);
+  }
+  if (total == null) {
+    const { results } = await context.env.DB.prepare(
+      "SELECT COUNT(*) AS total FROM visitors"
+    ).all();
+    total = Number(results && results[0] ? results[0].total : 0);
+    if (context.env.LEADERBOARD_CACHE) {
+      await context.env.LEADERBOARD_CACHE.put("visit:total", String(total), { expirationTtl: 60 });
+    }
+  }
   return json({ total: total });
 }

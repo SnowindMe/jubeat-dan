@@ -62,11 +62,15 @@ npm run preview    # 本地预览构建产物
 
 ## 管理员密码
 
-- 密码以 SHA-256 哈希存在 `data.json` 的 `config.admin.passHash` 中，默认 `admin888`
-- 修改密码：算出新密码哈希后填回 `passHash`，重新构建部署。例如：
-  `node -e "console.log(require('crypto').createHash('sha256').update('新密码').digest('hex'))"`
-- `passHash` 留空表示不启用密码（适合本地开发）；验证状态在会话内有效，关掉浏览器标签后需重新输入
-- 说明：纯前端校验适合小圈子使用；如需更强保护，可后续用 Cloudflare Functions 做服务端校验
+- 线上管理员密码由服务端校验，只认 D1 `admin_config` 表的 `pass_hash`（不再回退到代码里的默认值）
+- 首次部署后请在 D1 Console 执行以下语句设置密码（`<新密码>` 替换为实际密码的 SHA-256）：
+  ```sql
+  INSERT INTO admin_config (key, value) VALUES ('pass_hash', '<SHA256哈希>')
+  ON CONFLICT (key) DO UPDATE SET value = excluded.value;
+  ```
+- 日常改密：登录 `/admin` 后使用「🔑 修改密码」，自动写入 D1，无需重新部署
+- `data.json` 中残留的 `config.admin.passHash` 仅作为前端是否启用密码验证的信号，不参与服务端校验
+- 管理接口（反馈查看、排行榜管理）密码通过 `X-Admin-Pass` 请求头传递，不经过 URL
 
 ## 排行榜与登录（可选，Cloudflare Pages + D1）
 

@@ -23,7 +23,8 @@ function json(data, status) {
 
 export async function onRequestGet(context) {
   const url = new URL(context.request.url);
-  const pass = String(url.searchParams.get("pass") || "");
+  /* 管理员密码从 header 读取，避免密码出现在 URL / 访问日志 */
+  const pass = String(context.request.headers.get("x-admin-pass") || "");
   if (!(await verifyAdmin(context.env, pass))) {
     return json({ error: "管理员验证失败" }, 401);
   }

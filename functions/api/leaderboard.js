@@ -6,6 +6,7 @@
 
 import { verifyAdmin } from "./_admin.js";
 import { rateLimit } from "./_rate.js";
+import appData from "../../data.json";
 
 const MODES = ["EASY", "NORMAL", "HARD"];
 const CRITERIA = ["score", "rate", "avg"];
@@ -49,6 +50,11 @@ export async function onRequestGet(context) {
 
   /* 管理后台：不传 dan 时返回最近记录（含 id，供排行榜管理使用） */
   if (!dan) {
+    /* 管理数据必须验证管理员密码（从 header 读取，避免密码进 URL/日志） */
+    const adminPass = context.request.headers.get("x-admin-pass") || "";
+    if (!(await verifyAdmin(context.env, adminPass))) {
+      return json({ error: "管理员验证失败" }, 401);
+    }
     const rows = await context.env.DB.prepare(
       "SELECT id, player_id, player, dan, version, mode, criterion, value, scores, rates, created_at " +
       "FROM leaderboard ORDER BY created_at DESC LIMIT ?"
@@ -133,6 +139,18 @@ export async function onRequestPost(context) {
   }
   if (!dan || !MODES.includes(mode) || !CRITERIA.includes(criterion)) {
     return json({ error: "invalid dan/mode/criterion" }, 400);
+  }
+  /* 服务端校验段位真实性：只允许提交 data.json 中真实存在的段位，
+   * 防止伪造任意段位名满分霸榜；自定义段位不参与线上榜单。 */
+  const realDan = appData.dans.find(function (d) {
+    return d.name === dan &&
+      (((d.version || "").trim() || "默认") === version);
+  });
+  if (!realDan) {
+    return json({ error: "段位不存在，无法提交" }, 400);
+  }
+  if (scores.length !== realDan.songs.length) {
+    return json({ error: "曲目数量与段位不符" }, 400);
   }
   if (!validNumberArray(scores, 0, SCORE_MAX)) {
     return json({ error: "scores 需为 1-10 个 0-" + SCORE_MAX + " 的数字" }, 400);

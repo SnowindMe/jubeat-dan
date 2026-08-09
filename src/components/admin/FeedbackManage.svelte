@@ -14,8 +14,9 @@
     error = "";
     note = "";
     try {
-      var qs = "?pass=" + encodeURIComponent(getAdminPass());
-      var r = await fetch("/api/feedback" + qs);
+      var r = await fetch("/api/feedback", {
+        headers: { "X-Admin-Pass": getAdminPass() }
+      });
       var j = await r.json().catch(function () { return {}; });
       if (r.status === 401) {
         clearAdminSession();

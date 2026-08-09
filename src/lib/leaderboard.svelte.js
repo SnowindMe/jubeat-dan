@@ -1,5 +1,7 @@
 /* 排行榜 API 客户端（Cloudflare Pages Functions + D1） */
 
+import { getAdminPass } from "./stores.svelte.js";
+
 const PLAYER_ID_KEY = "jubeat-dan-player-id-v1";
 
 /* 匿名设备身份：本地生成并持久化，排行榜以它为准做去重，
@@ -50,7 +52,9 @@ export async function fetchBoard() {
 }
 
 export async function fetchManageEntries(limit) {
-  var r = await fetch("/api/leaderboard?limit=" + (limit || 100));
+  var r = await fetch("/api/leaderboard?limit=" + (limit || 100), {
+    headers: { "X-Admin-Pass": getAdminPass() }
+  });
   var j = await r.json().catch(function () { return {}; });
   if (!r.ok) throw new Error((j && j.error) || ("HTTP " + r.status));
   return j.entries || [];

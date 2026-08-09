@@ -1,14 +1,8 @@
 /* ============================================================
  * 管理员密码统一校验（Cloudflare Pages Functions + D1）
- * 优先读取 D1 admin_config 表中的 pass_hash；
- * 未迁移或未改过密码时回退到 data.json 内置 hash。
+ * 只认 D1 admin_config 表中的 pass_hash；
+ * 不再回退 data.json 内置 hash（避免默认密码公开可被利用）。
  * ============================================================ */
-
-import appData from "../../data.json";
-
-const DEFAULT_HASH = String(
-  (appData && appData.config && appData.config.admin && appData.config.admin.passHash) || ""
-).toLowerCase();
 
 export async function sha256Hex(str) {
   const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
@@ -22,11 +16,11 @@ export async function getAdminHash(env) {
     const row = await env.DB.prepare(
       "SELECT value FROM admin_config WHERE key = 'pass_hash'"
     ).first();
-    if (row && row.value) return String(row.value).toLowerCase();
+    return row && row.value ? String(row.value).toLowerCase() : null;
   } catch (e) {
-    /* admin_config 表未迁移时回退默认 hash */
+    /* admin_config 表未迁移或异常时视为未设置密码 */
+    return null;
   }
-  return DEFAULT_HASH;
 }
 
 export async function verifyAdmin(env, pass) {
