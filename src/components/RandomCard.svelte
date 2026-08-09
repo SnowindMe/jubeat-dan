@@ -1,5 +1,5 @@
 <script>
-  import { untrack } from "svelte";
+  import { onMount } from "svelte";
   import RandomSongRow from "./RandomSongRow.svelte";
   import { MODES, POOLS } from "../lib/constants.js";
   import { clampRate, clampScore, computePassed } from "../lib/pass.js";
@@ -15,8 +15,9 @@
   const c = $derived(app.random.challenge);
   const isRate = $derived(c.criterion === "rate");
 
-  // 打开时先按当前输入重算一次通过状态（与原版 createRandomCard 一致）
-  untrack(function () {
+  // 挂载时按当前输入重算一次通过状态（与原版 createRandomCard 一致），
+  // 避免在渲染期写响应式状态
+  onMount(function () {
     c.cleared = computePassed({ criterion: c.criterion }, c);
     c.clearedCriterion = c.cleared ? c.criterion : null;
   });

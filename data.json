@@ -25,7 +25,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/ad5fce1935.png"
+     "image": "assets/songs/ad5fce1935.webp"
     },
     {
      "title": "エイリアンエイリアン",
@@ -33,7 +33,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/fbb452a501.png"
+     "image": "assets/songs/fbb452a501.webp"
     },
     {
      "title": "ULTRA HAPPY MEGAMIX",
@@ -41,7 +41,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": true,
-     "image": "assets/songs/3bcb040f69.png"
+     "image": "assets/songs/3bcb040f69.webp"
     }
    ],
    "criterion": "score",
@@ -61,7 +61,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/830c18af16.png"
+     "image": "assets/songs/830c18af16.webp"
     },
     {
      "title": "厳冬記",
@@ -69,7 +69,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/ddc1816efe.png"
+     "image": "assets/songs/ddc1816efe.webp"
     },
     {
      "title": "チョコレートスマイル",
@@ -77,7 +77,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": true,
-     "image": "assets/songs/6302170375.png"
+     "image": "assets/songs/6302170375.webp"
     }
    ],
    "criterion": "score",
@@ -97,7 +97,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/aefd09b3b2.png"
+     "image": "assets/songs/aefd09b3b2.webp"
     },
     {
      "title": "向日葵サンセット",
@@ -105,7 +105,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/9fc222d9d3.png"
+     "image": "assets/songs/9fc222d9d3.webp"
     },
     {
      "title": "アルストロメリア",
@@ -113,7 +113,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": true,
-     "image": "assets/songs/f041109812.png"
+     "image": "assets/songs/f041109812.webp"
     }
    ],
    "criterion": "score",
@@ -133,7 +133,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/f87fcdac2a.png"
+     "image": "assets/songs/f87fcdac2a.webp"
     },
     {
      "title": "リメンバーリメンバー",
@@ -141,7 +141,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/db7267d8e9.png"
+     "image": "assets/songs/db7267d8e9.webp"
     },
     {
      "title": "ロンロンへ ライライライ！",
@@ -149,7 +149,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "assets/songs/bcfc74c3d9.png"
+     "image": "assets/songs/bcfc74c3d9.webp"
     }
    ],
    "criterion": "score",
@@ -169,7 +169,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/436b23ec61.png"
+     "image": "assets/songs/436b23ec61.webp"
     },
     {
      "title": "キモチコネクト",
@@ -177,7 +177,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/80dc8a6ba1.png"
+     "image": "assets/songs/80dc8a6ba1.webp"
     },
     {
      "title": "隅田川夏恋歌",
@@ -185,7 +185,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "assets/songs/731d6954a6.png"
+     "image": "assets/songs/731d6954a6.webp"
     }
    ],
    "criterion": "score",
@@ -204,7 +204,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/a317cb6904.png"
+     "image": "assets/songs/a317cb6904.webp"
     },
     {
      "title": "Gimme a Big Beat",
@@ -212,7 +212,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/28a047366b.png"
+     "image": "assets/songs/28a047366b.webp"
     },
     {
      "title": "I'm so Happy",
@@ -220,7 +220,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "assets/songs/af49c259c9.png"
+     "image": "assets/songs/af49c259c9.webp"
     }
    ],
    "criterion": "score",
@@ -239,7 +239,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/1e8d97c893.png"
+     "image": "assets/songs/1e8d97c893.webp"
     },
     {
      "title": "True Blue",
@@ -247,7 +247,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/278df8c40e.png"
+     "image": "assets/songs/278df8c40e.webp"
     },
     {
      "title": "Singularity",
@@ -255,7 +255,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "assets/songs/96fc473ad2.png"
+     "image": "assets/songs/96fc473ad2.webp"
     }
    ],
    "criterion": "score",
@@ -274,7 +274,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/1d04dc47c8.png"
+     "image": "assets/songs/1d04dc47c8.webp"
     },
     {
      "title": "ZZ",
@@ -282,7 +282,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/1674f4de55.png"
+     "image": "assets/songs/1674f4de55.webp"
     },
     {
      "title": "Roll the Dice",
@@ -290,7 +290,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "assets/songs/6351b49105.png"
+     "image": "assets/songs/6351b49105.webp"
     }
    ],
    "criterion": "score",
@@ -309,7 +309,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/29651f8f83.png"
+     "image": "assets/songs/29651f8f83.webp"
     },
     {
      "title": "Our Faith",
@@ -317,7 +317,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/f214988d43.png"
+     "image": "assets/songs/f214988d43.webp"
     },
     {
      "title": "Crack Traxxxx",
@@ -325,7 +325,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "assets/songs/b97d302778.png"
+     "image": "assets/songs/b97d302778.webp"
     }
    ],
    "criterion": "score",
@@ -344,7 +344,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/720ed203b7.png"
+     "image": "assets/songs/720ed203b7.webp"
     },
     {
      "title": "Red Goose",
@@ -352,7 +352,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/8cb22558de.png"
+     "image": "assets/songs/8cb22558de.webp"
     },
     {
      "title": "Elemental Creation",
@@ -360,7 +360,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": true,
-     "image": "assets/songs/6c52526507.png"
+     "image": "assets/songs/6c52526507.webp"
     }
    ],
    "criterion": "score",
@@ -379,7 +379,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/0bc0d9b9b5.png"
+     "image": "assets/songs/0bc0d9b9b5.webp"
     },
     {
      "title": "Everybody's Rich",
@@ -387,7 +387,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/07399b2510.png"
+     "image": "assets/songs/07399b2510.webp"
     },
     {
      "title": "Confiserie",
@@ -395,7 +395,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": true,
-     "image": "assets/songs/18352362c5.png"
+     "image": "assets/songs/18352362c5.webp"
     }
    ],
    "criterion": "score",
@@ -414,7 +414,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/de240fb02a.png"
+     "image": "assets/songs/de240fb02a.webp"
     },
     {
      "title": "Last Dress",
@@ -422,7 +422,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/c19102493d.png"
+     "image": "assets/songs/c19102493d.webp"
     },
     {
      "title": "Megalara Garuda",
@@ -430,7 +430,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": true,
-     "image": "assets/songs/131fb339a3.png"
+     "image": "assets/songs/131fb339a3.webp"
     }
    ],
    "criterion": "score",
@@ -449,7 +449,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/6a5dffe521.png"
+     "image": "assets/songs/6a5dffe521.webp"
     },
     {
      "title": "セツナトリップ",
@@ -457,7 +457,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/566707cec4.png"
+     "image": "assets/songs/566707cec4.webp"
     },
     {
      "title": "Giant Otter Family",
@@ -465,7 +465,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": true,
-     "image": "assets/songs/9eadcc6368.png"
+     "image": "assets/songs/9eadcc6368.webp"
     }
    ],
    "criterion": "score",
@@ -486,7 +486,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/830c18af16.png"
+     "image": "assets/songs/830c18af16.webp"
     },
     {
      "title": "Bad Apple!!",
@@ -494,7 +494,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/30a5454b00.png"
+     "image": "assets/songs/30a5454b00.webp"
     },
     {
      "title": "チョコレートスマイル",
@@ -502,7 +502,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": true,
-     "image": "assets/songs/6302170375.png"
+     "image": "assets/songs/6302170375.webp"
     }
    ],
    "criterion": "score",
@@ -523,7 +523,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/1c5b138983.png"
+     "image": "assets/songs/1c5b138983.webp"
     },
     {
      "title": "only my railgun",
@@ -531,7 +531,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/6d975142e4.png"
+     "image": "assets/songs/6d975142e4.webp"
     },
     {
      "title": "アルストロメリア",
@@ -539,7 +539,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": true,
-     "image": "assets/songs/f041109812.png"
+     "image": "assets/songs/f041109812.webp"
     }
    ],
    "criterion": "score",
@@ -560,7 +560,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/f87fcdac2a.png"
+     "image": "assets/songs/f87fcdac2a.webp"
     },
     {
      "title": "le mirage",
@@ -568,7 +568,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/36b16b47a8.png"
+     "image": "assets/songs/36b16b47a8.webp"
     },
     {
      "title": "凛として咲く花の如く",
@@ -576,7 +576,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "assets/songs/f040f57222.png"
+     "image": "assets/songs/f040f57222.webp"
     }
    ],
    "criterion": "score",
@@ -596,7 +596,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/481c0d95e0.png"
+     "image": "assets/songs/481c0d95e0.webp"
     },
     {
      "title": "キモチコネクト",
@@ -604,7 +604,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/80dc8a6ba1.png"
+     "image": "assets/songs/80dc8a6ba1.webp"
     },
     {
      "title": "隅田川夏恋歌",
@@ -612,7 +612,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "assets/songs/731d6954a6.png"
+     "image": "assets/songs/731d6954a6.webp"
     }
    ],
    "criterion": "score",
@@ -632,7 +632,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/440f2baed3.png"
+     "image": "assets/songs/440f2baed3.webp"
     },
     {
      "title": "Knell",
@@ -640,7 +640,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/ee704e44a3.png"
+     "image": "assets/songs/ee704e44a3.webp"
     },
     {
      "title": "True Blue",
@@ -648,7 +648,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "assets/songs/278df8c40e.png"
+     "image": "assets/songs/278df8c40e.webp"
     }
    ],
    "criterion": "score",
@@ -668,7 +668,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/3a9c8180cf.png"
+     "image": "assets/songs/3a9c8180cf.webp"
     },
     {
      "title": "Daily Lunch Special",
@@ -676,7 +676,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/5086ef71a8.png"
+     "image": "assets/songs/5086ef71a8.webp"
     },
     {
      "title": "Sacrifice for Justice",
@@ -684,7 +684,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "assets/songs/4b6872b544.png"
+     "image": "assets/songs/4b6872b544.webp"
     }
    ],
    "criterion": "score",
@@ -704,7 +704,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/f214988d43.png"
+     "image": "assets/songs/f214988d43.webp"
     },
     {
      "title": "ラクガキスト",
@@ -712,7 +712,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/a8218829c4.png"
+     "image": "assets/songs/a8218829c4.webp"
     },
     {
      "title": "天空の華",
@@ -720,7 +720,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "assets/songs/8e68ff894d.png"
+     "image": "assets/songs/8e68ff894d.webp"
     }
    ],
    "criterion": "score",
@@ -740,7 +740,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/0f250a8383.png"
+     "image": "assets/songs/0f250a8383.webp"
     },
     {
      "title": "アストライアの双皿",
@@ -748,7 +748,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/29651f8f83.png"
+     "image": "assets/songs/29651f8f83.webp"
     },
     {
      "title": "ドーパミン",
@@ -756,7 +756,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "assets/songs/2030e33862.png"
+     "image": "assets/songs/2030e33862.webp"
     }
    ],
    "criterion": "score",
@@ -776,7 +776,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/731a8d6439.png"
+     "image": "assets/songs/731a8d6439.webp"
     },
     {
      "title": "Red Goose",
@@ -784,7 +784,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/8cb22558de.png"
+     "image": "assets/songs/8cb22558de.webp"
     },
     {
      "title": "Elemental Creation",
@@ -792,7 +792,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": true,
-     "image": "assets/songs/6c52526507.png"
+     "image": "assets/songs/6c52526507.webp"
     }
    ],
    "criterion": "score",
@@ -812,7 +812,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/e3db7dadf0.png"
+     "image": "assets/songs/e3db7dadf0.webp"
     },
     {
      "title": "霖が哭く",
@@ -820,7 +820,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/4289b9f550.png"
+     "image": "assets/songs/4289b9f550.webp"
     },
     {
      "title": "Confiserie",
@@ -828,7 +828,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": true,
-     "image": "assets/songs/18352362c5.png"
+     "image": "assets/songs/18352362c5.webp"
     }
    ],
    "criterion": "score",
@@ -848,7 +848,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/68da0f2dcd.png"
+     "image": "assets/songs/68da0f2dcd.webp"
     },
     {
      "title": "Megalara Garuda",
@@ -856,7 +856,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/131fb339a3.png"
+     "image": "assets/songs/131fb339a3.webp"
     },
     {
      "title": "Stand Alone Beat Masta",
@@ -864,7 +864,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": true,
-     "image": "assets/songs/599b3bad2b.png"
+     "image": "assets/songs/599b3bad2b.webp"
     }
    ],
    "criterion": "score",
@@ -884,7 +884,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/19e4045a7c.png"
+     "image": "assets/songs/19e4045a7c.webp"
     },
     {
      "title": "Special One",
@@ -892,7 +892,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/b17ee5408b.png"
+     "image": "assets/songs/b17ee5408b.webp"
     },
     {
      "title": "fellow",
@@ -900,7 +900,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/bc023f8b35.png"
+     "image": "assets/songs/bc023f8b35.webp"
     },
     {
      "title": "記憶の欠片",
@@ -908,7 +908,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/f87fcdac2a.png"
+     "image": "assets/songs/f87fcdac2a.webp"
     },
     {
      "title": "とってもとっても、ありがとう。",
@@ -916,7 +916,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/bc281fe59c.png"
+     "image": "assets/songs/bc281fe59c.webp"
     }
    ],
    "criterion": "avg",
@@ -944,7 +944,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/1ff814cb73.png"
+     "image": "assets/songs/1ff814cb73.webp"
     },
     {
      "title": "Theory of Eternity",
@@ -952,7 +952,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/c005016e8b.png"
+     "image": "assets/songs/c005016e8b.webp"
     },
     {
      "title": "Riot of Color",
@@ -960,7 +960,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/40704a8cda.png"
+     "image": "assets/songs/40704a8cda.webp"
     },
     {
      "title": "Chronos",
@@ -968,7 +968,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/f5ef67f5bf.png"
+     "image": "assets/songs/f5ef67f5bf.webp"
     },
     {
      "title": "アルストロメリア",
@@ -976,7 +976,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/f041109812.png"
+     "image": "assets/songs/f041109812.webp"
     }
    ],
    "criterion": "avg",
@@ -1004,7 +1004,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/713862c585.png"
+     "image": "assets/songs/713862c585.webp"
     },
     {
      "title": "虚空と光明のディスクール",
@@ -1012,7 +1012,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/2f994b7e6c.png"
+     "image": "assets/songs/2f994b7e6c.webp"
     },
     {
      "title": "STREET DANCER",
@@ -1020,7 +1020,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/2f5ee3e082.png"
+     "image": "assets/songs/2f5ee3e082.webp"
     },
     {
      "title": "ツキミチヌ",
@@ -1028,7 +1028,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/1e908209ef.png"
+     "image": "assets/songs/1e908209ef.webp"
     },
     {
      "title": "防人恋歌",
@@ -1036,7 +1036,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/443a6e35b1.png"
+     "image": "assets/songs/443a6e35b1.webp"
     }
    ],
    "criterion": "avg",
@@ -1064,7 +1064,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/16d5f3c004.png"
+     "image": "assets/songs/16d5f3c004.webp"
     },
     {
      "title": "天ノ弱",
@@ -1072,7 +1072,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/481c0d95e0.png"
+     "image": "assets/songs/481c0d95e0.webp"
     },
     {
      "title": "セツナトリップ",
@@ -1080,7 +1080,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/566707cec4.png"
+     "image": "assets/songs/566707cec4.webp"
     },
     {
      "title": "ロストワンの号哭",
@@ -1088,7 +1088,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/830c18af16.png"
+     "image": "assets/songs/830c18af16.webp"
     },
     {
      "title": "ラクガキスト",
@@ -1096,7 +1096,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/a8218829c4.png"
+     "image": "assets/songs/a8218829c4.webp"
     }
    ],
    "criterion": "rate",
@@ -1126,7 +1126,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/bc281fe59c.png"
+     "image": "assets/songs/bc281fe59c.webp"
     },
     {
      "title": "虚空と光明のディスクール",
@@ -1134,7 +1134,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/2f994b7e6c.png"
+     "image": "assets/songs/2f994b7e6c.webp"
     },
     {
      "title": "恋とキングコング",
@@ -1142,7 +1142,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/befdb0e294.png"
+     "image": "assets/songs/befdb0e294.webp"
     },
     {
      "title": "イブの時代っ！",
@@ -1150,7 +1150,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/e96cd1efc0.png"
+     "image": "assets/songs/e96cd1efc0.webp"
     },
     {
      "title": "めうめうぺったんたん！！",
@@ -1158,7 +1158,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/7282c35efb.png"
+     "image": "assets/songs/7282c35efb.webp"
     }
    ],
    "criterion": "avg",
@@ -1186,7 +1186,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/6e349a476a.png"
+     "image": "assets/songs/6e349a476a.webp"
     },
     {
      "title": "イブの時代っ！",
@@ -1194,7 +1194,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/e96cd1efc0.png"
+     "image": "assets/songs/e96cd1efc0.webp"
     },
     {
      "title": "Daily Lunch Special",
@@ -1202,7 +1202,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/5086ef71a8.png"
+     "image": "assets/songs/5086ef71a8.webp"
     },
     {
      "title": "Starlight Parade",
@@ -1210,7 +1210,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/f26dfcf5e4.png"
+     "image": "assets/songs/f26dfcf5e4.webp"
     },
     {
      "title": "IN THE NAME OF LOVE",
@@ -1218,7 +1218,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/79fbee6b82.png"
+     "image": "assets/songs/79fbee6b82.webp"
     }
    ],
    "criterion": "rate",
@@ -1248,7 +1248,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/ff6bfb46ac.png"
+     "image": "assets/songs/ff6bfb46ac.webp"
     },
     {
      "title": "Shining Star",
@@ -1256,7 +1256,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/06e6ad5b3e.png"
+     "image": "assets/songs/06e6ad5b3e.webp"
     },
     {
      "title": "ヒーロー",
@@ -1264,7 +1264,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/3828e30ab0.png"
+     "image": "assets/songs/3828e30ab0.webp"
     },
     {
      "title": "Happy Happy",
@@ -1272,7 +1272,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/9d5e27cfa6.png"
+     "image": "assets/songs/9d5e27cfa6.webp"
     },
     {
      "title": "Polaris",
@@ -1280,7 +1280,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/04dd0a60ea.png"
+     "image": "assets/songs/04dd0a60ea.webp"
     }
    ],
    "criterion": "avg",
@@ -1308,7 +1308,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/f040f57222.png"
+     "image": "assets/songs/f040f57222.webp"
     },
     {
      "title": "Summer Holiday",
@@ -1316,7 +1316,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/4f9be8321e.png"
+     "image": "assets/songs/4f9be8321e.webp"
     },
     {
      "title": "VALLIS-NERIA",
@@ -1324,7 +1324,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/1cdaa722c3.png"
+     "image": "assets/songs/1cdaa722c3.webp"
     },
     {
      "title": "アルストロメリア",
@@ -1332,7 +1332,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/f041109812.png"
+     "image": "assets/songs/f041109812.webp"
     },
     {
      "title": "Far east nightbird",
@@ -1340,7 +1340,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/f16706af3c.png"
+     "image": "assets/songs/f16706af3c.webp"
     }
    ],
    "criterion": "rate",
@@ -1370,7 +1370,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/c005016e8b.png"
+     "image": "assets/songs/c005016e8b.webp"
     },
     {
      "title": "HEART BEAT FORMULA",
@@ -1378,7 +1378,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/6d2a6e56d9.png"
+     "image": "assets/songs/6d2a6e56d9.webp"
     },
     {
      "title": "この青空の下で",
@@ -1386,7 +1386,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/1ff814cb73.png"
+     "image": "assets/songs/1ff814cb73.webp"
     },
     {
      "title": "Fly with me",
@@ -1394,7 +1394,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/6e349a476a.png"
+     "image": "assets/songs/6e349a476a.webp"
     },
     {
      "title": "アルストロメリア",
@@ -1402,7 +1402,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/f041109812.png"
+     "image": "assets/songs/f041109812.webp"
     }
    ],
    "criterion": "avg",
@@ -1430,7 +1430,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/126807ef49.png"
+     "image": "assets/songs/126807ef49.webp"
     },
     {
      "title": "さよならトリップ",
@@ -1438,7 +1438,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/887c9015a4.png"
+     "image": "assets/songs/887c9015a4.webp"
     },
     {
      "title": "亡国のヒストリア",
@@ -1446,7 +1446,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/c3810b13ff.png"
+     "image": "assets/songs/c3810b13ff.webp"
     },
     {
      "title": "コイノチカラ",
@@ -1454,7 +1454,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/23db66a12e.png"
+     "image": "assets/songs/23db66a12e.webp"
     },
     {
      "title": "Dragontail Butterfly",
@@ -1462,7 +1462,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/9f0123ac2f.png"
+     "image": "assets/songs/9f0123ac2f.webp"
     }
    ],
    "criterion": "rate",
@@ -1492,7 +1492,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/5da57c9b8b.png"
+     "image": "assets/songs/5da57c9b8b.webp"
     },
     {
      "title": "Shine On Me",
@@ -1500,7 +1500,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/e977193ac2.png"
+     "image": "assets/songs/e977193ac2.webp"
     },
     {
      "title": "ほしふり",
@@ -1508,7 +1508,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/15d3b6ab7f.png"
+     "image": "assets/songs/15d3b6ab7f.webp"
     },
     {
      "title": "le mirage",
@@ -1516,7 +1516,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/36b16b47a8.png"
+     "image": "assets/songs/36b16b47a8.webp"
     },
     {
      "title": "†渚の小悪魔ラヴリィ～レイディオ†",
@@ -1524,7 +1524,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/10ca1fe443.png"
+     "image": "assets/songs/10ca1fe443.webp"
     }
    ],
    "criterion": "avg",
@@ -1551,7 +1551,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/b3c655aef2.png"
+     "image": "assets/songs/b3c655aef2.webp"
     },
     {
      "title": "Russian Snowy Dance",
@@ -1559,7 +1559,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/1e8aa1ebec.png"
+     "image": "assets/songs/1e8aa1ebec.webp"
     },
     {
      "title": "Nature (jubeat version)",
@@ -1567,7 +1567,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/84b916dcc2.png"
+     "image": "assets/songs/84b916dcc2.webp"
     },
     {
      "title": "スペースカーニバル",
@@ -1575,7 +1575,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/441450f330.png"
+     "image": "assets/songs/441450f330.webp"
     },
     {
      "title": "DRAGON KILLER",
@@ -1583,7 +1583,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/a4fc222292.png"
+     "image": "assets/songs/a4fc222292.webp"
     }
    ],
    "criterion": "rate",
@@ -1613,7 +1613,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/f05c789bdc.png"
+     "image": "assets/songs/f05c789bdc.webp"
     },
     {
      "title": "アストライアの双皿",
@@ -1621,7 +1621,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/29651f8f83.png"
+     "image": "assets/songs/29651f8f83.webp"
     },
     {
      "title": "True Blue",
@@ -1629,7 +1629,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/278df8c40e.png"
+     "image": "assets/songs/278df8c40e.webp"
     },
     {
      "title": "encounter",
@@ -1637,7 +1637,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/22d546322b.png"
+     "image": "assets/songs/22d546322b.webp"
     },
     {
      "title": "ドーパミン",
@@ -1645,7 +1645,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/2030e33862.png"
+     "image": "assets/songs/2030e33862.webp"
     }
    ],
    "criterion": "avg",
@@ -1673,7 +1673,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/8e68ff894d.png"
+     "image": "assets/songs/8e68ff894d.webp"
     },
     {
      "title": "overcomplexification",
@@ -1681,7 +1681,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/aa9caec481.png"
+     "image": "assets/songs/aa9caec481.webp"
     },
     {
      "title": "Niflheimr",
@@ -1689,7 +1689,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/babeafb73c.png"
+     "image": "assets/songs/babeafb73c.webp"
     },
     {
      "title": "glacia [ 2 ]",
@@ -1697,7 +1697,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/42c8d16c6d.png"
+     "image": "assets/songs/42c8d16c6d.webp"
     },
     {
      "title": "アガット",
@@ -1705,7 +1705,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/5b53a4a81a.png"
+     "image": "assets/songs/5b53a4a81a.webp"
     }
    ],
    "criterion": "avg",
@@ -1733,7 +1733,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/0b1fd5d14e.png"
+     "image": "assets/songs/0b1fd5d14e.webp"
     },
     {
      "title": "キケンな果実",
@@ -1741,7 +1741,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/c0e2d94923.png"
+     "image": "assets/songs/c0e2d94923.webp"
     },
     {
      "title": "Green Green Dance",
@@ -1749,7 +1749,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/7553e85d40.png"
+     "image": "assets/songs/7553e85d40.webp"
     },
     {
      "title": "Windy Fairy",
@@ -1757,7 +1757,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/f3dd53ffc5.png"
+     "image": "assets/songs/f3dd53ffc5.webp"
     },
     {
      "title": "隅田川夏恋歌",
@@ -1765,7 +1765,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/731d6954a6.png"
+     "image": "assets/songs/731d6954a6.webp"
     }
    ],
    "criterion": "avg",
@@ -1793,7 +1793,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/a5f4e9c5e5.png"
+     "image": "assets/songs/a5f4e9c5e5.webp"
     },
     {
      "title": "めうめうぺったんたん！！",
@@ -1801,7 +1801,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/7282c35efb.png"
+     "image": "assets/songs/7282c35efb.webp"
     },
     {
      "title": "O JIYA",
@@ -1809,7 +1809,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/59a1facc96.png"
+     "image": "assets/songs/59a1facc96.webp"
     },
     {
      "title": "eyes",
@@ -1817,7 +1817,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/88cbcd2c5a.png"
+     "image": "assets/songs/88cbcd2c5a.webp"
     },
     {
      "title": "TYCOON",
@@ -1825,7 +1825,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/e983c705f9.png"
+     "image": "assets/songs/e983c705f9.webp"
     }
    ],
    "criterion": "rate",
@@ -1855,7 +1855,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/481c0d95e0.png"
+     "image": "assets/songs/481c0d95e0.webp"
     },
     {
      "title": "いーあるふぁんくらぶ",
@@ -1863,7 +1863,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/16d5f3c004.png"
+     "image": "assets/songs/16d5f3c004.webp"
     },
     {
      "title": "ロストワンの号哭",
@@ -1871,7 +1871,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/830c18af16.png"
+     "image": "assets/songs/830c18af16.webp"
     },
     {
      "title": "セツナトリップ",
@@ -1879,7 +1879,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/566707cec4.png"
+     "image": "assets/songs/566707cec4.webp"
     },
     {
      "title": "ラクガキスト",
@@ -1887,7 +1887,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/a8218829c4.png"
+     "image": "assets/songs/a8218829c4.webp"
     }
    ],
    "criterion": "avg",
@@ -1914,7 +1914,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/06e6ad5b3e.png"
+     "image": "assets/songs/06e6ad5b3e.webp"
     },
     {
      "title": "Sweet Rain",
@@ -1922,7 +1922,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/5da57c9b8b.png"
+     "image": "assets/songs/5da57c9b8b.webp"
     },
     {
      "title": "蒼天",
@@ -1930,7 +1930,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/b854012f4c.png"
+     "image": "assets/songs/b854012f4c.webp"
     },
     {
      "title": "candii",
@@ -1938,7 +1938,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/e01a457e4f.png"
+     "image": "assets/songs/e01a457e4f.webp"
     },
     {
      "title": "SigSig",
@@ -1946,7 +1946,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/e8d3a0a2f8.png"
+     "image": "assets/songs/e8d3a0a2f8.webp"
     }
    ],
    "criterion": "rate",
@@ -1976,7 +1976,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/e627daad88.png"
+     "image": "assets/songs/e627daad88.webp"
     },
     {
      "title": "ナナホシ",
@@ -1984,7 +1984,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/ae4db6f8eb.png"
+     "image": "assets/songs/ae4db6f8eb.webp"
     },
     {
      "title": "bass 2 bass",
@@ -1992,7 +1992,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/fb57b08c6b.png"
+     "image": "assets/songs/fb57b08c6b.webp"
     },
     {
      "title": "梅雪夜",
@@ -2000,7 +2000,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/acb42d8b71.png"
+     "image": "assets/songs/acb42d8b71.webp"
     },
     {
      "title": "PRANA",
@@ -2008,7 +2008,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/ee84ecb877.png"
+     "image": "assets/songs/ee84ecb877.webp"
     }
    ],
    "criterion": "rate",
@@ -2038,7 +2038,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/bc281fe59c.png"
+     "image": "assets/songs/bc281fe59c.webp"
     },
     {
      "title": "恋とキングコング",
@@ -2046,7 +2046,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/befdb0e294.png"
+     "image": "assets/songs/befdb0e294.webp"
     },
     {
      "title": "虚空と光明のディスクール",
@@ -2054,7 +2054,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/2f994b7e6c.png"
+     "image": "assets/songs/2f994b7e6c.webp"
     },
     {
      "title": "イブの時代っ！",
@@ -2062,7 +2062,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/e96cd1efc0.png"
+     "image": "assets/songs/e96cd1efc0.webp"
     },
     {
      "title": "めうめうぺったんたん！！",
@@ -2070,7 +2070,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/7282c35efb.png"
+     "image": "assets/songs/7282c35efb.webp"
     }
    ],
    "criterion": "avg",
@@ -2097,7 +2097,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/f8ef091228.png"
+     "image": "assets/songs/f8ef091228.webp"
     },
     {
      "title": "滅びに至るエランプシス",
@@ -2105,7 +2105,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/f68e97c28b.png"
+     "image": "assets/songs/f68e97c28b.webp"
     },
     {
      "title": "ちくわパフェだよ☆CKP",
@@ -2113,7 +2113,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/efb5b1e679.png"
+     "image": "assets/songs/efb5b1e679.webp"
     },
     {
      "title": "カタルシスの月",
@@ -2121,7 +2121,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/50423bba4b.png"
+     "image": "assets/songs/50423bba4b.webp"
     },
     {
      "title": "ホーンテッド★メイドランチ",
@@ -2129,7 +2129,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/590d43f3e1.png"
+     "image": "assets/songs/590d43f3e1.webp"
     }
    ],
    "criterion": "avg",
@@ -2156,7 +2156,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/f05c789bdc.png"
+     "image": "assets/songs/f05c789bdc.webp"
     },
     {
      "title": "アストライアの双皿",
@@ -2164,7 +2164,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/29651f8f83.png"
+     "image": "assets/songs/29651f8f83.webp"
     },
     {
      "title": "True Blue",
@@ -2172,7 +2172,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/278df8c40e.png"
+     "image": "assets/songs/278df8c40e.webp"
     },
     {
      "title": "encounter",
@@ -2180,7 +2180,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/22d546322b.png"
+     "image": "assets/songs/22d546322b.webp"
     },
     {
      "title": "ドーパミン",
@@ -2188,7 +2188,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/2030e33862.png"
+     "image": "assets/songs/2030e33862.webp"
     }
    ],
    "criterion": "avg",
@@ -2215,7 +2215,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/8e68ff894d.png"
+     "image": "assets/songs/8e68ff894d.webp"
     },
     {
      "title": "overcomplexification",
@@ -2223,7 +2223,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/aa9caec481.png"
+     "image": "assets/songs/aa9caec481.webp"
     },
     {
      "title": "Niflheimr",
@@ -2231,7 +2231,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/babeafb73c.png"
+     "image": "assets/songs/babeafb73c.webp"
     },
     {
      "title": "glacia [ 2 ]",
@@ -2239,7 +2239,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/42c8d16c6d.png"
+     "image": "assets/songs/42c8d16c6d.webp"
     },
     {
      "title": "アガット",
@@ -2247,7 +2247,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/5b53a4a81a.png"
+     "image": "assets/songs/5b53a4a81a.webp"
     }
    ],
    "criterion": "avg",
@@ -2274,7 +2274,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/b185f33b9b.png"
+     "image": "assets/songs/b185f33b9b.webp"
     },
     {
      "title": "Rainbow after snow",
@@ -2282,7 +2282,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/e5fb3399e8.png"
+     "image": "assets/songs/e5fb3399e8.webp"
     },
     {
      "title": "あいのうた",
@@ -2290,7 +2290,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/87a6da096d.png"
+     "image": "assets/songs/87a6da096d.webp"
     },
     {
      "title": "サヨナラ・ヘヴン",
@@ -2298,7 +2298,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/e8bea0247b.png"
+     "image": "assets/songs/e8bea0247b.webp"
     },
     {
      "title": "恋とキングコング",
@@ -2306,7 +2306,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/befdb0e294.png"
+     "image": "assets/songs/befdb0e294.webp"
     }
    ],
    "criterion": "avg",
@@ -2333,7 +2333,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/8158a5eef0.png"
+     "image": "assets/songs/8158a5eef0.webp"
     },
     {
      "title": "anemone",
@@ -2341,7 +2341,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/71c8462029.png"
+     "image": "assets/songs/71c8462029.webp"
     },
     {
      "title": "Crosswind",
@@ -2349,7 +2349,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/61a552f954.png"
+     "image": "assets/songs/61a552f954.webp"
     },
     {
      "title": "万華鏡",
@@ -2357,7 +2357,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/7f7658f6f7.png"
+     "image": "assets/songs/7f7658f6f7.webp"
     },
     {
      "title": "歌の翼",
@@ -2365,7 +2365,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/039fd1fc40.png"
+     "image": "assets/songs/039fd1fc40.webp"
     }
    ],
    "criterion": "rate",
@@ -2395,7 +2395,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/787828aab8.png"
+     "image": "assets/songs/787828aab8.webp"
     },
     {
      "title": "朧",
@@ -2403,7 +2403,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/16913c51a0.png"
+     "image": "assets/songs/16913c51a0.webp"
     },
     {
      "title": "Snow Goose",
@@ -2411,7 +2411,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/eb197cd094.png"
+     "image": "assets/songs/eb197cd094.webp"
     },
     {
      "title": "quaver♪",
@@ -2419,7 +2419,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/2e0583a202.png"
+     "image": "assets/songs/2e0583a202.webp"
     },
     {
      "title": "The Wind of Gold",
@@ -2427,7 +2427,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/625e2ee24d.png"
+     "image": "assets/songs/625e2ee24d.webp"
     }
    ],
    "criterion": "avg",
@@ -2455,7 +2455,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/f5ef67f5bf.png"
+     "image": "assets/songs/f5ef67f5bf.webp"
     },
     {
      "title": "Cosmic Hurricane",
@@ -2463,7 +2463,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/3963b6fac9.png"
+     "image": "assets/songs/3963b6fac9.webp"
     },
     {
      "title": "Romancing Layer",
@@ -2471,7 +2471,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/a53327eae0.png"
+     "image": "assets/songs/a53327eae0.webp"
     },
     {
      "title": "PRANA",
@@ -2479,7 +2479,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/ee84ecb877.png"
+     "image": "assets/songs/ee84ecb877.webp"
     },
     {
      "title": "Riot of Color",
@@ -2487,7 +2487,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/40704a8cda.png"
+     "image": "assets/songs/40704a8cda.webp"
     }
    ],
    "criterion": "avg",
@@ -2515,7 +2515,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/8820a62039.png"
+     "image": "assets/songs/8820a62039.webp"
     },
     {
      "title": "Icicles",
@@ -2523,7 +2523,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/9630bd940f.png"
+     "image": "assets/songs/9630bd940f.webp"
     },
     {
      "title": "Russian Snowy Dance",
@@ -2531,7 +2531,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/1e8aa1ebec.png"
+     "image": "assets/songs/1e8aa1ebec.webp"
     },
     {
      "title": "トリカゴノ鳳凰",
@@ -2539,7 +2539,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/a41920654c.png"
+     "image": "assets/songs/a41920654c.webp"
     },
     {
      "title": "隅田川夏恋歌",
@@ -2547,7 +2547,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/731d6954a6.png"
+     "image": "assets/songs/731d6954a6.webp"
     }
    ],
    "criterion": "avg",
@@ -2574,7 +2574,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/b40fdf5bd6.png"
+     "image": "assets/songs/b40fdf5bd6.webp"
     },
     {
      "title": "TYCOON",
@@ -2582,7 +2582,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/e983c705f9.png"
+     "image": "assets/songs/e983c705f9.webp"
     },
     {
      "title": "黒髪乱れし修羅となりて",
@@ -2590,7 +2590,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/dc5354cad1.png"
+     "image": "assets/songs/dc5354cad1.webp"
     },
     {
      "title": "キルト",
@@ -2598,7 +2598,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/657775c375.png"
+     "image": "assets/songs/657775c375.webp"
     },
     {
      "title": "True Blue",
@@ -2606,7 +2606,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "assets/songs/278df8c40e.png"
+     "image": "assets/songs/278df8c40e.webp"
     }
    ],
    "criterion": "rate",
@@ -2636,7 +2636,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/2b984123bd.png"
+     "image": "assets/songs/2b984123bd.webp"
     },
     {
      "title": "Macuilxochitl",
@@ -2644,7 +2644,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/720ed203b7.png"
+     "image": "assets/songs/720ed203b7.webp"
     },
     {
      "title": "I'm so Happy",
@@ -2652,7 +2652,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/af49c259c9.png"
+     "image": "assets/songs/af49c259c9.webp"
     },
     {
      "title": "HEAVENLY MOON",
@@ -2660,7 +2660,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/288f92170c.png"
+     "image": "assets/songs/288f92170c.webp"
     },
     {
      "title": "アストライアの双皿",
@@ -2668,7 +2668,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/29651f8f83.png"
+     "image": "assets/songs/29651f8f83.webp"
     }
    ],
    "criterion": "avg",
@@ -2695,7 +2695,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/7e30863c89.png"
+     "image": "assets/songs/7e30863c89.webp"
     },
     {
      "title": "Mirage",
@@ -2703,7 +2703,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/6f6a4d0593.png"
+     "image": "assets/songs/6f6a4d0593.webp"
     },
     {
      "title": "トルコ行進曲",
@@ -2711,7 +2711,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/f22e5cb3b8.png"
+     "image": "assets/songs/f22e5cb3b8.webp"
     },
     {
      "title": "Red Goose",
@@ -2719,7 +2719,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/8cb22558de.png"
+     "image": "assets/songs/8cb22558de.webp"
     },
     {
      "title": "Nature (jubeat version)",
@@ -2727,7 +2727,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/84b916dcc2.png"
+     "image": "assets/songs/84b916dcc2.webp"
     }
    ],
    "criterion": "avg",
@@ -2754,7 +2754,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/f05c789bdc.png"
+     "image": "assets/songs/f05c789bdc.webp"
     },
     {
      "title": "アストライアの双皿",
@@ -2762,7 +2762,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/29651f8f83.png"
+     "image": "assets/songs/29651f8f83.webp"
     },
     {
      "title": "True Blue",
@@ -2770,7 +2770,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/278df8c40e.png"
+     "image": "assets/songs/278df8c40e.webp"
     },
     {
      "title": "encounter",
@@ -2778,7 +2778,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/22d546322b.png"
+     "image": "assets/songs/22d546322b.webp"
     },
     {
      "title": "ドーパミン",
@@ -2786,7 +2786,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/2030e33862.png"
+     "image": "assets/songs/2030e33862.webp"
     }
    ],
    "criterion": "avg",
@@ -2813,7 +2813,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/8e68ff894d.png"
+     "image": "assets/songs/8e68ff894d.webp"
     },
     {
      "title": "overcomplexification",
@@ -2821,7 +2821,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/aa9caec481.png"
+     "image": "assets/songs/aa9caec481.webp"
     },
     {
      "title": "Niflheimr",
@@ -2829,7 +2829,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/babeafb73c.png"
+     "image": "assets/songs/babeafb73c.webp"
     },
     {
      "title": "glacia [ 2 ]",
@@ -2837,7 +2837,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/42c8d16c6d.png"
+     "image": "assets/songs/42c8d16c6d.webp"
     },
     {
      "title": "アガット",
@@ -2845,7 +2845,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "assets/songs/5b53a4a81a.png"
+     "image": "assets/songs/5b53a4a81a.webp"
     }
    ],
    "criterion": "avg",

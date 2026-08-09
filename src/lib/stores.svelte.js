@@ -122,7 +122,7 @@ export function saveCustomData() {
       localStorage.setItem(CUSTOM_KEY, JSON.stringify(app.customDans));
     }
   } catch (e) {
-    /* ignore */
+    showNotice("⚠️ 本地存储空间不足，自定义段位数据可能未完整保存");
   }
 }
 
@@ -220,7 +220,7 @@ export function saveState() {
   try {
     localStorage.setItem(APP_CONFIG.storageKey, JSON.stringify(app.progress));
   } catch (e) {
-    /* storage unavailable – progress simply won't persist */
+    showNotice("⚠️ 本地存储空间不足，进度可能未保存");
   }
 }
 

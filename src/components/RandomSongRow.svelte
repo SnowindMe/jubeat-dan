@@ -19,7 +19,7 @@
 
 <li class="song-row">
   {#if song.image}
-    <span class="song-thumb"><img src={song.image} alt="" decoding="async"></span>
+    <span class="song-thumb"><img src={song.image} alt="" decoding="async" loading="lazy"></span>
   {:else}
     <span class="song-thumb empty">♪</span>
   {/if}

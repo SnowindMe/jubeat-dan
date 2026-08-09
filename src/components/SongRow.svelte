@@ -52,7 +52,7 @@
 
 <li class="song-row" class:locked class:below>
   {#if song.image && (!song.hidden || revealed)}
-    <span class="song-thumb"><img src={song.image} alt="" decoding="async"></span>
+    <span class="song-thumb"><img src={song.image} alt="" decoding="async" loading="lazy"></span>
   {:else}
     <span class="song-thumb empty">♪</span>
   {/if}
