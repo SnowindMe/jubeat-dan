@@ -6,3 +6,7 @@ compatibility_date = "2024-11-01"
 binding = "DB"
 database_name = "jubeat-dan"
 database_id = "97bd8fc2-e52c-4f1a-bae4-b24d39169ca4"
+
+[[r2_buckets]]
+binding = "SONG_IMAGES"
+bucket_name = "jubeat-dan-assets"

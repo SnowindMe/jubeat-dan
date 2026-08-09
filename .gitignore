@@ -3,5 +3,6 @@ dist/
 .svelte-kit/
 .gh-pages-deploy/
 .wrangler/
+.r2-upload/
 .DS_Store
 *.log

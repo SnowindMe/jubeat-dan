@@ -25,7 +25,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/0/05/Sorairo_days.png/300px-Sorairo_days.png"
+     "image": "assets/songs/ad5fce1935.png"
     },
     {
      "title": "エイリアンエイリアン",
@@ -33,7 +33,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/0/06/Alien_alien.png/300px-Alien_alien.png"
+     "image": "assets/songs/fbb452a501.png"
     },
     {
      "title": "ULTRA HAPPY MEGAMIX",
@@ -41,7 +41,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/5/54/ULTRA_HAPPY_MEGAMIX.png/300px-ULTRA_HAPPY_MEGAMIX.png"
+     "image": "assets/songs/3bcb040f69.png"
     }
    ],
    "criterion": "score",
@@ -61,7 +61,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/f/fe/Lost_one_no_goukoku.png/300px-Lost_one_no_goukoku.png"
+     "image": "assets/songs/830c18af16.png"
     },
     {
      "title": "厳冬記",
@@ -69,7 +69,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/6/6a/NH-STYLE_2_album.png/300px-NH-STYLE_2_album.png"
+     "image": "assets/songs/ddc1816efe.png"
     },
     {
      "title": "チョコレートスマイル",
@@ -77,7 +77,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/9/95/Chocolate_smile.png/300px-Chocolate_smile.png"
+     "image": "assets/songs/6302170375.png"
     }
    ],
    "criterion": "score",
@@ -97,7 +97,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/7/75/Takane_no_Hanako-san.png/300px-Takane_no_Hanako-san.png"
+     "image": "assets/songs/aefd09b3b2.png"
     },
     {
      "title": "向日葵サンセット",
@@ -105,7 +105,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/1/17/Cirno_no_perfect_sansuu_kyoushitsu_9_shuunen_version.png/300px-Cirno_no_perfect_sansuu_kyoushitsu_9_shuunen_version.png"
+     "image": "assets/songs/9fc222d9d3.png"
     },
     {
      "title": "アルストロメリア",
@@ -113,7 +113,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/e/e0/Alstroemeria.png/300px-Alstroemeria.png"
+     "image": "assets/songs/f041109812.png"
     }
    ],
    "criterion": "score",
@@ -133,7 +133,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/a/a3/Kioku_no_kakera.png/300px-Kioku_no_kakera.png"
+     "image": "assets/songs/f87fcdac2a.png"
     },
     {
      "title": "リメンバーリメンバー",
@@ -141,7 +141,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/f/f9/Remember_remember.png/300px-Remember_remember.png"
+     "image": "assets/songs/db7267d8e9.png"
     },
     {
      "title": "ロンロンへ ライライライ！",
@@ -149,7 +149,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/b/b1/Ronron_e_rairairai%21.png/300px-Ronron_e_rairairai%21.png"
+     "image": "assets/songs/bcfc74c3d9.png"
     }
    ],
    "criterion": "score",
@@ -169,7 +169,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/d/d8/Tokai_seifuku_Girls.png/300px-Tokai_seifuku_Girls.png"
+     "image": "assets/songs/436b23ec61.png"
     },
     {
      "title": "キモチコネクト",
@@ -177,7 +177,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/8/8d/Kimochi_connect.png/300px-Kimochi_connect.png"
+     "image": "assets/songs/80dc8a6ba1.png"
     },
     {
      "title": "隅田川夏恋歌",
@@ -185,7 +185,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/c/c5/Sumidagawa_karenka.png/300px-Sumidagawa_karenka.png"
+     "image": "assets/songs/731d6954a6.png"
     }
    ],
    "criterion": "score",
@@ -204,7 +204,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/5/51/SHION.png/300px-SHION.png"
+     "image": "assets/songs/a317cb6904.png"
     },
     {
      "title": "Gimme a Big Beat",
@@ -212,7 +212,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/0/0e/Gimme_a_Big_Beat.png/300px-Gimme_a_Big_Beat.png"
+     "image": "assets/songs/28a047366b.png"
     },
     {
      "title": "I'm so Happy",
@@ -220,7 +220,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/f/f9/I%27m_so_Happy.PNG/300px-I%27m_so_Happy.PNG"
+     "image": "assets/songs/af49c259c9.png"
     }
    ],
    "criterion": "score",
@@ -239,7 +239,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/6/62/Tenkaranbu.png/300px-Tenkaranbu.png"
+     "image": "assets/songs/1e8d97c893.png"
     },
     {
      "title": "True Blue",
@@ -247,7 +247,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/3/3a/True_Blue.png/300px-True_Blue.png"
+     "image": "assets/songs/278df8c40e.png"
     },
     {
      "title": "Singularity",
@@ -255,7 +255,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/d/d0/Singularity.png/300px-Singularity.png"
+     "image": "assets/songs/96fc473ad2.png"
     }
    ],
    "criterion": "score",
@@ -274,7 +274,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/e/e9/Dragon_Blade_jubeat.png/300px-Dragon_Blade_jubeat.png"
+     "image": "assets/songs/1d04dc47c8.png"
     },
     {
      "title": "ZZ",
@@ -282,7 +282,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/d/d3/ZZ.png/300px-ZZ.png"
+     "image": "assets/songs/1674f4de55.png"
     },
     {
      "title": "Roll the Dice",
@@ -290,7 +290,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/b/b0/Roll_the_Dice.png/300px-Roll_the_Dice.png"
+     "image": "assets/songs/6351b49105.png"
     }
    ],
    "criterion": "score",
@@ -309,7 +309,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/9/9b/Astraia_no_soubei.png/300px-Astraia_no_soubei.png"
+     "image": "assets/songs/29651f8f83.png"
     },
     {
      "title": "Our Faith",
@@ -317,7 +317,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/ca/Our_Faith.png/300px-Our_Faith.png"
+     "image": "assets/songs/f214988d43.png"
     },
     {
      "title": "Crack Traxxxx",
@@ -325,7 +325,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/6/6d/Crack_Traxxxx.png/300px-Crack_Traxxxx.png"
+     "image": "assets/songs/b97d302778.png"
     }
    ],
    "criterion": "score",
@@ -344,7 +344,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/b/b5/Macuilxochitl.png/300px-Macuilxochitl.png"
+     "image": "assets/songs/720ed203b7.png"
     },
     {
      "title": "Red Goose",
@@ -352,7 +352,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/c5/Red_Goose.png/300px-Red_Goose.png"
+     "image": "assets/songs/8cb22558de.png"
     },
     {
      "title": "Elemental Creation",
@@ -360,7 +360,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/4/44/Elemental_Creation.png/300px-Elemental_Creation.png"
+     "image": "assets/songs/6c52526507.png"
     }
    ],
    "criterion": "score",
@@ -379,7 +379,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/9/9e/ROCK_ju.png/300px-ROCK_ju.png"
+     "image": "assets/songs/0bc0d9b9b5.png"
     },
     {
      "title": "Everybody's Rich",
@@ -387,7 +387,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/4/4e/Everybody%27s_Rich.png/300px-Everybody%27s_Rich.png"
+     "image": "assets/songs/07399b2510.png"
     },
     {
      "title": "Confiserie",
@@ -395,7 +395,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/8/8d/Confiserie.png/300px-Confiserie.png"
+     "image": "assets/songs/18352362c5.png"
     }
    ],
    "criterion": "score",
@@ -414,7 +414,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/5/59/StrayedCatz.png/300px-StrayedCatz.png"
+     "image": "assets/songs/de240fb02a.png"
     },
     {
      "title": "Last Dress",
@@ -422,7 +422,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/3/39/Last_Dress.png/300px-Last_Dress.png"
+     "image": "assets/songs/c19102493d.png"
     },
     {
      "title": "Megalara Garuda",
@@ -430,7 +430,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/5/52/Megalara_Garuda.png/300px-Megalara_Garuda.png"
+     "image": "assets/songs/131fb339a3.png"
     }
    ],
    "criterion": "score",
@@ -449,7 +449,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/e/ef/Share_The_World.png/300px-Share_The_World.png"
+     "image": "assets/songs/6a5dffe521.png"
     },
     {
      "title": "セツナトリップ",
@@ -457,7 +457,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/6/6e/Setsuna_trip.png/300px-Setsuna_trip.png"
+     "image": "assets/songs/566707cec4.png"
     },
     {
      "title": "Giant Otter Family",
@@ -465,7 +465,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/0/0e/Giant_Otter_Family.png/300px-Giant_Otter_Family.png"
+     "image": "assets/songs/9eadcc6368.png"
     }
    ],
    "criterion": "score",
@@ -486,7 +486,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/f/fe/Lost_one_no_goukoku.png/300px-Lost_one_no_goukoku.png"
+     "image": "assets/songs/830c18af16.png"
     },
     {
      "title": "Bad Apple!!",
@@ -494,7 +494,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/0/07/Bad_Apple%21%21_feat._nomico.png/300px-Bad_Apple%21%21_feat._nomico.png"
+     "image": "assets/songs/30a5454b00.png"
     },
     {
      "title": "チョコレートスマイル",
@@ -502,7 +502,7 @@
      "diff": "bsc",
      "mode": "normal",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/9/95/Chocolate_smile.png/300px-Chocolate_smile.png"
+     "image": "assets/songs/6302170375.png"
     }
    ],
    "criterion": "score",
@@ -523,7 +523,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/f/fb/PONPONPON.png/300px-PONPONPON.png"
+     "image": "assets/songs/1c5b138983.png"
     },
     {
      "title": "only my railgun",
@@ -531,7 +531,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/9/90/Only_my_railgun.png/300px-Only_my_railgun.png"
+     "image": "assets/songs/6d975142e4.png"
     },
     {
      "title": "アルストロメリア",
@@ -539,7 +539,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/e/e0/Alstroemeria.png/300px-Alstroemeria.png"
+     "image": "assets/songs/f041109812.png"
     }
    ],
    "criterion": "score",
@@ -560,7 +560,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/a/a3/Kioku_no_kakera.png/300px-Kioku_no_kakera.png"
+     "image": "assets/songs/f87fcdac2a.png"
     },
     {
      "title": "le mirage",
@@ -568,7 +568,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/2/24/Le_mirage.png/300px-Le_mirage.png"
+     "image": "assets/songs/36b16b47a8.png"
     },
     {
      "title": "凛として咲く花の如く",
@@ -576,7 +576,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/d/d4/Jubeat_Rin_to_shite_saku_hana_no_gotoku.PNG/300px-Jubeat_Rin_to_shite_saku_hana_no_gotoku.PNG"
+     "image": "assets/songs/f040f57222.png"
     }
    ],
    "criterion": "score",
@@ -596,7 +596,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/cd/Amanojaku_NOV.png/300px-Amanojaku_NOV.png"
+     "image": "assets/songs/481c0d95e0.png"
     },
     {
      "title": "キモチコネクト",
@@ -604,7 +604,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/8/8d/Kimochi_connect.png/300px-Kimochi_connect.png"
+     "image": "assets/songs/80dc8a6ba1.png"
     },
     {
      "title": "隅田川夏恋歌",
@@ -612,7 +612,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/c/c5/Sumidagawa_karenka.png/300px-Sumidagawa_karenka.png"
+     "image": "assets/songs/731d6954a6.png"
     }
    ],
    "criterion": "score",
@@ -632,7 +632,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/ca/Amalgamation.png/300px-Amalgamation.png"
+     "image": "assets/songs/440f2baed3.png"
     },
     {
      "title": "Knell",
@@ -640,7 +640,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/3/37/Knell.png/300px-Knell.png"
+     "image": "assets/songs/ee704e44a3.png"
     },
     {
      "title": "True Blue",
@@ -648,7 +648,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/3/3a/True_Blue.png/300px-True_Blue.png"
+     "image": "assets/songs/278df8c40e.png"
     }
    ],
    "criterion": "score",
@@ -668,7 +668,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/9/91/Pa-Pi-Pu-Yeah%21_EXH.png/300px-Pa-Pi-Pu-Yeah%21_EXH.png"
+     "image": "assets/songs/3a9c8180cf.png"
     },
     {
      "title": "Daily Lunch Special",
@@ -676,7 +676,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/d/d3/Daily_Lunch_Special.png/300px-Daily_Lunch_Special.png"
+     "image": "assets/songs/5086ef71a8.png"
     },
     {
      "title": "Sacrifice for Justice",
@@ -684,7 +684,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/b/b4/Sacrifice_for_Justice.png/300px-Sacrifice_for_Justice.png"
+     "image": "assets/songs/4b6872b544.png"
     }
    ],
    "criterion": "score",
@@ -704,7 +704,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/ca/Our_Faith.png/300px-Our_Faith.png"
+     "image": "assets/songs/f214988d43.png"
     },
     {
      "title": "ラクガキスト",
@@ -712,7 +712,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/5/57/Luckgakist_NOV.png/300px-Luckgakist_NOV.png"
+     "image": "assets/songs/a8218829c4.png"
     },
     {
      "title": "天空の華",
@@ -720,7 +720,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/1/1d/Tenkuu_no_hana.png/300px-Tenkuu_no_hana.png"
+     "image": "assets/songs/8e68ff894d.png"
     }
    ],
    "criterion": "score",
@@ -740,7 +740,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/e/e8/Vermilion.png/300px-Vermilion.png"
+     "image": "assets/songs/0f250a8383.png"
     },
     {
      "title": "アストライアの双皿",
@@ -748,7 +748,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/9/9b/Astraia_no_soubei.png/300px-Astraia_no_soubei.png"
+     "image": "assets/songs/29651f8f83.png"
     },
     {
      "title": "ドーパミン",
@@ -756,7 +756,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/b/b0/Dopamine.png/300px-Dopamine.png"
+     "image": "assets/songs/2030e33862.png"
     }
    ],
    "criterion": "score",
@@ -776,7 +776,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/c5/TSAR_BOMBA.png/300px-TSAR_BOMBA.png"
+     "image": "assets/songs/731a8d6439.png"
     },
     {
      "title": "Red Goose",
@@ -784,7 +784,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/c5/Red_Goose.png/300px-Red_Goose.png"
+     "image": "assets/songs/8cb22558de.png"
     },
     {
      "title": "Elemental Creation",
@@ -792,7 +792,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/4/44/Elemental_Creation.png/300px-Elemental_Creation.png"
+     "image": "assets/songs/6c52526507.png"
     }
    ],
    "criterion": "score",
@@ -812,7 +812,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/1/1c/Ryoushi_no_umi_no_Lindwurm.png/300px-Ryoushi_no_umi_no_Lindwurm.png"
+     "image": "assets/songs/e3db7dadf0.png"
     },
     {
      "title": "霖が哭く",
@@ -820,7 +820,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/f/f5/Rin_ga_naku.png/300px-Rin_ga_naku.png"
+     "image": "assets/songs/4289b9f550.png"
     },
     {
      "title": "Confiserie",
@@ -828,7 +828,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/8/8d/Confiserie.png/300px-Confiserie.png"
+     "image": "assets/songs/18352362c5.png"
     }
    ],
    "criterion": "score",
@@ -848,7 +848,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/b/bc/Sol_Cosine_Job_2.png/300px-Sol_Cosine_Job_2.png"
+     "image": "assets/songs/68da0f2dcd.png"
     },
     {
      "title": "Megalara Garuda",
@@ -856,7 +856,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/5/52/Megalara_Garuda.png/300px-Megalara_Garuda.png"
+     "image": "assets/songs/131fb339a3.png"
     },
     {
      "title": "Stand Alone Beat Masta",
@@ -864,7 +864,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": true,
-     "image": "https://remywiki.com/images/thumb/7/71/Stand_Alone_Beat_Masta.png/300px-Stand_Alone_Beat_Masta.png"
+     "image": "assets/songs/599b3bad2b.png"
     }
    ],
    "criterion": "score",
@@ -884,7 +884,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/a/a2/Show_up_%21_-_short_ver_-.png/300px-Show_up_%21_-_short_ver_-.png"
+     "image": "assets/songs/19e4045a7c.png"
     },
     {
      "title": "Special One",
@@ -892,7 +892,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/b/b7/Special_One.png/300px-Special_One.png"
+     "image": "assets/songs/b17ee5408b.png"
     },
     {
      "title": "fellow",
@@ -900,7 +900,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/0/0d/Fellow.png/300px-Fellow.png"
+     "image": "assets/songs/bc023f8b35.png"
     },
     {
      "title": "記憶の欠片",
@@ -908,7 +908,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/a/a3/Kioku_no_kakera.png/300px-Kioku_no_kakera.png"
+     "image": "assets/songs/f87fcdac2a.png"
     },
     {
      "title": "とってもとっても、ありがとう。",
@@ -916,7 +916,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/b/bf/Tottemo_tottemo%2C_arigatou.png/300px-Tottemo_tottemo%2C_arigatou.png"
+     "image": "assets/songs/bc281fe59c.png"
     }
    ],
    "criterion": "avg",
@@ -944,7 +944,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/0/00/Kono_aozora_no_shita_de.png/300px-Kono_aozora_no_shita_de.png"
+     "image": "assets/songs/1ff814cb73.png"
     },
     {
      "title": "Theory of Eternity",
@@ -952,7 +952,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/6/63/Theory_of_Eternity_jubeat.png/300px-Theory_of_Eternity_jubeat.png"
+     "image": "assets/songs/c005016e8b.png"
     },
     {
      "title": "Riot of Color",
@@ -960,7 +960,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/5/5e/Riot_of_Color.png/300px-Riot_of_Color.png"
+     "image": "assets/songs/40704a8cda.png"
     },
     {
      "title": "Chronos",
@@ -968,7 +968,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/9/94/Chronos.png/300px-Chronos.png"
+     "image": "assets/songs/f5ef67f5bf.png"
     },
     {
      "title": "アルストロメリア",
@@ -976,7 +976,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/e/e0/Alstroemeria.png/300px-Alstroemeria.png"
+     "image": "assets/songs/f041109812.png"
     }
    ],
    "criterion": "avg",
@@ -1004,7 +1004,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/c0/Cloche.png/300px-Cloche.png"
+     "image": "assets/songs/713862c585.png"
     },
     {
      "title": "虚空と光明のディスクール",
@@ -1012,7 +1012,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/a/a8/Kokuu_to_koumyou_no_discourse.png/300px-Kokuu_to_koumyou_no_discourse.png"
+     "image": "assets/songs/2f994b7e6c.png"
     },
     {
      "title": "STREET DANCER",
@@ -1020,7 +1020,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/8/89/STREET_DANCER.png/300px-STREET_DANCER.png"
+     "image": "assets/songs/2f5ee3e082.png"
     },
     {
      "title": "ツキミチヌ",
@@ -1028,7 +1028,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/a/a8/Tsukimichinu.png/300px-Tsukimichinu.png"
+     "image": "assets/songs/1e908209ef.png"
     },
     {
      "title": "防人恋歌",
@@ -1036,7 +1036,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/c0/Sakimori_renka.png/300px-Sakimori_renka.png"
+     "image": "assets/songs/443a6e35b1.png"
     }
    ],
    "criterion": "avg",
@@ -1064,7 +1064,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/a/ae/Yi-er_funclub.png/300px-Yi-er_funclub.png"
+     "image": "assets/songs/16d5f3c004.png"
     },
     {
      "title": "天ノ弱",
@@ -1072,7 +1072,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/cd/Amanojaku_NOV.png/300px-Amanojaku_NOV.png"
+     "image": "assets/songs/481c0d95e0.png"
     },
     {
      "title": "セツナトリップ",
@@ -1080,7 +1080,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/6/6e/Setsuna_trip.png/300px-Setsuna_trip.png"
+     "image": "assets/songs/566707cec4.png"
     },
     {
      "title": "ロストワンの号哭",
@@ -1088,7 +1088,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/f/fe/Lost_one_no_goukoku.png/300px-Lost_one_no_goukoku.png"
+     "image": "assets/songs/830c18af16.png"
     },
     {
      "title": "ラクガキスト",
@@ -1096,7 +1096,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/5/57/Luckgakist_NOV.png/300px-Luckgakist_NOV.png"
+     "image": "assets/songs/a8218829c4.png"
     }
    ],
    "criterion": "rate",
@@ -1126,7 +1126,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/b/bf/Tottemo_tottemo%2C_arigatou.png/300px-Tottemo_tottemo%2C_arigatou.png"
+     "image": "assets/songs/bc281fe59c.png"
     },
     {
      "title": "虚空と光明のディスクール",
@@ -1134,7 +1134,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/a/a8/Kokuu_to_koumyou_no_discourse.png/300px-Kokuu_to_koumyou_no_discourse.png"
+     "image": "assets/songs/2f994b7e6c.png"
     },
     {
      "title": "恋とキングコング",
@@ -1142,7 +1142,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/1/12/Koi_to_King_Kong.png/300px-Koi_to_King_Kong.png"
+     "image": "assets/songs/befdb0e294.png"
     },
     {
      "title": "イブの時代っ！",
@@ -1150,7 +1150,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/c9/Eve_no_jidai%21.png/300px-Eve_no_jidai%21.png"
+     "image": "assets/songs/e96cd1efc0.png"
     },
     {
      "title": "めうめうぺったんたん！！",
@@ -1158,7 +1158,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/f/fe/Meumeupettantan%21%21.png/300px-Meumeupettantan%21%21.png"
+     "image": "assets/songs/7282c35efb.png"
     }
    ],
    "criterion": "avg",
@@ -1186,7 +1186,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/d/d1/Fly_with_me_jubeat.png/300px-Fly_with_me_jubeat.png"
+     "image": "assets/songs/6e349a476a.png"
     },
     {
      "title": "イブの時代っ！",
@@ -1194,7 +1194,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/c9/Eve_no_jidai%21.png/300px-Eve_no_jidai%21.png"
+     "image": "assets/songs/e96cd1efc0.png"
     },
     {
      "title": "Daily Lunch Special",
@@ -1202,7 +1202,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/d/d3/Daily_Lunch_Special.png/300px-Daily_Lunch_Special.png"
+     "image": "assets/songs/5086ef71a8.png"
     },
     {
      "title": "Starlight Parade",
@@ -1210,7 +1210,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/cd/Starlight_Parade.png/300px-Starlight_Parade.png"
+     "image": "assets/songs/f26dfcf5e4.png"
     },
     {
      "title": "IN THE NAME OF LOVE",
@@ -1218,7 +1218,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/0/04/IN_THE_NAME_OF_LOVE.png/300px-IN_THE_NAME_OF_LOVE.png"
+     "image": "assets/songs/79fbee6b82.png"
     }
    ],
    "criterion": "rate",
@@ -1248,7 +1248,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/b/bc/Cassis.png/300px-Cassis.png"
+     "image": "assets/songs/ff6bfb46ac.png"
     },
     {
      "title": "Shining Star",
@@ -1256,7 +1256,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/c3/Kodona_no_kaidan_single.png/300px-Kodona_no_kaidan_single.png"
+     "image": "assets/songs/06e6ad5b3e.png"
     },
     {
      "title": "ヒーロー",
@@ -1264,7 +1264,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/d/d9/Hero.png/300px-Hero.png"
+     "image": "assets/songs/3828e30ab0.png"
     },
     {
      "title": "Happy Happy",
@@ -1272,7 +1272,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/2/2f/Happy_Happy.png/300px-Happy_Happy.png"
+     "image": "assets/songs/9d5e27cfa6.png"
     },
     {
      "title": "Polaris",
@@ -1280,7 +1280,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/a/a2/Polaris.png/300px-Polaris.png"
+     "image": "assets/songs/04dd0a60ea.png"
     }
    ],
    "criterion": "avg",
@@ -1308,7 +1308,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/d/d4/Jubeat_Rin_to_shite_saku_hana_no_gotoku.PNG/300px-Jubeat_Rin_to_shite_saku_hana_no_gotoku.PNG"
+     "image": "assets/songs/f040f57222.png"
     },
     {
      "title": "Summer Holiday",
@@ -1316,7 +1316,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/e/eb/Summer_Holiday.png/300px-Summer_Holiday.png"
+     "image": "assets/songs/4f9be8321e.png"
     },
     {
      "title": "VALLIS-NERIA",
@@ -1324,7 +1324,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/a/a8/VALLIS-NERIA.png/300px-VALLIS-NERIA.png"
+     "image": "assets/songs/1cdaa722c3.png"
     },
     {
      "title": "アルストロメリア",
@@ -1332,7 +1332,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/e/e0/Alstroemeria.png/300px-Alstroemeria.png"
+     "image": "assets/songs/f041109812.png"
     },
     {
      "title": "Far east nightbird",
@@ -1340,7 +1340,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/9/92/Far_east_nightbird.png/300px-Far_east_nightbird.png"
+     "image": "assets/songs/f16706af3c.png"
     }
    ],
    "criterion": "rate",
@@ -1370,7 +1370,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/6/63/Theory_of_Eternity_jubeat.png/300px-Theory_of_Eternity_jubeat.png"
+     "image": "assets/songs/c005016e8b.png"
     },
     {
      "title": "HEART BEAT FORMULA",
@@ -1378,7 +1378,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/b/b5/HEART_BEAT_FORMULA.png/300px-HEART_BEAT_FORMULA.png"
+     "image": "assets/songs/6d2a6e56d9.png"
     },
     {
      "title": "この青空の下で",
@@ -1386,7 +1386,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/0/00/Kono_aozora_no_shita_de.png/300px-Kono_aozora_no_shita_de.png"
+     "image": "assets/songs/1ff814cb73.png"
     },
     {
      "title": "Fly with me",
@@ -1394,7 +1394,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/d/d1/Fly_with_me_jubeat.png/300px-Fly_with_me_jubeat.png"
+     "image": "assets/songs/6e349a476a.png"
     },
     {
      "title": "アルストロメリア",
@@ -1402,7 +1402,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/e/e0/Alstroemeria.png/300px-Alstroemeria.png"
+     "image": "assets/songs/f041109812.png"
     }
    ],
    "criterion": "avg",
@@ -1430,7 +1430,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/2/23/STARLIT_DUST.png/300px-STARLIT_DUST.png"
+     "image": "assets/songs/126807ef49.png"
     },
     {
      "title": "さよならトリップ",
@@ -1438,7 +1438,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/9/96/Sayonara_trip.png/300px-Sayonara_trip.png"
+     "image": "assets/songs/887c9015a4.png"
     },
     {
      "title": "亡国のヒストリア",
@@ -1446,7 +1446,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/a/a0/Boukoku_no_historia.png/300px-Boukoku_no_historia.png"
+     "image": "assets/songs/c3810b13ff.png"
     },
     {
      "title": "コイノチカラ",
@@ -1454,7 +1454,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/b/b0/Koi_no_chikara.png/300px-Koi_no_chikara.png"
+     "image": "assets/songs/23db66a12e.png"
     },
     {
      "title": "Dragontail Butterfly",
@@ -1462,7 +1462,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/6/69/Dragontail_Butterfly.png/300px-Dragontail_Butterfly.png"
+     "image": "assets/songs/9f0123ac2f.png"
     }
    ],
    "criterion": "rate",
@@ -1492,7 +1492,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/8/8b/Sweet_Rain.png/300px-Sweet_Rain.png"
+     "image": "assets/songs/5da57c9b8b.png"
     },
     {
      "title": "Shine On Me",
@@ -1500,7 +1500,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/d/d5/Shine_On_Me.png/300px-Shine_On_Me.png"
+     "image": "assets/songs/e977193ac2.png"
     },
     {
      "title": "ほしふり",
@@ -1508,7 +1508,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/8/8c/Hoshifuri.png/300px-Hoshifuri.png"
+     "image": "assets/songs/15d3b6ab7f.png"
     },
     {
      "title": "le mirage",
@@ -1516,7 +1516,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/2/24/Le_mirage.png/300px-Le_mirage.png"
+     "image": "assets/songs/36b16b47a8.png"
     },
     {
      "title": "†渚の小悪魔ラヴリィ～レイディオ†",
@@ -1524,7 +1524,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/6/61/Nagisa_no_koakuma_lovely_radio.png/300px-Nagisa_no_koakuma_lovely_radio.png"
+     "image": "assets/songs/10ca1fe443.png"
     }
    ],
    "criterion": "avg",
@@ -1551,7 +1551,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/b/b4/Tengoku_to_jigoku.png/300px-Tengoku_to_jigoku.png"
+     "image": "assets/songs/b3c655aef2.png"
     },
     {
      "title": "Russian Snowy Dance",
@@ -1559,7 +1559,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/c8/Russian_Snowy_Dance.png/300px-Russian_Snowy_Dance.png"
+     "image": "assets/songs/1e8aa1ebec.png"
     },
     {
      "title": "Nature (jubeat version)",
@@ -1567,7 +1567,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/1/11/Nature_%28jubeat_version%29.png/300px-Nature_%28jubeat_version%29.png"
+     "image": "assets/songs/84b916dcc2.png"
     },
     {
      "title": "スペースカーニバル",
@@ -1575,7 +1575,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/b/b0/Space_carnival.png/300px-Space_carnival.png"
+     "image": "assets/songs/441450f330.png"
     },
     {
      "title": "DRAGON KILLER",
@@ -1583,7 +1583,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/e/ee/DRAGON_KILLER.png/300px-DRAGON_KILLER.png"
+     "image": "assets/songs/a4fc222292.png"
     }
    ],
    "criterion": "rate",
@@ -1613,7 +1613,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/3/3b/We%27re_so_Happy.png/300px-We%27re_so_Happy.png"
+     "image": "assets/songs/f05c789bdc.png"
     },
     {
      "title": "アストライアの双皿",
@@ -1621,7 +1621,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/9/9b/Astraia_no_soubei.png/300px-Astraia_no_soubei.png"
+     "image": "assets/songs/29651f8f83.png"
     },
     {
      "title": "True Blue",
@@ -1629,7 +1629,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/3/3a/True_Blue.png/300px-True_Blue.png"
+     "image": "assets/songs/278df8c40e.png"
     },
     {
      "title": "encounter",
@@ -1637,7 +1637,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/0/01/Encounter.png/300px-Encounter.png"
+     "image": "assets/songs/22d546322b.png"
     },
     {
      "title": "ドーパミン",
@@ -1645,7 +1645,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/b/b0/Dopamine.png/300px-Dopamine.png"
+     "image": "assets/songs/2030e33862.png"
     }
    ],
    "criterion": "avg",
@@ -1673,7 +1673,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/1/1d/Tenkuu_no_hana.png/300px-Tenkuu_no_hana.png"
+     "image": "assets/songs/8e68ff894d.png"
     },
     {
      "title": "overcomplexification",
@@ -1681,7 +1681,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/0/03/Overcomplexification.png/300px-Overcomplexification.png"
+     "image": "assets/songs/aa9caec481.png"
     },
     {
      "title": "Niflheimr",
@@ -1689,7 +1689,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/4/4d/Niflheimr.png/300px-Niflheimr.png"
+     "image": "assets/songs/babeafb73c.png"
     },
     {
      "title": "glacia [ 2 ]",
@@ -1697,7 +1697,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/0/02/Glacia.png/300px-Glacia.png"
+     "image": "assets/songs/42c8d16c6d.png"
     },
     {
      "title": "アガット",
@@ -1705,7 +1705,7 @@
      "diff": "adv",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/e/e4/Agate.png/300px-Agate.png"
+     "image": "assets/songs/5b53a4a81a.png"
     }
    ],
    "criterion": "avg",
@@ -1733,7 +1733,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/0/0e/Milky_ice_bear.png/300px-Milky_ice_bear.png"
+     "image": "assets/songs/0b1fd5d14e.png"
     },
     {
      "title": "キケンな果実",
@@ -1741,7 +1741,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/3/31/Kiken_na_kajitsu_jubeat.png/300px-Kiken_na_kajitsu_jubeat.png"
+     "image": "assets/songs/c0e2d94923.png"
     },
     {
      "title": "Green Green Dance",
@@ -1749,7 +1749,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/8/82/Green_Green_Dance.png/300px-Green_Green_Dance.png"
+     "image": "assets/songs/7553e85d40.png"
     },
     {
      "title": "Windy Fairy",
@@ -1757,7 +1757,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/cc/Windy_Fairy.png/300px-Windy_Fairy.png"
+     "image": "assets/songs/f3dd53ffc5.png"
     },
     {
      "title": "隅田川夏恋歌",
@@ -1765,7 +1765,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/c5/Sumidagawa_karenka.png/300px-Sumidagawa_karenka.png"
+     "image": "assets/songs/731d6954a6.png"
     }
    ],
    "criterion": "avg",
@@ -1793,7 +1793,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/8/8b/FRIENDSHIP.png/300px-FRIENDSHIP.png"
+     "image": "assets/songs/a5f4e9c5e5.png"
     },
     {
      "title": "めうめうぺったんたん！！",
@@ -1801,7 +1801,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/f/fe/Meumeupettantan%21%21.png/300px-Meumeupettantan%21%21.png"
+     "image": "assets/songs/7282c35efb.png"
     },
     {
      "title": "O JIYA",
@@ -1809,7 +1809,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/a/ab/O_JIYA.png/300px-O_JIYA.png"
+     "image": "assets/songs/59a1facc96.png"
     },
     {
      "title": "eyes",
@@ -1817,7 +1817,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/5/57/Eyes.png/300px-Eyes.png"
+     "image": "assets/songs/88cbcd2c5a.png"
     },
     {
      "title": "TYCOON",
@@ -1825,7 +1825,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/6/6d/TYCOON_NOV.png/300px-TYCOON_NOV.png"
+     "image": "assets/songs/e983c705f9.png"
     }
    ],
    "criterion": "rate",
@@ -1855,7 +1855,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/cd/Amanojaku_NOV.png/300px-Amanojaku_NOV.png"
+     "image": "assets/songs/481c0d95e0.png"
     },
     {
      "title": "いーあるふぁんくらぶ",
@@ -1863,7 +1863,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/a/ae/Yi-er_funclub.png/300px-Yi-er_funclub.png"
+     "image": "assets/songs/16d5f3c004.png"
     },
     {
      "title": "ロストワンの号哭",
@@ -1871,7 +1871,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/f/fe/Lost_one_no_goukoku.png/300px-Lost_one_no_goukoku.png"
+     "image": "assets/songs/830c18af16.png"
     },
     {
      "title": "セツナトリップ",
@@ -1879,7 +1879,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/6/6e/Setsuna_trip.png/300px-Setsuna_trip.png"
+     "image": "assets/songs/566707cec4.png"
     },
     {
      "title": "ラクガキスト",
@@ -1887,7 +1887,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/5/57/Luckgakist_NOV.png/300px-Luckgakist_NOV.png"
+     "image": "assets/songs/a8218829c4.png"
     }
    ],
    "criterion": "avg",
@@ -1914,7 +1914,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/c3/Kodona_no_kaidan_single.png/300px-Kodona_no_kaidan_single.png"
+     "image": "assets/songs/06e6ad5b3e.png"
     },
     {
      "title": "Sweet Rain",
@@ -1922,7 +1922,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/8/8b/Sweet_Rain.png/300px-Sweet_Rain.png"
+     "image": "assets/songs/5da57c9b8b.png"
     },
     {
      "title": "蒼天",
@@ -1930,7 +1930,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/0/0f/Souten.png/300px-Souten.png"
+     "image": "assets/songs/b854012f4c.png"
     },
     {
      "title": "candii",
@@ -1938,7 +1938,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/7/70/Candii.png/300px-Candii.png"
+     "image": "assets/songs/e01a457e4f.png"
     },
     {
      "title": "SigSig",
@@ -1946,7 +1946,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/3/3f/Jubeat_SigSig.PNG/300px-Jubeat_SigSig.PNG"
+     "image": "assets/songs/e8d3a0a2f8.png"
     }
    ],
    "criterion": "rate",
@@ -1976,7 +1976,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/e/eb/Wow_Wow_VENUS.png/300px-Wow_Wow_VENUS.png"
+     "image": "assets/songs/e627daad88.png"
     },
     {
      "title": "ナナホシ",
@@ -1984,7 +1984,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/2/20/Nanahoshi.png/300px-Nanahoshi.png"
+     "image": "assets/songs/ae4db6f8eb.png"
     },
     {
      "title": "bass 2 bass",
@@ -1992,7 +1992,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/a/ac/Bass_2_bass.png/300px-Bass_2_bass.png"
+     "image": "assets/songs/fb57b08c6b.png"
     },
     {
      "title": "梅雪夜",
@@ -2000,7 +2000,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/8/87/Umeyukiyo.png/300px-Umeyukiyo.png"
+     "image": "assets/songs/acb42d8b71.png"
     },
     {
      "title": "PRANA",
@@ -2008,7 +2008,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/8/81/PRANA.png/300px-PRANA.png"
+     "image": "assets/songs/ee84ecb877.png"
     }
    ],
    "criterion": "rate",
@@ -2038,7 +2038,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/b/bf/Tottemo_tottemo%2C_arigatou.png/300px-Tottemo_tottemo%2C_arigatou.png"
+     "image": "assets/songs/bc281fe59c.png"
     },
     {
      "title": "恋とキングコング",
@@ -2046,7 +2046,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/1/12/Koi_to_King_Kong.png/300px-Koi_to_King_Kong.png"
+     "image": "assets/songs/befdb0e294.png"
     },
     {
      "title": "虚空と光明のディスクール",
@@ -2054,7 +2054,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/a/a8/Kokuu_to_koumyou_no_discourse.png/300px-Kokuu_to_koumyou_no_discourse.png"
+     "image": "assets/songs/2f994b7e6c.png"
     },
     {
      "title": "イブの時代っ！",
@@ -2062,7 +2062,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/c9/Eve_no_jidai%21.png/300px-Eve_no_jidai%21.png"
+     "image": "assets/songs/e96cd1efc0.png"
     },
     {
      "title": "めうめうぺったんたん！！",
@@ -2070,7 +2070,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/f/fe/Meumeupettantan%21%21.png/300px-Meumeupettantan%21%21.png"
+     "image": "assets/songs/7282c35efb.png"
     }
    ],
    "criterion": "avg",
@@ -2097,7 +2097,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/1/18/Hashire_melonpan.png/300px-Hashire_melonpan.png"
+     "image": "assets/songs/f8ef091228.png"
     },
     {
      "title": "滅びに至るエランプシス",
@@ -2105,7 +2105,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/d/d3/Horobi_ni_itaru_ellampsis.png/300px-Horobi_ni_itaru_ellampsis.png"
+     "image": "assets/songs/f68e97c28b.png"
     },
     {
      "title": "ちくわパフェだよ☆CKP",
@@ -2113,7 +2113,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/9/91/Chikuwa_parfait_da_yo_CKP.png/300px-Chikuwa_parfait_da_yo_CKP.png"
+     "image": "assets/songs/efb5b1e679.png"
     },
     {
      "title": "カタルシスの月",
@@ -2121,7 +2121,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/a/ac/Catharsis_no_tsuki.png/300px-Catharsis_no_tsuki.png"
+     "image": "assets/songs/50423bba4b.png"
     },
     {
      "title": "ホーンテッド★メイドランチ",
@@ -2129,7 +2129,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/8/84/Haunted_maid_lunch.png/300px-Haunted_maid_lunch.png"
+     "image": "assets/songs/590d43f3e1.png"
     }
    ],
    "criterion": "avg",
@@ -2156,7 +2156,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/3/3b/We%27re_so_Happy.png/300px-We%27re_so_Happy.png"
+     "image": "assets/songs/f05c789bdc.png"
     },
     {
      "title": "アストライアの双皿",
@@ -2164,7 +2164,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/9/9b/Astraia_no_soubei.png/300px-Astraia_no_soubei.png"
+     "image": "assets/songs/29651f8f83.png"
     },
     {
      "title": "True Blue",
@@ -2172,7 +2172,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/3/3a/True_Blue.png/300px-True_Blue.png"
+     "image": "assets/songs/278df8c40e.png"
     },
     {
      "title": "encounter",
@@ -2180,7 +2180,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/0/01/Encounter.png/300px-Encounter.png"
+     "image": "assets/songs/22d546322b.png"
     },
     {
      "title": "ドーパミン",
@@ -2188,7 +2188,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/b/b0/Dopamine.png/300px-Dopamine.png"
+     "image": "assets/songs/2030e33862.png"
     }
    ],
    "criterion": "avg",
@@ -2215,7 +2215,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/1/1d/Tenkuu_no_hana.png/300px-Tenkuu_no_hana.png"
+     "image": "assets/songs/8e68ff894d.png"
     },
     {
      "title": "overcomplexification",
@@ -2223,7 +2223,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/0/03/Overcomplexification.png/300px-Overcomplexification.png"
+     "image": "assets/songs/aa9caec481.png"
     },
     {
      "title": "Niflheimr",
@@ -2231,7 +2231,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/4/4d/Niflheimr.png/300px-Niflheimr.png"
+     "image": "assets/songs/babeafb73c.png"
     },
     {
      "title": "glacia [ 2 ]",
@@ -2239,7 +2239,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/0/02/Glacia.png/300px-Glacia.png"
+     "image": "assets/songs/42c8d16c6d.png"
     },
     {
      "title": "アガット",
@@ -2247,7 +2247,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/e/e4/Agate.png/300px-Agate.png"
+     "image": "assets/songs/5b53a4a81a.png"
     }
    ],
    "criterion": "avg",
@@ -2274,7 +2274,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/5/5b/Tsubomi.png/300px-Tsubomi.png"
+     "image": "assets/songs/b185f33b9b.png"
     },
     {
      "title": "Rainbow after snow",
@@ -2282,7 +2282,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/4/49/Crevice.png/300px-Crevice.png"
+     "image": "assets/songs/e5fb3399e8.png"
     },
     {
      "title": "あいのうた",
@@ -2290,7 +2290,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/6/64/Ai_no_uta.png/300px-Ai_no_uta.png"
+     "image": "assets/songs/87a6da096d.png"
     },
     {
      "title": "サヨナラ・ヘヴン",
@@ -2298,7 +2298,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/7/73/Sayonara_heaven.png/300px-Sayonara_heaven.png"
+     "image": "assets/songs/e8bea0247b.png"
     },
     {
      "title": "恋とキングコング",
@@ -2306,7 +2306,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/1/12/Koi_to_King_Kong.png/300px-Koi_to_King_Kong.png"
+     "image": "assets/songs/befdb0e294.png"
     }
    ],
    "criterion": "avg",
@@ -2333,7 +2333,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/e/e6/Hakuchou_no_mizuumi.png/300px-Hakuchou_no_mizuumi.png"
+     "image": "assets/songs/8158a5eef0.png"
     },
     {
      "title": "anemone",
@@ -2341,7 +2341,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/3/3a/ANEMONE_-GITADORA_EDITION-.png/300px-ANEMONE_-GITADORA_EDITION-.png"
+     "image": "assets/songs/71c8462029.png"
     },
     {
      "title": "Crosswind",
@@ -2349,7 +2349,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/4/43/Crosswind.png/300px-Crosswind.png"
+     "image": "assets/songs/61a552f954.png"
     },
     {
      "title": "万華鏡",
@@ -2357,7 +2357,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/d/dd/Mangekyou.png/300px-Mangekyou.png"
+     "image": "assets/songs/7f7658f6f7.png"
     },
     {
      "title": "歌の翼",
@@ -2365,7 +2365,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/3/35/Uta_no_tsubasa.png/300px-Uta_no_tsubasa.png"
+     "image": "assets/songs/039fd1fc40.png"
     }
    ],
    "criterion": "rate",
@@ -2395,7 +2395,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/4/41/Little_Star.png/300px-Little_Star.png"
+     "image": "assets/songs/787828aab8.png"
     },
     {
      "title": "朧",
@@ -2403,7 +2403,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/7/74/Oboro.png/300px-Oboro.png"
+     "image": "assets/songs/16913c51a0.png"
     },
     {
      "title": "Snow Goose",
@@ -2411,7 +2411,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/9/95/Snow_Goose.png/300px-Snow_Goose.png"
+     "image": "assets/songs/eb197cd094.png"
     },
     {
      "title": "quaver♪",
@@ -2419,7 +2419,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/e/ea/Quaver.png/300px-Quaver.png"
+     "image": "assets/songs/2e0583a202.png"
     },
     {
      "title": "The Wind of Gold",
@@ -2427,7 +2427,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/9/91/The_Wind_of_Gold.png/300px-The_Wind_of_Gold.png"
+     "image": "assets/songs/625e2ee24d.png"
     }
    ],
    "criterion": "avg",
@@ -2455,7 +2455,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/9/94/Chronos.png/300px-Chronos.png"
+     "image": "assets/songs/f5ef67f5bf.png"
     },
     {
      "title": "Cosmic Hurricane",
@@ -2463,7 +2463,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/7/72/Cosmic_Hurricane.png/300px-Cosmic_Hurricane.png"
+     "image": "assets/songs/3963b6fac9.png"
     },
     {
      "title": "Romancing Layer",
@@ -2471,7 +2471,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/1/1a/Romancing_Layer.png/300px-Romancing_Layer.png"
+     "image": "assets/songs/a53327eae0.png"
     },
     {
      "title": "PRANA",
@@ -2479,7 +2479,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/8/81/PRANA.png/300px-PRANA.png"
+     "image": "assets/songs/ee84ecb877.png"
     },
     {
      "title": "Riot of Color",
@@ -2487,7 +2487,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/5/5e/Riot_of_Color.png/300px-Riot_of_Color.png"
+     "image": "assets/songs/40704a8cda.png"
     }
    ],
    "criterion": "avg",
@@ -2515,7 +2515,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/b/bf/KUNG-FU_MAMA.png/300px-KUNG-FU_MAMA.png"
+     "image": "assets/songs/8820a62039.png"
     },
     {
      "title": "Icicles",
@@ -2523,7 +2523,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/4/41/Icicles_jubeat.png/300px-Icicles_jubeat.png"
+     "image": "assets/songs/9630bd940f.png"
     },
     {
      "title": "Russian Snowy Dance",
@@ -2531,7 +2531,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/c8/Russian_Snowy_Dance.png/300px-Russian_Snowy_Dance.png"
+     "image": "assets/songs/1e8aa1ebec.png"
     },
     {
      "title": "トリカゴノ鳳凰",
@@ -2539,7 +2539,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/e/e8/Torikago_no_houou.png/300px-Torikago_no_houou.png"
+     "image": "assets/songs/a41920654c.png"
     },
     {
      "title": "隅田川夏恋歌",
@@ -2547,7 +2547,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/c5/Sumidagawa_karenka.png/300px-Sumidagawa_karenka.png"
+     "image": "assets/songs/731d6954a6.png"
     }
    ],
    "criterion": "avg",
@@ -2574,7 +2574,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/a/a8/Sakura_Sunrise.png/300px-Sakura_Sunrise.png"
+     "image": "assets/songs/b40fdf5bd6.png"
     },
     {
      "title": "TYCOON",
@@ -2582,7 +2582,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/6/6d/TYCOON_NOV.png/300px-TYCOON_NOV.png"
+     "image": "assets/songs/e983c705f9.png"
     },
     {
      "title": "黒髪乱れし修羅となりて",
@@ -2590,7 +2590,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/9/90/Kurokami_midareshi_shura_to_narite.png/300px-Kurokami_midareshi_shura_to_narite.png"
+     "image": "assets/songs/dc5354cad1.png"
     },
     {
      "title": "キルト",
@@ -2598,7 +2598,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/6/65/Quilt.png/300px-Quilt.png"
+     "image": "assets/songs/657775c375.png"
     },
     {
      "title": "True Blue",
@@ -2606,7 +2606,7 @@
      "diff": "ext",
      "mode": "normal",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/3/3a/True_Blue.png/300px-True_Blue.png"
+     "image": "assets/songs/278df8c40e.png"
     }
    ],
    "criterion": "rate",
@@ -2636,7 +2636,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/d/da/GIGA_BREAK.png/300px-GIGA_BREAK.png"
+     "image": "assets/songs/2b984123bd.png"
     },
     {
      "title": "Macuilxochitl",
@@ -2644,7 +2644,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/b/b5/Macuilxochitl.png/300px-Macuilxochitl.png"
+     "image": "assets/songs/720ed203b7.png"
     },
     {
      "title": "I'm so Happy",
@@ -2652,7 +2652,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/f/f9/I%27m_so_Happy.PNG/300px-I%27m_so_Happy.PNG"
+     "image": "assets/songs/af49c259c9.png"
     },
     {
      "title": "HEAVENLY MOON",
@@ -2660,7 +2660,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/3/39/HEAVENLY_MOON.PNG/300px-HEAVENLY_MOON.PNG"
+     "image": "assets/songs/288f92170c.png"
     },
     {
      "title": "アストライアの双皿",
@@ -2668,7 +2668,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/9/9b/Astraia_no_soubei.png/300px-Astraia_no_soubei.png"
+     "image": "assets/songs/29651f8f83.png"
     }
    ],
    "criterion": "avg",
@@ -2695,7 +2695,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/3/3e/Lucky_lucky.png/300px-Lucky_lucky.png"
+     "image": "assets/songs/7e30863c89.png"
     },
     {
      "title": "Mirage",
@@ -2703,7 +2703,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/f/fb/Mirage.png/300px-Mirage.png"
+     "image": "assets/songs/6f6a4d0593.png"
     },
     {
      "title": "トルコ行進曲",
@@ -2711,7 +2711,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/0/08/Turkey_koushinkyoku.png/300px-Turkey_koushinkyoku.png"
+     "image": "assets/songs/f22e5cb3b8.png"
     },
     {
      "title": "Red Goose",
@@ -2719,7 +2719,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/c/c5/Red_Goose.png/300px-Red_Goose.png"
+     "image": "assets/songs/8cb22558de.png"
     },
     {
      "title": "Nature (jubeat version)",
@@ -2727,7 +2727,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/1/11/Nature_%28jubeat_version%29.png/300px-Nature_%28jubeat_version%29.png"
+     "image": "assets/songs/84b916dcc2.png"
     }
    ],
    "criterion": "avg",
@@ -2754,7 +2754,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/3/3b/We%27re_so_Happy.png/300px-We%27re_so_Happy.png"
+     "image": "assets/songs/f05c789bdc.png"
     },
     {
      "title": "アストライアの双皿",
@@ -2762,7 +2762,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/9/9b/Astraia_no_soubei.png/300px-Astraia_no_soubei.png"
+     "image": "assets/songs/29651f8f83.png"
     },
     {
      "title": "True Blue",
@@ -2770,7 +2770,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/3/3a/True_Blue.png/300px-True_Blue.png"
+     "image": "assets/songs/278df8c40e.png"
     },
     {
      "title": "encounter",
@@ -2778,7 +2778,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/0/01/Encounter.png/300px-Encounter.png"
+     "image": "assets/songs/22d546322b.png"
     },
     {
      "title": "ドーパミン",
@@ -2786,7 +2786,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/b/b0/Dopamine.png/300px-Dopamine.png"
+     "image": "assets/songs/2030e33862.png"
     }
    ],
    "criterion": "avg",
@@ -2813,7 +2813,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/1/1d/Tenkuu_no_hana.png/300px-Tenkuu_no_hana.png"
+     "image": "assets/songs/8e68ff894d.png"
     },
     {
      "title": "overcomplexification",
@@ -2821,7 +2821,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/0/03/Overcomplexification.png/300px-Overcomplexification.png"
+     "image": "assets/songs/aa9caec481.png"
     },
     {
      "title": "Niflheimr",
@@ -2829,7 +2829,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/4/4d/Niflheimr.png/300px-Niflheimr.png"
+     "image": "assets/songs/babeafb73c.png"
     },
     {
      "title": "glacia [ 2 ]",
@@ -2837,7 +2837,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/0/02/Glacia.png/300px-Glacia.png"
+     "image": "assets/songs/42c8d16c6d.png"
     },
     {
      "title": "アガット",
@@ -2845,7 +2845,7 @@
      "diff": "ext",
      "mode": "hard",
      "hidden": false,
-     "image": "https://remywiki.com/images/thumb/e/e4/Agate.png/300px-Agate.png"
+     "image": "assets/songs/5b53a4a81a.png"
     }
    ],
    "criterion": "avg",
