@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte";
   import { FRAMES } from "./lib/constants.js";
   import DanCard from "./components/DanCard.svelte";
   import Decorations from "./components/Decorations.svelte";
@@ -29,8 +30,15 @@
   } from "./lib/stores.svelte.js";
 
   let settingsOpen = $state(false);
+  let visitCount = $state(null);
 
   const frameColor = $derived((FRAMES.find(function (f) { return f.id === app.playerFrame; }) || FRAMES[0]).color);
+
+  onMount(function () {
+    fetch("/api/visit").then(function (r) { return r.json(); }).then(function (j) {
+      if (j && typeof j.total === "number") visitCount = j.total;
+    }).catch(function () { /* 计数服务不可用时静默隐藏 */ });
+  });
 
   $effect(function () {
     effectiveDans();
@@ -170,6 +178,9 @@
 
 <footer class="site-footer">
   <p class="dim">非官方站点，与 KONAMI 无关 · 曲目信息请以机台实际为准</p>
+  {#if visitCount != null}
+    <p class="visit-count">本网站已有 {visitCount.toLocaleString("zh-CN")} 人查看，谢谢你们对 jubeat 的热爱与支持</p>
+  {/if}
 </footer>
 
 <Modal>
@@ -225,6 +236,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+
+  .visit-count {
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--muted, #7CA2C3);
   }
 
   .dan-list {

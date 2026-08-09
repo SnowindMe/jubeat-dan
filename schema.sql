@@ -39,6 +39,12 @@ CREATE TABLE IF NOT EXISTS admin_config (
   value TEXT NOT NULL
 );
 
+-- 独立访客计数表（visitor 为 IP+UA 的匿名哈希）
+CREATE TABLE IF NOT EXISTS visitors (
+  visitor TEXT PRIMARY KEY,
+  first_seen TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
 -- ============================================================
 -- 旧库迁移（已部署过旧表的 D1 数据库，在 Console 执行一次即可）：
 -- 旧表按 player 去重；迁移后旧记录以 'legacy:' + player 作为 player_id，
@@ -78,4 +84,10 @@ CREATE TABLE IF NOT EXISTS admin_config (
 -- CREATE TABLE IF NOT EXISTS admin_config (
 --   key TEXT PRIMARY KEY,
 --   value TEXT NOT NULL
+-- );
+--
+-- 访客计数迁移（任意时刻执行一次即可）：
+-- CREATE TABLE IF NOT EXISTS visitors (
+--   visitor TEXT PRIMARY KEY,
+--   first_seen TEXT NOT NULL DEFAULT (datetime('now'))
 -- );
