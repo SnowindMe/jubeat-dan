@@ -10,6 +10,7 @@
 # 只想上传 GitHub：只设置 GITHUB_TOKEN 即可。
 # 只想部署 Cloudflare：只设置两个 CLOUDFLARE_* 变量即可。
 # 先试运行：./deploy.ps1 -DryRun
+# 脚本会自动先构建前端（需要 Node.js 环境），再上传/部署。
 # ============================================================
 [CmdletBinding()]
 param(
@@ -33,15 +34,31 @@ if ($DryRun) {
   Write-Host "CLOUDFLARE_ACCOUNT_ID : $(if ($env:CLOUDFLARE_ACCOUNT_ID) { '已设置' } else { '未设置' })"
   Step "将执行："
   if ($env:GITHUB_TOKEN) {
-    Write-Host "1. GitHub：创建公开仓库 $GitHubUser/$RepoName，推送 main，启用 GitHub Pages"
+    Write-Host "1. 构建前端（npm install + npm run build）"
+    Write-Host "2. GitHub：创建公开仓库 $GitHubUser/$RepoName，推送 main，启用 GitHub Pages（Actions 工作流构建）"
   }
   if ($env:CLOUDFLARE_API_TOKEN -and $env:CLOUDFLARE_ACCOUNT_ID) {
-    Write-Host "2. Cloudflare：创建 D1 数据库、执行 schema.sql、创建 Pages 项目并部署"
+    Write-Host "3. Cloudflare：创建 D1 数据库、执行 schema.sql、创建 Pages 项目并部署 dist"
   }
   if (-not $env:GITHUB_TOKEN -and -not ($env:CLOUDFLARE_API_TOKEN -and $env:CLOUDFLARE_ACCOUNT_ID)) {
     Write-Host "（未设置任何令牌，请先按脚本头部说明设置环境变量）" -ForegroundColor Yellow
   }
   exit 0
+}
+
+# ---------------- 0. 构建前端 ----------------
+if ($env:GITHUB_TOKEN -or ($env:CLOUDFLARE_API_TOKEN -and $env:CLOUDFLARE_ACCOUNT_ID)) {
+  Step "构建前端（Svelte 5 + Vite）"
+  Push-Location $root
+  try {
+    if (-not (Test-Path "node_modules")) {
+      npm install 2>&1 | Out-Null
+    }
+    npm run build 2>&1 | Out-Null
+    Write-Host "    构建完成：dist/"
+  } finally {
+    Pop-Location
+  }
 }
 
 # ---------------- 1. GitHub ----------------
@@ -82,11 +99,11 @@ if ($env:GITHUB_TOKEN) {
     Pop-Location
   }
 
-  Step "GitHub：启用 GitHub Pages"
+  Step "GitHub：启用 GitHub Pages（使用 .github/workflows/gh-pages.yml 构建）"
   try {
     Invoke-RestMethod -Method Post -Uri "https://api.github.com/repos/$GitHubUser/$RepoName/pages" -Headers $ghHeaders `
       -ContentType "application/json" `
-      -Body (@{ source = @{ branch = "main"; path = "/" } } | ConvertTo-Json -Depth 4) | Out-Null
+      -Body (@{ build_type = "workflow" } | ConvertTo-Json) | Out-Null
     Write-Host "    已启用 Pages：https://$GitHubUser.github.io/$RepoName/"
   } catch {
     Write-Host "    Pages 启用请求未成功（可能已启用）：$($_.Exception.Message)" -ForegroundColor Yellow
@@ -122,7 +139,7 @@ if ($env:CLOUDFLARE_API_TOKEN -and $env:CLOUDFLARE_ACCOUNT_ID) {
   Push-Location $root
   try {
     npx --yes wrangler pages project create $ProjectName --production-branch main 2>&1 | Out-Null
-    npx --yes wrangler pages deploy . --project-name $ProjectName --branch main 2>&1 | Out-Null
+    npx --yes wrangler pages deploy dist --project-name $ProjectName --branch main 2>&1 | Out-Null
     Write-Host "    部署完成：https://$ProjectName.pages.dev/"
   } finally {
     Pop-Location

@@ -1,113 +1,104 @@
 # JUBEAT 段位挑战（音乐魔方）
 
-一个纯静态的段位认定进度追踪站，不需要服务器、不需要数据库，数据全部保存在浏览器本地（localStorage）。
+一个纯静态的段位认定进度追踪站，数据全部保存在浏览器本地（localStorage），可选接入 Cloudflare D1 排行榜。
 
 段位按 **jubeat 机台版本分组**展示（如 festo / clan / jubeat prop）：主页先显示「随机挑战」入口和版本列表，点开某个版本展开该版本下的段位文件夹网格，再点击文件夹弹出曲目卡片，可记录每首分数，达标自动判定通过。
 
-主页列表第一项是「🎲 随机挑战」：从曲目池随机抽取 3 首生成挑战，分「全曲池 / 入門（Lv≤7）/ 上級（Lv8-9）/ 超上級（Lv10）」四档难度（舞萌风格分级），支持换一组、记分数，达标自动判定通过；随机挑战结果独立保存在浏览器本地，并随导出存档一起备份。
+主页列表第一项是「🎲 随机挑战」：从曲目池随机抽取 3 首生成挑战，分「全曲池 / 入門（Lv≤7）/ 上級（Lv8-9）/ 超上級（Lv10）」四档难度，支持换一组、记分数，达标自动判定通过；随机挑战结果独立保存在浏览器本地，并随导出存档一起备份。
 
-管理后台页 `admin.html`（部署后为 `/admin`，需管理员密码验证）的「✏️ 段位管理」可以在页面里直接自定义段位（左侧选项卡切换，右侧编辑面板）：改名、填所属 jubeat 版本、设挑战模式、填金/银/铜奖牌线、改主题色、增删段位、上下排序、增删曲目、改曲名/难度、**上传歌曲图片**（点击曲目行左侧的缩略图选择图片，自动压缩到 240px 内保存），修改实时保存到本机；「恢复默认数据」可回到 `data.json` 的版本，自定义数据会随导出存档一起备份。主页不再显示管理入口，管理员直接访问 `/admin` 进入后台。
+管理后台页 `/admin`（部署后访问，需管理员密码验证）支持自定义段位：改名、填版本、设挑战模式、填金/银/铜奖牌线、改主题色、增删段位、排序、增删曲目、上传歌曲图片，修改实时保存到本机；「恢复默认数据」可回到 `data.json` 的版本。
 
-- **一个位置多首可选曲**：真实段位里部分曲目位提供选曲。在管理面板点某一行下方的「+ 该位置添加可选曲」，即可为该曲目位加备选歌；打歌时该位置会显示 1/2/3 小圆钮切换所选歌曲，切换后该位置的分数会重置。
-- **奖牌线**：可为段位设置金/银/铜三档奖牌线，并按「总分数 / 平均分 / music rate」任选一种判定依据（默认跟随过段方式），打歌时达到对应线会点亮奖牌。
+## 技术栈（v2，Svelte 5 重构版）
 
-主页配有糖果/棒棒糖不规则慢速飘动动效（纯 CSS transform，GPU 加速不卡顿）；达标自动通过段位或随机挑战时会播放糖果彩带庆祝（canvas-confetti，canvas 渲染）。系统开启"减弱动态效果"时动效自动关闭。
+- **Svelte 5**（runes）+ **Vite 8**：无虚拟 DOM，编译产物小，无运行时框架开销
+- 双页面：`index.html`（主页）+ `admin.html`（管理后台），共享组件与响应式 store
+- **样式按组件拆分**：组件独有样式写在各自 `.svelte` 的 `<style>` 里（自动作用域隔离）；设计令牌、重置与跨组件共享的类（按钮/曲目行/登录卡等）保留在 `src/app.css` 全局基座
+- **Cloudflare Pages Functions + D1**：排行榜 API（`functions/api/leaderboard.js`，未改动）
+- 零运行时依赖（canvas-confetti 为本地单文件，无 npm 依赖）
 
-## 难度、模式、过段方式与隐藏曲
+## 目录结构
 
-- **难度**：每首歌曲的 BSC（绿）/ ADV（黄）/ EXT（红），在「管理段位」中设置，打歌卡片以彩色徽章显示
-- **模式**：每首歌曲的 EASY / NORMAL（默认）/ HARD，在「管理段位」中设置，打歌卡片显示模式徽章
-- **过段方式**：每个段位在「管理段位」中选择 总分数 / 平均分 / music rate，打歌时该段位的输入框相应变为分数（0–1,000,000）或 Rate（0–100%）
-- **单曲线与 FULL COMBO**：段位可配置「单曲分数线」（如初段每曲 700,000 以上）和「FC 曲数要求」（如 prop 课程的 FULL COMBO 条件）；打歌时每首右侧有 FC 按钮可记录本曲是否 Full Combo，判定会自动检查单曲线与 FC 数
-- **顺序解锁与隐藏曲**：曲目按顺序挑战，前一首分数达到单曲线后下一首才解锁输入；隐藏曲（festo / clan 段位的 FINAL 曲）显示模糊遮罩 + 🔒/？？？，打完该曲后自动揭晓曲名。某首分数未达线时判定失败，弹出提示并关闭该段位挑战，可「重开挑战」清空重试
-- **隐藏曲**：歌曲可在「管理段位」中勾选隐藏，打歌时曲名显示为「？？？」；隐藏曲不会出现在随机挑战的曲目池中
-- 卡片会自动计算总分、平均分或平均 Rate，填满所有曲目且达到达标线后**自动判定通过**（无需手动勾选），并提示是否达标；默认达标线在 `data.json` 的 `config.pass` 中设置（总分/平均分按每首 700,000 分自动换算，默认 3 首即 2,100,000；Rate 默认 85%），也可在「管理段位」里用"总分线 / 平均分线 / Rate线"按段位单独覆盖
-
-## 本地运行
-
-直接用浏览器打开 `index.html` 即可（走 `js/data.js` 兜底数据）；或者在本目录起一个本地服务器，效果相同且直接读取 `data.json`：
-
-```powershell
-python -m http.server 8000
+```
+├── index.html / admin.html   Vite 多页入口
+├── src/
+│   ├── main.js / admin-main.js   页面挂载入口
+│   ├── App.svelte / AdminApp.svelte
+│   ├── components/               UI 组件（主页 + 管理后台）
+│   └── lib/
+│       ├── data.svelte.js        构建时打包 data.json
+│       ├── stores.svelte.js      集中式响应状态（进度/自定义数据/随机挑战/弹窗）
+│       ├── pass.js               通过判定与数值逻辑（纯函数）
+│       ├── leaderboard.svelte.js 排行榜 API 客户端
+│       └── importexport.js       导出 / 导入存档
+├── public/                       静态资源（图标、版本 Logo、canvas-confetti）
+├── functions/api/leaderboard.js  排行榜 API（Cloudflare Pages Functions + D1）
+├── data.json                     唯一数据源（构建时打包进 JS）
+├── wrangler.toml                 Pages 构建输出目录 = dist
+└── deploy.ps1                    一键部署脚本
 ```
 
-然后访问 `http://localhost:8000/`。
+## 本地开发
+
+需要 Node.js 18+（推荐 20/22+）：
+
+```powershell
+npm install
+npm run dev        # 开发服务器，默认 http://localhost:5173
+npm run build      # 构建到 dist/
+npm run preview    # 本地预览构建产物
+```
+
+开发时直接改 `data.json` 即可，保存后页面热更新（数据在构建时打包，开发模式同样生效）。
 
 ## 修改段位 / 曲目数据
 
-**所有数据都在根目录的 `data.json` 里维护**，这是一个纯 JSON 文件：
+**所有数据都在根目录的 `data.json` 里维护**，结构说明：
 
-- `dans` 数组里是段位列表，想自定义段位个数就直接增删数组项，每个段位包含 `id`（唯一标识，进度按它保存）、`name`（段位名）、`version`（所属 jubeat 机台版本，如 festo / clan / jubeat prop）、`color`（主题色）、`mode`（可选，挑战模式，默认取第一首歌的模式）、`medals`（可选，如 `{"gold":2400000,"silver":2200000,"bronze":2100000}`）、`medalBasis`（可选，奖牌线依据：`total` 总分数 / `avg` 平均分 / `rate` music rate，默认跟随过段方式）、`songs`（曲目位，prop 课程为 5 首）
-- 每个曲目位默认是一首歌对象；若某位置可多选，把该位置写成数组，如 `songs: [songA, [songB, songC], songD]`，打歌时可在该位置切换
-- 主页按 `version` 分组折叠展示；`version` 留空或缺失的段位归入「默认」组
-- 每首曲子可填 `title`（曲名）、`level`（难度等级，支持小数如 9.3 / 10.1）、`image`（可选，歌曲封面：推荐填 `assets/songs/` 下的相对路径，或在管理面板里上传）
-- 打歌卡片、随机挑战会在歌名旁显示歌曲缩略图；隐藏曲不会显示图片（防止剧透曲名对应的图）
+- `dans` 数组是段位列表，每个段位含 `id`（进度唯一标识）、`name`、`version`（所属版本）、`color`、`mode`、`criterion`（过段方式：`score` / `avg` / `rate`）、`passTotal` / `passAvg` / `passRate`（达标线，留空自动按每首 700,000 分换算）、`medals`（金/银/铜线）、`songMin`（单曲分数线）、`needFc`（FC 曲数要求）、`hidden` / `unlockCode`（隐藏段位）、`songs`（曲目位，可多选写成数组）
+- 每首曲子可填 `title`、`level`、`diff`（bsc/adv/ext）、`mode`、`hidden`、`image`（推荐 `assets/songs/` 相对路径或 URL）
+- 改完保存后重新构建部署：`npm run build`（本地开发时刷新即可）
 
-### 曲目图片（放 assets）
+> 旧版的 `js/data.js` 兜底文件与 `tools/sync-data.js` 已废弃删除：现在 Vite 在构建时直接打包 `data.json`，不需要任何同步步骤。
 
-图片推荐直接放进项目 `assets/songs/` 目录（没有就自己建），然后在 `data.json` 的 `image` 字段或编辑器里「图片」输入框填相对路径，如 `assets/songs/sigsig.jpg`（也支持任意图片 URL）。图片随站点一起部署、自动走 CDN，**不占 localStorage、不增加存档体积**。建议用 240px 以内的小图（JPG/PNG）。
+## 管理员密码
 
-编辑器里点缩略图「上传」的图会以 base64 存到本机浏览器（适合少量临时用）；要正式放 assets，就在「图片」输入框里填路径即可。
-- 改完保存：用本地服务器预览时直接刷新即生效；双击打开 `index.html` 的场合，先运行一次同步脚本再刷新：
-
-```powershell
-node tools/sync-data.js
-```
-
-> `js/data.js` 由该脚本自动生成，**不要手改**。
-
-> 当前内置 **festo 段位**（初段～十段 / 皆伝 / 指神）、**clan NOBOLOT 検定**（第1の山～英雄の山 共 12 门，3 曲制）和 **jubeat prop COURSE MODE**（Lv1～Lv10 共 33 个课程，5 曲制，BRONZE/SILVER/GOLD 条件）数据。
-
-## 免费部署（零成本）
-
-这个站是纯静态的，正好适合上一轮聊到的免费托管：
-
-### 方案 A：GitHub Pages（推荐）
-
-1. 在 GitHub 新建仓库，把 `outputs/jubeat-dan/` 下的文件推到仓库根目录
-2. 仓库 Settings → Pages → Source 选择 `main` 分支
-3. 几分钟后即可通过 `https://你的用户名.github.io/仓库名/` 访问
-
-### 方案 B：Cloudflare Pages（国内访问稍好）
-
-1. 注册 Cloudflare，进入 Pages → Create a project
-2. 连接 GitHub 仓库或直接拖拽上传 `outputs/jubeat-dan/` 文件夹
-3. 构建命令留空即可，自动获得 `*.pages.dev` 域名和免费 HTTPS
-
-两种方案都是 0 元，只需额外买域名（可选）。
-
-## 数据说明
-
-- 进度保存在浏览器 localStorage，不同设备不互通，可用「⚙️ 设置」里的导出存档 / 导入存档迁移（导入带自定义段位的存档时可选择"只导入进度"或"进度 + 自定义"，自定义数据可选覆盖）
-
-## 管理员密码（段位管理）
-
-- 上线后为防止玩家随意修改段位数据，进入「管理段位」需要管理员密码，默认 `admin888`。
-- 密码以 SHA-256 哈希存在 `data.json` 的 `config.admin.passHash` 中。修改密码：先算新密码哈希，例如 `node -e "console.log(require('crypto').createHash('sha256').update('新密码').digest('hex'))"`，把输出填回 `passHash`，再运行 `node tools/sync-data.js` 同步。
-- `passHash` 留空表示不启用密码（适合本地开发）；验证状态在会话内有效，关掉浏览器标签后需重新输入。
-- 说明：纯前端校验适合小圈子使用；如需更强保护，可后续用 Cloudflare Functions 做服务端校验。
-- 非官方站点，与 KONAMI 无关，曲目信息请以机台实际为准
+- 密码以 SHA-256 哈希存在 `data.json` 的 `config.admin.passHash` 中，默认 `admin888`
+- 修改密码：算出新密码哈希后填回 `passHash`，重新构建部署。例如：
+  `node -e "console.log(require('crypto').createHash('sha256').update('新密码').digest('hex'))"`
+- `passHash` 留空表示不启用密码（适合本地开发）；验证状态在会话内有效，关掉浏览器标签后需重新输入
+- 说明：纯前端校验适合小圈子使用；如需更强保护，可后续用 Cloudflare Functions 做服务端校验
 
 ## 排行榜与登录（可选，Cloudflare Pages + D1）
 
-工具栏的「🏆 排行榜」查看榜单，「👤 登录」设置昵称（昵称保存在本机，无密码，适合小圈子；后续可加 PIN 验证）。
+工具栏的「🏆 排行榜」查看榜单，「👤 登录」设置昵称（昵称保存在本机，无密码，适合小圈子）。
 
 - 通过段位后，段位卡片会出现「🏆 提交到排行榜」，达标即可提交
-- 按（版本 × 段位 × 挑战模式 × 过段方式）分榜，每个玩家只保留最好成绩（同榜重复提交自动覆盖，不产生冗余记录）
+- 按（版本 × 段位 × 挑战模式 × 过段方式）分榜，每个玩家只保留最好成绩（同榜重复提交自动覆盖）
 - 未部署后端时，前端自动显示本地演示数据，其余功能不受影响
 - 管理后台 `/admin` 的「🏆 排行榜管理」可查看全部记录并删除不当记录（删除操作在服务端验证管理员密码）
 
-### 部署（免费）
+## 部署（免费）
 
-仓库里已备好一键部署脚本 [deploy.ps1](deploy.ps1)：设置好 GitHub / Cloudflare 的令牌环境变量后运行 `./deploy.ps1`，即可完成 GitHub 上传 + GitHub Pages 启用 + Cloudflare D1 建库 + Pages 部署（先用 `-DryRun` 预览）。
+仓库里备好一键部署脚本 [deploy.ps1](deploy.ps1)：设置好 GitHub / Cloudflare 的令牌环境变量后运行 `./deploy.ps1`，脚本会先构建 `dist/`，再完成 GitHub 上传 + GitHub Pages 启用 + Cloudflare D1 建库 + Pages 部署（先用 `-DryRun` 预览）。
 
-1. Cloudflare 控制台 → Workers & Pages → D1，创建数据库（如 `jubeat-dan`）
-2. 在 D1 的 Console 中执行根目录的 `schema.sql`
-3. Pages 项目 → Settings → Bindings → 添加 D1 绑定，变量名 `DB`
-4. 推送代码（包含 `functions/` 目录）重新部署，排行榜 API 即生效
+手动部署：
 
-本地调试：
+1. `npm install && npm run build`
+2. Cloudflare：`npx wrangler pages deploy dist --project-name jubeat-dan --branch main`（或用 [deploy.ps1](deploy.ps1)）
+3. D1 绑定：在 Cloudflare 控制台创建 D1 数据库，执行根目录 `schema.sql`，并在 Pages 项目绑定变量名 `DB`
+4. GitHub Pages：推送 main 分支后由 `.github/workflows/gh-pages.yml` 自动构建并发布（需在仓库 Settings → Pages 选择 GitHub Actions 作为来源）
+
+本地调试排行榜：
 
 ```powershell
-npx wrangler pages dev . --d1 DB=<database-id>
+npx wrangler pages dev dist --d1 DB=<database-id>
 ```
+
+## HTTPS
+
+Cloudflare Pages 的 `*.pages.dev` 与 GitHub Pages 的 `*.github.io` 均自动提供免费 HTTPS，无需任何配置；绑定自定义域名时 Cloudflare 会自动签发免费证书（SSL/TLS 加密模式建议 Full (strict)）。
+
+## 其他说明
+
+- 进度保存在浏览器 localStorage，不同设备不互通，可用「⚙️ 设置」里的导出存档 / 导入存档迁移（导入带自定义段位的存档时可选择"只导入进度"或"进度 + 自定义"）
+- 非官方站点，与 KONAMI 无关，曲目信息请以机台实际为准

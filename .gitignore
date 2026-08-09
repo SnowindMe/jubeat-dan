@@ -1,4 +1,7 @@
 node_modules/
+dist/
+.svelte-kit/
+.gh-pages-deploy/
 .wrangler/
 .DS_Store
 *.log
