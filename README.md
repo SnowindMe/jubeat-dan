@@ -81,6 +81,7 @@ npm run preview    # 本地预览构建产物
 - 管理员可在 `/admin` 的「修改密码」中改密码（存于 D1 `admin_config` 表，无需重新部署）
 - 页脚显示独立访客数（D1 `visitors` 表，按匿名哈希去重）
 - 曲目图片已迁移到 Cloudflare R2（`SONG_IMAGES` 绑定），由 Pages Function 代理 `/assets/songs/*` 并做边缘缓存，不再依赖 remywiki 外链
+- 排行榜结果使用 Workers KV（`LEADERBOARD_CACHE` 绑定）缓存 5 分钟，提交后自动失效；反馈/管理员/上榜接口按 IP 限流（D1 `rate_limits` 表）
 - 未部署后端时，前端自动显示本地演示数据，其余功能不受影响
 - 管理后台 `/admin` 的「🏆 排行榜管理」可查看全部记录并删除不当记录（删除操作在服务端验证管理员密码）
 

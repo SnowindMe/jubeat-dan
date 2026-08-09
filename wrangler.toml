@@ -10,3 +10,7 @@ database_id = "97bd8fc2-e52c-4f1a-bae4-b24d39169ca4"
 [[r2_buckets]]
 binding = "SONG_IMAGES"
 bucket_name = "jubeat-dan-assets"
+
+[[kv_namespaces]]
+binding = "LEADERBOARD_CACHE"
+id = "0a5a5d4be1ba46f1ab9ccd5c1ecfb28a"

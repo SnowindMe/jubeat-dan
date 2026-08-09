@@ -5,6 +5,7 @@
  * ============================================================ */
 
 import { getAdminHash, sha256Hex, verifyAdmin } from "./_admin.js";
+import { rateLimit } from "./_rate.js";
 
 function json(data, status) {
   return new Response(JSON.stringify(data), {
@@ -22,6 +23,12 @@ export async function onRequestPost(context) {
     body = await context.request.json();
   } catch (e) {
     return json({ error: "invalid json" }, 400);
+  }
+
+  /* 防爆破：同一 IP 每分钟最多 5 次验证/改密尝试 */
+  const rl = await rateLimit(context.env, context.request, "admin", 60, 5);
+  if (!rl.allowed) {
+    return json({ error: "尝试过于频繁，请稍后再试" }, 429);
   }
 
   const action = String(body.action || "");

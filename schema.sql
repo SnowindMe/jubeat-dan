@@ -45,6 +45,14 @@ CREATE TABLE IF NOT EXISTS visitors (
   first_seen TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
+-- 轻量 IP 限流表（k 为 scope:IP，w 为窗口编号，窗口翻转自动重置）
+CREATE TABLE IF NOT EXISTS rate_limits (
+  k TEXT PRIMARY KEY,
+  c INTEGER NOT NULL DEFAULT 1,
+  w INTEGER NOT NULL,
+  expires_at INTEGER NOT NULL
+);
+
 -- ============================================================
 -- 旧库迁移（已部署过旧表的 D1 数据库，在 Console 执行一次即可）：
 -- 旧表按 player 去重；迁移后旧记录以 'legacy:' + player 作为 player_id，

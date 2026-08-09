@@ -6,6 +6,7 @@
  * ============================================================ */
 
 import { verifyAdmin } from "./_admin.js";
+import { rateLimit } from "./_rate.js";
 
 const CONTENT_MAX = 1000;
 const NAME_MAX = 20;
@@ -41,6 +42,12 @@ export async function onRequestPost(context) {
     body = await context.request.json();
   } catch (e) {
     return json({ error: "invalid json" }, 400);
+  }
+
+  /* 防刷：同一 IP 每小时最多 5 条反馈 */
+  const rl = await rateLimit(context.env, context.request, "fb", 3600, 5);
+  if (!rl.allowed) {
+    return json({ error: "反馈提交过于频繁，请稍后再试" }, 429);
   }
 
   const content = String(body.content || "").trim();

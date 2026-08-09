@@ -5,6 +5,7 @@
  * ============================================================ */
 
 import { verifyAdmin } from "./_admin.js";
+import { rateLimit } from "./_rate.js";
 
 const MODES = ["EASY", "NORMAL", "HARD"];
 const CRITERIA = ["score", "rate", "avg"];
@@ -31,6 +32,15 @@ function validNumberArray(arr, min, max) {
   });
 }
 
+async function invalidateBoardCache(env) {
+  /* POST 提交成功后清空排行榜缓存，保证下次查询立即看到新成绩 */
+  if (!env.LEADERBOARD_CACHE) return;
+  const list = await env.LEADERBOARD_CACHE.list({ prefix: "board:" });
+  await Promise.all(list.keys.map(function (k) {
+    return env.LEADERBOARD_CACHE.delete(k.name);
+  }));
+}
+
 export async function onRequestGet(context) {
   const url = new URL(context.request.url);
   const dan = (url.searchParams.get("dan") || "").trim();
@@ -55,6 +65,13 @@ export async function onRequestGet(context) {
     return json({ error: "invalid params" }, 400);
   }
 
+  /* 排行榜结果缓存到 KV（5 分钟 TTL），减轻 D1 读取压力 */
+  const cacheKey = "board:" + [dan, version, mode, criterion, limit].join("|");
+  if (context.env.LEADERBOARD_CACHE) {
+    const cached = await context.env.LEADERBOARD_CACHE.get(cacheKey, "json");
+    if (cached) return json(cached);
+  }
+
   let sql =
     "SELECT player, MAX(value) AS value, MIN(created_at) AS achieved_at " +
     "FROM leaderboard WHERE dan = ? AND mode = ? AND criterion = ?";
@@ -67,11 +84,15 @@ export async function onRequestGet(context) {
   binds.push(limit);
   const { results } = await context.env.DB.prepare(sql).bind(...binds).all();
 
-  return json({
+  const payload = {
     board: results.map(function (r, i) {
       return { rank: i + 1, player: r.player, value: r.value, achieved_at: r.achieved_at };
     })
-  });
+  };
+  if (context.env.LEADERBOARD_CACHE) {
+    await context.env.LEADERBOARD_CACHE.put(cacheKey, JSON.stringify(payload), { expirationTtl: 300 });
+  }
+  return json(payload);
 }
 
 export async function onRequestPost(context) {
@@ -80,6 +101,13 @@ export async function onRequestPost(context) {
     body = await context.request.json();
   } catch (e) {
     return json({ error: "invalid json" }, 400);
+  }
+
+  /* 防刷：同一 IP 每分钟最多 3 次提交、每小时最多 15 次 */
+  const rlMin = await rateLimit(context.env, context.request, "lb1", 60, 3);
+  const rlHour = await rateLimit(context.env, context.request, "lb2", 3600, 15);
+  if (!rlMin.allowed || !rlHour.allowed) {
+    return json({ error: "提交过于频繁，请稍后再试" }, 429);
   }
 
   const player = String(body.player || "").trim();
@@ -141,6 +169,7 @@ export async function onRequestPost(context) {
     await context.env.DB.prepare(sql)
       .bind(playerId, player, dan, version, mode, criterion, total, JSON.stringify(scores), JSON.stringify(rates))
       .run();
+    await invalidateBoardCache(context.env);
     return json({ ok: true, value: total });
   }
 
@@ -152,6 +181,7 @@ export async function onRequestPost(context) {
     await context.env.DB.prepare(sql)
       .bind(playerId, player, dan, version, mode, criterion, avg, JSON.stringify(scores), JSON.stringify(rates))
       .run();
+    await invalidateBoardCache(context.env);
     return json({ ok: true, value: avg });
   }
 
@@ -162,6 +192,7 @@ export async function onRequestPost(context) {
   await context.env.DB.prepare(sql)
     .bind(playerId, player, dan, version, mode, criterion, rateAvg, JSON.stringify(scores), JSON.stringify(rates))
     .run();
+  await invalidateBoardCache(context.env);
   return json({ ok: true, value: rateAvg });
 }
 
