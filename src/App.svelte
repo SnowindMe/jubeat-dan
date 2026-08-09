@@ -137,7 +137,7 @@
     </div>
   </div>
 
-  {#if app.customDans !== null}
+  {#if import.meta.env.DEV && app.customDans !== null}
     <div class="custom-data-notice">
       <span class="custom-data-notice-text">当前显示的是本地自定义段位数据，data.json 的更新不会自动生效。</span>
       <button type="button" class="btn custom-data-notice-btn" onclick={useDefaultData}>恢复默认数据</button>
