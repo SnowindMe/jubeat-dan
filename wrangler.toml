@@ -2,22 +2,27 @@ name = "jubeat-dan"
 pages_build_output_dir = "dist"
 compatibility_date = "2026-08-01"
 
-[[d1_databases]]
+# ============================================================
+# 生产环境（main 分支）：连接生产 D1 / KV / R2
+# ============================================================
+[env.production]
+
+[[env.production.d1_databases]]
 binding = "DB"
 database_name = "jubeat-dan"
 database_id = "97bd8fc2-e52c-4f1a-bae4-b24d39169ca4"
 
-[[r2_buckets]]
-binding = "SONG_IMAGES"
-bucket_name = "jubeat-dan-assets"
-
-[[kv_namespaces]]
+[[env.production.kv_namespaces]]
 binding = "LEADERBOARD_CACHE"
 id = "0a5a5d4be1ba46f1ab9ccd5c1ecfb28a"
 
+[[env.production.r2_buckets]]
+binding = "SONG_IMAGES"
+bucket_name = "jubeat-dan-assets"
+
 # ============================================================
 # 预览环境（dev 分支）：D1 / KV 使用独立资源隔离数据，
-# R2 沿用生产桶（non-inheritable 绑定必须在此完整列出）。
+# R2 沿用生产桶
 # ============================================================
 [env.preview]
 
