@@ -14,3 +14,22 @@ bucket_name = "jubeat-dan-assets"
 [[kv_namespaces]]
 binding = "LEADERBOARD_CACHE"
 id = "0a5a5d4be1ba46f1ab9ccd5c1ecfb28a"
+
+# ============================================================
+# 预览环境（dev 分支）：D1 / KV 使用独立资源隔离数据，
+# R2 沿用生产桶（non-inheritable 绑定必须在此完整列出）。
+# ============================================================
+[env.preview]
+
+[[env.preview.d1_databases]]
+binding = "DB"
+database_name = "jubeat-dan-preview"
+database_id = "a297d123-8c60-410e-84ff-fe4fcfa8f0d1"
+
+[[env.preview.kv_namespaces]]
+binding = "LEADERBOARD_CACHE"
+id = "dcecf62ebe4343d99231f839b6408998"
+
+[[env.preview.r2_buckets]]
+binding = "SONG_IMAGES"
+bucket_name = "jubeat-dan-assets"
