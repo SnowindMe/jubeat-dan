@@ -63,7 +63,7 @@
 
 <div class="editor">
   <div class="editor-head">
-    <span class="rank-badge">自定义段位管理</span>
+    <h2 class="editor-title">自定义段位管理</h2>
     <span class="editor-hint">修改实时保存到本机；「导出存档」可带走自定义段位数据</span>
   </div>
 
@@ -122,7 +122,13 @@
     margin-bottom: 12px;
   }
 
-  .editor-head .rank-badge { color: #1E9BE0; }
+  .editor-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #1B7FCF;
+  }
 
   .editor-hint {
     font-size: 12px;

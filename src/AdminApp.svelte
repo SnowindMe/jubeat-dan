@@ -1,87 +1,48 @@
 <script>
-  import { tick } from "svelte";
   import AdminLogin from "./components/AdminLogin.svelte";
   import BoardManage from "./components/admin/BoardManage.svelte";
   import FeedbackManage from "./components/admin/FeedbackManage.svelte";
   import EditorCard from "./components/admin/EditorCard.svelte";
   import PasswordCard from "./components/PasswordCard.svelte";
   import Decorations from "./components/Decorations.svelte";
-  import Modal from "./components/Modal.svelte";
-  import { versionLabel } from "./lib/pass.js";
-  import {
-    adminLocked,
-    app,
-    clearAdminSession,
-    ensureCustom,
-    isAdminAuthed,
-    modal,
-    openModal
-  } from "./lib/stores.svelte.js";
+  import { adminLocked, clearAdminSession, isAdminAuthed } from "./lib/stores.svelte.js";
 
-  let boardVisible = $state(false);
-  let boardKey = $state(0);
-  let feedbackVisible = $state(false);
-  let feedbackKey = $state(0);
+  const VIEWS = [
+    { id: "editor", label: "✏️ 段位管理" },
+    { id: "board", label: "🏆 排行榜管理" },
+    { id: "feedback", label: "📮 反馈管理" },
+    { id: "passwd", label: "🔑 修改密码" }
+  ];
+
+  /* 侧边栏 + 右内容：未验证管理员身份时右区先显示登录卡片，验证后进入对应功能 */
+  let view = $state(adminLocked() && !isAdminAuthed() ? "login" : "editor");
   let pending = $state("editor");
+  let boardKey = $state(0);
+  let feedbackKey = $state(0);
 
-  function run(action) {
-    if (action === "board") {
-      openBoardManage();
-    } else if (action === "feedback") {
-      openFeedbackManage();
-    } else if (action === "passwd") {
-      openModal("passwd");
+  function selectView(id) {
+    pending = id;
+    if (adminLocked() && !isAdminAuthed()) {
+      view = "login";
     } else {
-      openEditorModal();
-    }
-  }
-
-  function requireAuth(action) {
-    pending = action;
-    if (!adminLocked() || isAdminAuthed()) {
-      run(action);
-    } else {
-      openModal("admin", { payload: { pending: action } });
+      view = id;
     }
   }
 
   function runPending() {
-    run(pending);
-  }
-
-  function openEditorModal() {
-    ensureCustom();
-    if (app.customDans.length) {
-      var selIdx = Math.min(app.editorSelected, app.customDans.length - 1);
-      app.versionOpen[versionLabel(app.customDans[selIdx])] = true;
-    }
-    openModal("editor");
-  }
-
-  async function openBoardManage() {
-    boardVisible = true;
-    boardKey++;
-    await tick();
-    var panel = document.querySelector(".board-manage-panel");
-    if (panel && panel.scrollIntoView) panel.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-
-  async function openFeedbackManage() {
-    feedbackVisible = true;
-    feedbackKey++;
-    await tick();
-    var panel = document.querySelector(".feedback-manage-panel");
-    if (panel && panel.scrollIntoView) panel.scrollIntoView({ behavior: "smooth", block: "start" });
+    view = pending;
   }
 
   function onBoardAuthFail() {
     clearAdminSession();
-    requireAuth("board");
+    pending = "board";
+    view = "login";
   }
 
   function onFeedbackAuthFail() {
     clearAdminSession();
-    requireAuth("feedback");
+    pending = "feedback";
+    view = "login";
   }
 </script>
 
@@ -102,67 +63,166 @@
   </div>
 </header>
 
-<main class="container">
-  <div class="toolbar">
-    <div class="actions">
-      <button class="btn" id="adminManageBtn" title="管理员：增删段位、编辑曲目" onclick={() => requireAuth("editor")}>✏️ 段位管理</button>
-      <button class="btn" id="adminBoardBtn" title="管理员：查看并管理排行榜记录" onclick={() => requireAuth("board")}>🏆 排行榜管理</button>
-      <button class="btn" id="adminFeedbackBtn" title="管理员：查看并管理用户反馈" onclick={() => requireAuth("feedback")}>📮 反馈管理</button>
-      <button class="btn" id="adminPasswdBtn" title="管理员：修改管理员密码" onclick={() => requireAuth("passwd")}>🔑 修改密码</button>
-      <a class="btn" href="./">← 返回主页</a>
-    </div>
-  </div>
+<main class="container admin-layout">
+  <aside class="admin-sidebar">
+    <nav class="admin-nav" aria-label="管理后台导航">
+      {#each VIEWS as v (v.id)}
+        <button
+          type="button"
+          class="admin-nav-item"
+          class:active={view === v.id}
+          onclick={() => selectView(v.id)}
+        >{v.label}</button>
+      {/each}
+    </nav>
+    <a class="admin-nav-item admin-nav-back" href="./">← 返回主页</a>
+  </aside>
 
-  {#if boardVisible}
-    <section class="board-manage-panel">
-      <div class="board-card">
-        <div class="card-head">
-          <span class="rank-badge">🏆 排行榜管理</span>
-        </div>
-        <div class="board-controls">
-          <button class="btn primary" onclick={() => { boardKey++; }}>刷新</button>
-        </div>
-        {#key boardKey}
-          <BoardManage onAuthFail={onBoardAuthFail} />
-        {/key}
+  <section class="admin-content">
+    {#if view === "login"}
+      <div class="admin-login-wrap">
+        <AdminLogin onSuccess={runPending} />
       </div>
-    </section>
-  {/if}
-
-  {#if feedbackVisible}
-    <section class="feedback-manage-panel">
-      <div class="board-card">
-        <div class="card-head">
-          <span class="rank-badge">📮 反馈管理</span>
-        </div>
-        <div class="board-controls">
-          <button class="btn primary" onclick={() => { feedbackKey++; }}>刷新</button>
-        </div>
-        {#key feedbackKey}
-          <FeedbackManage onAuthFail={onFeedbackAuthFail} />
-        {/key}
+    {:else if view === "editor"}
+      <EditorCard />
+    {:else if view === "board"}
+      <div class="admin-page-head">
+        <h2 class="admin-page-title">🏆 排行榜管理</h2>
+        <button class="btn primary" onclick={() => { boardKey++; }}>刷新</button>
       </div>
-    </section>
-  {/if}
+      {#key boardKey}
+        <BoardManage onAuthFail={onBoardAuthFail} />
+      {/key}
+    {:else if view === "feedback"}
+      <div class="admin-page-head">
+        <h2 class="admin-page-title">📮 反馈管理</h2>
+        <button class="btn primary" onclick={() => { feedbackKey++; }}>刷新</button>
+      </div>
+      {#key feedbackKey}
+        <FeedbackManage onAuthFail={onFeedbackAuthFail} />
+      {/key}
+    {:else if view === "passwd"}
+      <div class="admin-login-wrap">
+        <PasswordCard />
+      </div>
+    {/if}
+  </section>
 </main>
 
 <footer class="site-footer">
   <p class="dim">非官方站点，与 KONAMI 无关 · 曲目信息请以机台实际为准</p>
 </footer>
 
-<Modal>
-  {#if modal.mode === "editor"}
-    <EditorCard />
-  {:else if modal.mode === "admin"}
-    <AdminLogin onSuccess={runPending} />
-  {:else if modal.mode === "passwd"}
-    <PasswordCard />
-  {/if}
-</Modal>
-
 <style>
-  .board-manage-panel { margin-top: 18px; }
-  .feedback-manage-panel { margin-top: 18px; }
-  .board-manage-panel .board-card { max-width: 900px; margin: 0 auto; }
-  .feedback-manage-panel .board-card { max-width: 900px; margin: 0 auto; }
+  .admin-layout {
+    max-width: 1040px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .admin-sidebar {
+    position: sticky;
+    top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #C7E4F7;
+    border-radius: 14px;
+    backdrop-filter: blur(4px);
+  }
+
+  .admin-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .admin-nav-item {
+    appearance: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    text-align: left;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .admin-nav-item:hover {
+    background: #EFF7FE;
+    color: #1B7FCF;
+  }
+
+  .admin-nav-item.active {
+    background: linear-gradient(180deg, #2FA8F0, #3B82F6);
+    color: #FFFFFF;
+    box-shadow: 0 6px 14px rgba(47, 168, 240, 0.30);
+  }
+
+  .admin-nav-back {
+    border-top: 1px dashed #CBE7F5;
+    border-radius: 0;
+    text-decoration: none;
+  }
+
+  .admin-nav-back:hover { border-radius: 10px; }
+
+  .admin-content {
+    min-width: 0;
+    padding: 18px 20px 22px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #C7E4F7;
+    border-radius: 14px;
+    backdrop-filter: blur(4px);
+  }
+
+  .admin-page-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .admin-page-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #1B7FCF;
+  }
+
+  .admin-login-wrap {
+    max-width: 380px;
+    margin: 32px auto;
+  }
+
+  @media (max-width: 640px) {
+    .admin-layout { grid-template-columns: 1fr; }
+    .admin-sidebar { position: static; }
+    .admin-nav {
+      flex-direction: row;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+    .admin-nav-item { flex: none; white-space: nowrap; }
+    .admin-nav-back {
+      border-top: none;
+      border-left: 1px dashed #CBE7F5;
+      border-radius: 10px;
+      padding-top: 10px;
+    }
+  }
 </style>
