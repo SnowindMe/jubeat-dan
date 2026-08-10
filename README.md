@@ -29,9 +29,13 @@
 │       ├── stores.svelte.js      集中式响应状态（进度/自定义数据/随机挑战/弹窗）
 │       ├── pass.js               通过判定与数值逻辑（纯函数）
 │       ├── leaderboard.svelte.js 排行榜 API 客户端
+│       ├── cloudsave.svelte.js   云存档状态与 API 客户端
 │       └── importexport.js       导出 / 导入存档
 ├── public/                       静态资源（图标、版本 Logo、canvas-confetti）
 ├── functions/api/leaderboard.js  排行榜 API（Cloudflare Pages Functions + D1）
+├── functions/api/auth.js         用户账号 API（注册/登录/登出）
+├── functions/api/save.js         云存档 API（读取/上传）
+├── functions/api/_auth.js        账号会话与密码哈希共享模块
 ├── data.json                     唯一数据源（构建时打包进 JS）
 ├── wrangler.toml                 Pages 构建输出目录 = dist
 └── deploy.ps1                    一键部署脚本
@@ -80,6 +84,7 @@ npm run preview    # 本地预览构建产物
 - 按（版本 × 段位 × 挑战模式 × 过段方式）分榜，每个设备只保留最好成绩（同榜重复提交自动覆盖）
 - 身份以浏览器匿名设备 ID 为准（localStorage 自动生成），改名只会原地更新榜名，不会新增榜位
 - 「👤 登录」可同时设置头像与姓名框（保存在本机）
+- 主页顶部的 **ME 横幅**会按姓名框 SVG（默认 jubeat 音乐魔方 / prop / clan / festo，860×220）展示你的段位名片：头像、昵称、最高已过段位会自动替换进模板（默认音乐魔方版不含 PASS/难度标；prop/clan/festo 版的 PASS 与难度标在未过段位时隐藏）；头像支持上传本地图片（自动压缩，仅存本机）
 - 「🔑 隐藏码」输入隐藏码可解锁对应版本的隐藏段位（段位数据中配置 `unlockCode`）
 - 「📮 反馈」提交的意见会存入 D1 `feedback` 表，管理员在 `/admin` 的「反馈管理」中查看/删除
 - 管理员可在 `/admin` 的「修改密码」中改密码（存于 D1 `admin_config` 表，无需重新部署）
@@ -88,6 +93,26 @@ npm run preview    # 本地预览构建产物
 - 排行榜结果使用 Workers KV（`LEADERBOARD_CACHE` 绑定）缓存 5 分钟，提交后自动失效；反馈/管理员/上榜接口按 IP 限流（D1 `rate_limits` 表）
 - 未部署后端时，前端自动显示本地演示数据，其余功能不受影响
 - 管理后台 `/admin` 的「🏆 排行榜管理」可查看全部记录并删除不当记录（删除操作在服务端验证管理员密码）
+
+## 云存档与账号（自建登录，Cloudflare Pages + D1）
+
+主页工具栏「☁️ 云存档」提供账号注册 / 登录 / 退出，登录后可在不同设备间上传、下载完整存档（进度、随机挑战、自定义段位，与「导出存档」格式一致）。
+
+- 账号：用户名 + 密码。密码以 **PBKDF2-SHA256（10 万次迭代 + 随机盐）** 哈希后存入 D1 `users` 表，不存明文
+- 会话：登录后下发 **HttpOnly Cookie**（30 天有效），服务端只存会话 token 的 SHA-256 哈希（`sessions` 表）
+- 接口：
+  - `GET /api/auth` → 当前登录状态
+  - `POST /api/auth` `{ action: "register" | "login" | "logout" | "changepass" }`
+  - `GET /api/save` / `PUT /api/save` `{ data: {...} }`（存档 ≤512KB，超出 413）
+- 安全：SameSite=Lax + Origin 同源校验防 CSRF；注册/登录/上传按 IP 限流（复用 `rate_limits` 表）；登出后旧会话立即失效
+- 数据库：`users` / `sessions` 表已加入 [schema.sql](schema.sql)；接口在表缺失时会自动 `CREATE TABLE IF NOT EXISTS` 自愈，已部署库无需手动迁移
+- 注意：云存档依赖 Pages Functions，**只在 Cloudflare Pages（`pages.dev`）上生效**；GitHub Pages 镜像没有后端，云存档按钮会提示服务不可用
+
+### 修改密码 / 忘记密码
+
+- **修改密码**：登录后打开「☁️ 云存档」→「🔑 修改密码」，输入当前密码与两个新密码即可；改密后**其他设备会自动退出登录**，当前设备保持在线
+- **忘记密码**：站点无邮件系统，采用管理员重置流程——用户联系管理员，管理员在 `/admin` 的「👥 用户管理」里找到该用户，填入临时新密码并重置；重置后该用户所有设备退出登录，需用新密码重新登录
+- 管理接口：`POST /api/admin` `{ action: "resetpass", username, newPass }` 重置密码；`GET /api/admin` 查看用户列表（两者均需 `X-Admin-Pass` 管理员密码头鉴权）
 
 ## 部署（免费）
 

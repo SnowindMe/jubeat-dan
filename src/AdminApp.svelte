@@ -3,6 +3,7 @@
   import BoardManage from "./components/admin/BoardManage.svelte";
   import FeedbackManage from "./components/admin/FeedbackManage.svelte";
   import EditorCard from "./components/admin/EditorCard.svelte";
+  import UserManage from "./components/admin/UserManage.svelte";
   import PasswordCard from "./components/PasswordCard.svelte";
   import Decorations from "./components/Decorations.svelte";
   import { adminLocked, clearAdminSession, isAdminAuthed } from "./lib/stores.svelte.js";
@@ -11,6 +12,7 @@
     { id: "editor", label: "✏️ 段位管理" },
     { id: "board", label: "🏆 排行榜管理" },
     { id: "feedback", label: "📮 反馈管理" },
+    { id: "users", label: "👥 用户管理" },
     { id: "passwd", label: "🔑 修改密码" }
   ];
 
@@ -19,6 +21,7 @@
   let pending = $state("editor");
   let boardKey = $state(0);
   let feedbackKey = $state(0);
+  let usersKey = $state(0);
 
   function selectView(id) {
     pending = id;
@@ -42,6 +45,12 @@
   function onFeedbackAuthFail() {
     clearAdminSession();
     pending = "feedback";
+    view = "login";
+  }
+
+  function onUsersAuthFail() {
+    clearAdminSession();
+    pending = "users";
     view = "login";
   }
 </script>
@@ -100,6 +109,14 @@
       </div>
       {#key feedbackKey}
         <FeedbackManage onAuthFail={onFeedbackAuthFail} />
+      {/key}
+    {:else if view === "users"}
+      <div class="admin-page-head">
+        <h2 class="admin-page-title">👥 用户管理</h2>
+        <button class="btn primary" onclick={() => { usersKey++; }}>刷新</button>
+      </div>
+      {#key usersKey}
+        <UserManage onAuthFail={onUsersAuthFail} />
       {/key}
     {:else if view === "passwd"}
       <div class="admin-login-wrap">

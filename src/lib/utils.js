@@ -48,6 +48,24 @@ export function candyBurst(scale) {
   });
 }
 
+/* 姓名框 SVG 的头像槽是 <image>，需要把 emoji 头像画成图片数据 */
+export function emojiToDataUrl(emoji) {
+  try {
+    var size = 120;
+    var c = document.createElement("canvas");
+    c.width = size;
+    c.height = size;
+    var ctx = c.getContext("2d");
+    ctx.font = size * 0.75 + "px system-ui, 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(String(emoji || "🐱"), size / 2, size / 2 + size * 0.04);
+    return c.toDataURL("image/png");
+  } catch (e) {
+    return "";
+  }
+}
+
 export function fileToDataThumb(file, cb) {
   function compress(img) {
     try {

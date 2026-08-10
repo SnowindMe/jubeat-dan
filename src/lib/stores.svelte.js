@@ -5,6 +5,7 @@ import {
   AVATARS,
   CUSTOM_KEY,
   FRAMES,
+  NAME_PLATES,
   MODES,
   PLAYER_KEY,
   POOLS,
@@ -24,6 +25,7 @@ export const app = $state({
   playerName: "",
   playerAvatar: "",
   playerFrame: "none",
+  playerPlate: "base",
   customDans: null,
   progress: null,
   random: null,
@@ -42,15 +44,18 @@ function loadProfile() {
   var name = "";
   var avatar = defaultAvatar();
   var frame = "none";
+  var plate = "base";
   try {
     var raw = localStorage.getItem(PLAYER_KEY);
-    if (!raw) return { name: name, avatar: avatar, frame: frame };
+    if (!raw) return { name: name, avatar: avatar, frame: frame, plate: plate };
     var parsed = JSON.parse(raw);
     if (parsed && typeof parsed === "object" && typeof parsed.name === "string") {
+      var savedAvatar = String(parsed.avatar || "");
       return {
         name: parsed.name,
-        avatar: AVATARS.includes(parsed.avatar) ? parsed.avatar : avatar,
-        frame: FRAMES.some(function (f) { return f.id === parsed.frame; }) ? parsed.frame : frame
+        avatar: (AVATARS.includes(savedAvatar) || savedAvatar.startsWith("data:image")) ? savedAvatar : avatar,
+        frame: FRAMES.some(function (f) { return f.id === parsed.frame; }) ? parsed.frame : frame,
+        plate: NAME_PLATES.some(function (p) { return p.id === parsed.plate; }) ? parsed.plate : plate
       };
     }
     /* 旧格式：纯昵称字符串 */
@@ -70,16 +75,19 @@ var profile = loadProfile();
 app.playerName = profile.name;
 app.playerAvatar = profile.avatar;
 app.playerFrame = profile.frame;
+app.playerPlate = profile.plate;
 
-export function saveProfile(name, avatar, frame) {
+export function saveProfile(name, avatar, frame, plate) {
   app.playerName = name;
   app.playerAvatar = avatar || defaultAvatar();
   app.playerFrame = FRAMES.some(function (f) { return f.id === frame; }) ? frame : "none";
+  app.playerPlate = NAME_PLATES.some(function (p) { return p.id === plate; }) ? plate : "base";
   try {
     localStorage.setItem(PLAYER_KEY, JSON.stringify({
       name: app.playerName,
       avatar: app.playerAvatar,
-      frame: app.playerFrame
+      frame: app.playerFrame,
+      plate: app.playerPlate
     }));
   } catch (e) {
     /* ignore */

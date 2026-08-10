@@ -29,6 +29,15 @@ export const FRAMES = [
   { id: "purple", label: "星紫", color: "#9A56EC" }
 ];
 
+/* 段位姓名框（主页 ME 横幅，按 860×220 的 SVG 设计稿展示） */
+export const NAME_PLATES = [
+  { id: "base", label: "jubeat 音乐魔方", src: "assets/nameplate/nameplate-base.svg" },
+  { id: "prop", label: "jubeat prop", src: "assets/nameplate/nameplate-prop.svg" },
+  { id: "clan", label: "jubeat clan", src: "assets/nameplate/nameplate-clan.svg" },
+  { id: "festo", label: "jubeat festo", src: "assets/nameplate/nameplate-festo.svg" },
+  { id: "none", label: "无", src: "" }
+];
+
 export const POOLS = {
   all:  { label: "全曲池",    match: (s) => true },
   low:  { label: "入門 Lv≤7",  match: (s) => s.level <= 7 },

@@ -1,12 +1,21 @@
 <script>
-  import { AVATARS, FRAMES } from "../lib/constants.js";
+  import { AVATARS, FRAMES, NAME_PLATES } from "../lib/constants.js";
   import { app, closeModal, saveProfile } from "../lib/stores.svelte.js";
-  import { candyBurst } from "../lib/utils.js";
+  import { candyBurst, fileToDataThumb } from "../lib/utils.js";
 
   let name = $state(app.playerName);
   let avatar = $state(app.playerAvatar);
   let frame = $state(app.playerFrame);
+  let plate = $state(app.playerPlate);
   let msg = $state("");
+  let fileInput = $state(null);
+
+  function onAvatarFile(ev) {
+    var f = ev.currentTarget.files && ev.currentTarget.files[0];
+    if (!f) return;
+    fileToDataThumb(f, function (url) { avatar = url; });
+    ev.currentTarget.value = "";
+  }
 
   function submit() {
     var n = name.trim();
@@ -14,7 +23,7 @@
       msg = "昵称不能为空";
       return;
     }
-    saveProfile(n, avatar, frame);
+    saveProfile(n, avatar, frame, plate);
     candyBurst(0.5);
     closeModal();
   }
@@ -34,7 +43,11 @@
     onkeydown={(e) => { if (e.key === "Enter") submit(); }}
   >
   <div class="profile-preview" style="--frame-color: {(FRAMES.find(function (f) { return f.id === frame; }) || FRAMES[0]).color}">
-    <span class="profile-avatar">{avatar}</span>
+    {#if String(avatar || "").startsWith("data:image")}
+      <img class="profile-avatar-img" src={avatar} alt="">
+    {:else}
+      <span class="profile-avatar">{avatar}</span>
+    {/if}
     <span class="profile-name">{name || "预览"}</span>
   </div>
   <div class="pick-label">头像</div>
@@ -49,7 +62,12 @@
       >{a}</button>
     {/each}
   </div>
-  <div class="pick-label">姓名框</div>
+  <div class="upload-row">
+    <button type="button" class="btn" onclick={() => fileInput?.click()}>📷 上传头像图片</button>
+    <span class="upload-hint">支持 JPG / PNG，自动压缩保存在本机</span>
+    <input type="file" id="avatarFile" accept="image/*" hidden bind:this={fileInput} onchange={onAvatarFile}>
+  </div>
+  <div class="pick-label">头像框</div>
   <div class="frame-row">
     {#each FRAMES as f (f.id)}
       <button
@@ -59,6 +77,24 @@
         style="--frame-color: {f.color}"
         onclick={() => { frame = f.id; }}
       >{f.label}</button>
+    {/each}
+  </div>
+  <div class="pick-label">段位姓名框（主页 ME 横幅）</div>
+  <div class="plate-row">
+    {#each NAME_PLATES as p (p.id)}
+      <button
+        type="button"
+        class="plate-option"
+        class:selected={plate === p.id}
+        title={p.label}
+        onclick={() => { plate = p.id; }}
+      >
+        {#if p.src}
+          <img class="plate-thumb" src={p.src} alt={p.label}>
+        {:else}
+          <span class="plate-none">无</span>
+        {/if}
+      </button>
     {/each}
   </div>
   <div class="login-actions">
@@ -87,6 +123,13 @@
     border-radius: 50%;
     background: linear-gradient(135deg, #E1F4FF, #C5E9FB);
     font-size: 20px;
+  }
+
+  .profile-avatar-img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    object-fit: cover;
   }
 
   .profile-name {
@@ -156,6 +199,62 @@
   .frame-option.selected {
     box-shadow: 0 0 0 2px var(--frame-color, #38B6F2);
     background: #F2FAFF;
+  }
+
+  .upload-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .upload-hint {
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  .plate-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .plate-option {
+    flex: 1;
+    min-width: 130px;
+    max-width: 170px;
+    padding: 6px;
+    border: 2px solid #D7EBFA;
+    border-radius: 10px;
+    background: #FFFFFF;
+    cursor: pointer;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .plate-option:hover {
+    border-color: #8FD0F7;
+  }
+
+  .plate-option.selected {
+    border-color: #38B6F2;
+    box-shadow: 0 0 0 2px rgba(56, 182, 242, 0.25);
+  }
+
+  .plate-thumb {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  .plate-none {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
   }
 
   @media (max-width: 420px) {

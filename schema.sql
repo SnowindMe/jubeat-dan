@@ -53,6 +53,26 @@ CREATE TABLE IF NOT EXISTS rate_limits (
   expires_at INTEGER NOT NULL
 );
 
+-- 用户账号（云存档登录）
+CREATE TABLE IF NOT EXISTS users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  name_key TEXT NOT NULL UNIQUE,
+  pass TEXT NOT NULL,
+  save_data TEXT,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+-- 登录会话（只存 token 的 SHA-256 哈希，cookie 里才是原始 token）
+CREATE TABLE IF NOT EXISTS sessions (
+  token_hash TEXT PRIMARY KEY,
+  user_id INTEGER NOT NULL,
+  created_at TEXT NOT NULL DEFAULT (datetime('now')),
+  expires_at INTEGER NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_sessions_user ON sessions (user_id);
+
 -- ============================================================
 -- 旧库迁移（已部署过旧表的 D1 数据库，在 Console 执行一次即可）：
 -- 旧表按 player 去重；迁移后旧记录以 'legacy:' + player 作为 player_id，
@@ -99,3 +119,20 @@ CREATE TABLE IF NOT EXISTS rate_limits (
 --   visitor TEXT PRIMARY KEY,
 --   first_seen TEXT NOT NULL DEFAULT (datetime('now'))
 -- );
+--
+-- 云存档迁移（任意时刻执行一次即可，接口在表缺失时也会自动建表）：
+-- CREATE TABLE IF NOT EXISTS users (
+--   id INTEGER PRIMARY KEY AUTOINCREMENT,
+--   name TEXT NOT NULL,
+--   name_key TEXT NOT NULL UNIQUE,
+--   pass TEXT NOT NULL,
+--   save_data TEXT,
+--   created_at TEXT NOT NULL DEFAULT (datetime('now'))
+-- );
+-- CREATE TABLE IF NOT EXISTS sessions (
+--   token_hash TEXT PRIMARY KEY,
+--   user_id INTEGER NOT NULL,
+--   created_at TEXT NOT NULL DEFAULT (datetime('now')),
+--   expires_at INTEGER NOT NULL
+-- );
+-- CREATE INDEX IF NOT EXISTS idx_sessions_user ON sessions (user_id);

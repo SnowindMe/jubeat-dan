@@ -2,9 +2,12 @@
  * 管理员接口（Cloudflare Pages Functions + D1）
  * POST /api/admin  { action: "verify", pass }
  * POST /api/admin  { action: "password", oldPass, newPass }
+ * POST /api/admin  { action: "resetpass", username, newPass }（X-Admin-Pass 头鉴权）
+ * GET  /api/admin  → 用户列表（X-Admin-Pass 头鉴权）
  * ============================================================ */
 
 import { getAdminHash, sha256Hex, verifyAdmin } from "./_admin.js";
+import { createPasswordHash } from "./_auth.js";
 import { rateLimit } from "./_rate.js";
 
 function json(data, status) {
@@ -62,5 +65,45 @@ export async function onRequestPost(context) {
     return json({ ok: true });
   }
 
+  if (action === "resetpass") {
+    const adminPass = context.request.headers.get("x-admin-pass") || "";
+    if (!(await verifyAdmin(context.env, adminPass))) {
+      return json({ error: "管理员验证失败" }, 401);
+    }
+    const username = String(body.username || "").trim();
+    const newPass = String(body.newPass || "");
+    if (!username) return json({ error: "请输入用户名" }, 400);
+    if (newPass.length < 6 || newPass.length > 64) {
+      return json({ error: "新密码需为 6-64 个字符" }, 400);
+    }
+    const row = await context.env.DB.prepare(
+      "SELECT id FROM users WHERE name_key = ?"
+    ).bind(username.toLowerCase()).first();
+    if (!row) return json({ error: "用户不存在" }, 404);
+    const passHash = await createPasswordHash(newPass);
+    await context.env.DB.prepare("UPDATE users SET pass = ? WHERE id = ?")
+      .bind(passHash, row.id).run();
+    /* 重置后强制该用户所有设备重新登录 */
+    await context.env.DB.prepare("DELETE FROM sessions WHERE user_id = ?")
+      .bind(row.id).run();
+    return json({ ok: true });
+  }
+
   return json({ error: "unknown action" }, 400);
+}
+
+export async function onRequestGet(context) {
+  const adminPass = context.request.headers.get("x-admin-pass") || "";
+  if (!(await verifyAdmin(context.env, adminPass))) {
+    return json({ error: "管理员验证失败" }, 401);
+  }
+  const rl = await rateLimit(context.env, context.request, "admin", 60, 5);
+  if (!rl.allowed) {
+    return json({ error: "尝试过于频繁，请稍后再试" }, 429);
+  }
+  const { results } = await context.env.DB.prepare(
+    "SELECT id, name, created_at, (save_data IS NOT NULL) AS has_save " +
+    "FROM users ORDER BY id DESC LIMIT 200"
+  ).all();
+  return json({ users: results });
 }
