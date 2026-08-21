@@ -933,8 +933,16 @@ body {
   .logo-img { width: 150px; }
   .toolbar { flex-direction: column; align-items: stretch; }
   .filters { justify-content: center; }
-  .actions { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .actions .btn { width: 100%; margin: 0; }
+  .actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .actions .btn {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 7px 10px;
+    font-size: 13px;
+    white-space: nowrap;
+    text-align: center;
+  }
   /* 第 5 个（设置）占满整行，避免末行孤零按钮 */
   .actions > :nth-child(5) { grid-column: 1 / -1; }
   .actions #resetBtn { grid-column: 1 / -1; }

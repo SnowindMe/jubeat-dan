@@ -115,19 +115,24 @@
   .me-nameplate {
     display: block;
     width: 100%;
+    max-width: 100%;
     padding: 0;
     border: none;
     background: transparent;
     cursor: pointer;
+    overflow: hidden;
   }
 
   .me-nameplate-svg {
     width: 100%;
+    max-width: 100%;
     aspect-ratio: 860 / 220;
+    overflow: hidden;
   }
 
   .me-nameplate-svg :global(svg) {
     width: 100%;
+    max-width: 100%;
     height: 100%;
     display: block;
   }
