@@ -232,6 +232,26 @@ export function saveState() {
   }
 }
 
+/* 防抖版保存：输入分数等高频路径使用，避免每次按键全量序列化写 localStorage
+ * （进度对象包含所有段位，序列化开销大，是打字卡顿的主因）。 */
+let progressSaveTimer = null;
+
+export function scheduleSaveState() {
+  if (progressSaveTimer) clearTimeout(progressSaveTimer);
+  progressSaveTimer = setTimeout(function () {
+    progressSaveTimer = null;
+    saveState();
+  }, 300);
+}
+
+export function flushSaveState() {
+  if (progressSaveTimer) {
+    clearTimeout(progressSaveTimer);
+    progressSaveTimer = null;
+    saveState();
+  }
+}
+
 export function danState(dan) {
   var key = danKey(dan);
   var st = app.progress.d[key];

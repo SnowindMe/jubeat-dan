@@ -12,7 +12,7 @@
   --panel-2: #F2FAFF;
   --line: #CBE7F5;
   --text: #3D4468;
-  --muted: #7E93AD;
+  --muted: #5E7A96;
   --cyan: #2FA8F0;
   --blue: #3B82F6;
   --pink: #FF7EB6;
@@ -44,7 +44,6 @@ body {
     radial-gradient(900px 420px at 15% -5%, rgba(255, 255, 255, 0.55), transparent 60%),
     radial-gradient(800px 460px at 90% 0%, rgba(255, 255, 255, 0.35), transparent 55%),
     linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 45%, var(--bg-bottom) 100%);
-  background-attachment: fixed;
   color: var(--text);
   min-height: 100vh;
   line-height: 1.55;
@@ -76,6 +75,11 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.65);
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.10);
+  opacity: 0.6;
+}
+
+/* 仅少量网格块保留呼吸动画，避免整屏 16 个元素常驻动画拖慢低端机 */
+.grid-bg i:nth-child(-n+6) {
   animation: pulse 5s ease-in-out infinite;
 }
 
@@ -172,7 +176,6 @@ body {
   cursor: pointer;
   transition: all 0.15s ease;
   font-family: inherit;
-  backdrop-filter: blur(4px);
 }
 
 .chip:hover, .btn:hover {
@@ -919,7 +922,7 @@ body {
   color: #1B6FB0;
 }
 
-.site-footer .dim { opacity: 0.7; font-size: 12px; }
+.site-footer .dim { opacity: 0.85; font-size: 12px; }
 
 /* ---------- Responsive（全局共享部分） ---------- */
 
@@ -932,6 +935,8 @@ body {
   .filters { justify-content: center; }
   .actions { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
   .actions .btn { width: 100%; margin: 0; }
+  /* 第 5 个（设置）占满整行，避免末行孤零按钮 */
+  .actions > :nth-child(5) { grid-column: 1 / -1; }
   .actions #resetBtn { grid-column: 1 / -1; }
   .song-row { flex-wrap: wrap; }
   .score-field { width: 100%; }

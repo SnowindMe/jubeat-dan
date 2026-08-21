@@ -28,10 +28,11 @@
 │       ├── data.svelte.js        构建时打包 data.json
 │       ├── stores.svelte.js      集中式响应状态（进度/自定义数据/随机挑战/弹窗）
 │       ├── pass.js               通过判定与数值逻辑（纯函数）
+│       ├── render.js             段位进度摘要 / 奖牌行 HTML 渲染
 │       ├── leaderboard.svelte.js 排行榜 API 客户端
 │       ├── cloudsave.svelte.js   云存档状态与 API 客户端
 │       └── importexport.js       导出 / 导入存档
-├── public/                       静态资源（图标、版本 Logo、canvas-confetti）
+├── public/                       静态资源（图标、版本 Logo、_headers 安全头、canvas-confetti）
 ├── functions/api/leaderboard.js  排行榜 API（Cloudflare Pages Functions + D1）
 ├── functions/api/auth.js         用户账号 API（注册/登录/登出）
 ├── functions/api/save.js         云存档 API（读取/上传）

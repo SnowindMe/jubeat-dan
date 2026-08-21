@@ -9,9 +9,9 @@
   onMount(function () {
     if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    /* 全屏背景：3 个棒棒糖 + 6 个蝴蝶糖果，位置/角度/速度随机 */
-    candies = Array.from({ length: 9 }, function (_, i) {
-      var candy = i >= 3;
+    /* 全屏背景：2 个棒棒糖 + 3 个蝴蝶糖果，位置/角度/速度随机（减量降耗） */
+    candies = Array.from({ length: 5 }, function (_, i) {
+      var candy = i >= 2;
       var color = DECOR_COLORS[Math.floor(Math.random() * DECOR_COLORS.length)];
       return {
         candy: candy,

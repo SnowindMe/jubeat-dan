@@ -20,7 +20,8 @@
     danState,
     effectiveDans,
     openModal,
-    saveState
+    saveState,
+    scheduleSaveState
   } from "../lib/stores.svelte.js";
   import { candyBurst } from "../lib/utils.js";
 
@@ -63,7 +64,7 @@
     var wasCleared = st.cleared;
     st.cleared = computePassed(dan, st);
     st.clearedCriterion = st.cleared ? dan.criterion : null;
-    saveState();
+    scheduleSaveState();
     afterClearedChange(wasCleared);
   }
 
@@ -72,7 +73,7 @@
     var wasCleared = st.cleared;
     st.cleared = computePassed(dan, st);
     st.clearedCriterion = st.cleared ? dan.criterion : null;
-    saveState();
+    scheduleSaveState();
     afterClearedChange(wasCleared);
   }
 
@@ -83,7 +84,7 @@
     st.rates[i] = null;
     st.cleared = computePassed(dan, st);
     st.clearedCriterion = st.cleared ? dan.criterion : null;
-    saveState();
+    scheduleSaveState();
   }
 
   function retry() {
@@ -94,7 +95,7 @@
     }
     st.cleared = false;
     st.clearedCriterion = null;
-    saveState();
+    scheduleSaveState();
   }
 
   async function submit() {

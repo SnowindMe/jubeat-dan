@@ -176,9 +176,7 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background: rgba(246, 250, 255, 0.55);
-    -webkit-backdrop-filter: blur(7px);
-    backdrop-filter: blur(7px);
+    background: rgba(246, 250, 255, 0.86);
     border-radius: 10px;
     z-index: 2;
     pointer-events: none;

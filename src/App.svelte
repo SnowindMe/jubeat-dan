@@ -83,6 +83,14 @@
     return out;
   });
 
+  /* 全局通过进度：所有段位（含隐藏）中已通过的数量，用于 hero 进度条 */
+  const overallProgress = $derived.by(function () {
+    var dans = effectiveDans();
+    var total = dans.length;
+    var cleared = dans.filter(function (d) { return readDanState(d).cleared; }).length;
+    return { total: total, cleared: cleared, pct: total ? Math.round((cleared / total) * 100) : 0 };
+  });
+
   function onImportChange(ev) {
     if (ev.currentTarget.files && ev.currentTarget.files[0]) {
       importData(ev.currentTarget.files[0]);
@@ -110,6 +118,15 @@
       <div class="logo-text">
         <h1>段位挑战</h1>
         <p class="subtitle">jubeat 音乐魔方 · 段位认定进度追踪</p>
+      </div>
+    </div>
+    <div class="hero-progress" title="全部版本已通过段位">
+      <div class="hero-progress-top">
+        <span class="hero-progress-label">总进度</span>
+        <span class="hero-progress-num">{overallProgress.cleared}/{overallProgress.total} 已通过</span>
+      </div>
+      <div class="hero-progress-track" role="progressbar" aria-valuenow={overallProgress.cleared} aria-valuemin="0" aria-valuemax={overallProgress.total}>
+        <div class="hero-progress-fill" style="width: {overallProgress.pct}%"></div>
       </div>
     </div>
   </div>
@@ -212,6 +229,52 @@
     margin-top: 6px;
     font-size: 12px;
     color: var(--muted, #7CA2C3);
+  }
+
+  .hero-progress {
+    flex: none;
+    min-width: 220px;
+    max-width: 280px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(199, 228, 247, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(36, 110, 170, 0.14);
+  }
+
+  .hero-progress-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .hero-progress-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #5B7CA0;
+    letter-spacing: 2px;
+  }
+
+  .hero-progress-num {
+    font-size: 15px;
+    font-weight: 800;
+    color: #1B7FCF;
+  }
+
+  .hero-progress-track {
+    height: 8px;
+    border-radius: 999px;
+    background: #E3F0FA;
+    overflow: hidden;
+  }
+
+  .hero-progress-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #2FA8F0, #6C5CE7);
+    transition: width 0.35s ease;
   }
 
   .dan-list {
